@@ -116,6 +116,7 @@ class PaperBuilder:
         en_script_html = scripts.get('en', '').replace('\n', '<br><br>')
         zh_script_html = scripts.get('zh', '').replace('\n', '<br><br>')
 
+        # AUDIO_BASE_PATH and ARCHIVE_LINK_PATH placeholders will be replaced in save()
         html_content = f"""<!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -137,6 +138,7 @@ class PaperBuilder:
         .nav-btn {{
             background: #ffffff; border: 1px solid #cbd5e1; padding: 8px 16px; border-radius: 8px; color: #475569;
             text-decoration: none; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.2s;
+            display: inline-flex; align-items: center; gap: 6px;
         }}
         .nav-btn:hover {{ background: #f1f5f9; color: var(--accent-blue); }}
         
@@ -255,17 +257,17 @@ class PaperBuilder:
 <body>
     <div class="container">
         <div class="top-nav">
-            <a href="../../index.html" class="nav-btn">&larr; 인덱스(목록)로 돌아가기</a>
-            <span style="color: #64748b; font-size: 0.9rem;">Daily Morning Briefing System</span>
+            <span style="color: #64748b; font-size: 0.95rem; font-weight: 700;">Daily Morning Briefing System</span>
+            <a href="ARCHIVE_LINK_PATH" class="nav-btn">🗂️ 지난 신문 보기 (Archive)</a>
         </div>
 
         <header class="header">
             <h1>📰 The Daily Intelligence Times</h1>
             <div class="meta">발행 일시: {date_str} 09:00 | Global Morning Briefing | Multi-Language Edition</div>
             
-            <audio id="audio-ko" src="../audio/briefing_{date_str}_ko.m4a"></audio>
-            <audio id="audio-en" src="../audio/briefing_{date_str}_en.m4a"></audio>
-            <audio id="audio-zh" src="../audio/briefing_{date_str}_zh.m4a"></audio>
+            <audio id="audio-ko" src="AUDIO_BASE_PATHbriefing_{date_str}_ko.m4a"></audio>
+            <audio id="audio-en" src="AUDIO_BASE_PATHbriefing_{date_str}_en.m4a"></audio>
+            <audio id="audio-zh" src="AUDIO_BASE_PATHbriefing_{date_str}_zh.m4a"></audio>
             
             <button id="playBtn" class="play-btn" onclick="togglePlay()">🔊 브리핑 읽어주기 (Play)</button>
         </header>
@@ -323,7 +325,7 @@ class PaperBuilder:
 """
         return html_content
 
-    def build_index(self):
+    def build_archive(self):
         files = glob.glob(os.path.join(self.html_dir, "briefing_*.html"))
         dates = []
         for f in files:
@@ -346,7 +348,7 @@ class PaperBuilder:
         if not cards_html:
             cards_html = "<div style='text-align:center; padding: 40px; color: #64748b;'>아직 생성된 브리핑이 없습니다.</div>"
 
-        index_html = f"""<!DOCTYPE html>
+        archive_html = f"""<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -356,6 +358,9 @@ class PaperBuilder:
         :root {{ --bg-color: #f8fafc; --text-main: #1e293b; --accent-blue: #2563eb; }}
         body {{ font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; padding: 40px 20px; }}
         .container {{ max-width: 800px; margin: 0 auto; }}
+        .top-nav {{ margin-bottom: 30px; text-align: left; }}
+        .nav-btn {{ background: #ffffff; border: 1px solid #cbd5e1; padding: 8px 16px; border-radius: 8px; color: #475569; text-decoration: none; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; }}
+        .nav-btn:hover {{ background: #f1f5f9; color: var(--accent-blue); }}
         .header {{ text-align: center; margin-bottom: 40px; }}
         .header h1 {{ font-size: 2.8rem; margin: 0 0 10px 0; color: #0f172a; }}
         .header p {{ font-size: 1.1rem; color: #64748b; }}
@@ -369,9 +374,12 @@ class PaperBuilder:
 </head>
 <body>
     <div class="container">
+        <div class="top-nav">
+            <a href="index.html" class="nav-btn">&larr; 오늘의 브리핑으로 돌아가기</a>
+        </div>
         <div class="header">
-            <h1>📰 Daily Morning Briefing</h1>
-            <p>오늘의 지식을 채우고, 긍정적인 하루를 시작하세요.</p>
+            <h1>🗂️ Morning Briefing Archives</h1>
+            <p>날짜별로 발행된 지난 데일리 모닝 인텔리전스 목록입니다.</p>
         </div>
         <div class="grid">
             {cards_html}
@@ -380,27 +388,31 @@ class PaperBuilder:
 </body>
 </html>
 """
-        index_path = os.path.join(self.root_dir, "index.html")
-        with open(index_path, "w", encoding="utf-8") as f:
-            f.write(index_html)
-        return index_path
+        archive_path = os.path.join(self.root_dir, "archive.html")
+        with open(archive_path, "w", encoding="utf-8") as f:
+            f.write(archive_html)
+        return archive_path
 
     def save(self, md_content: str, html_content: str, date_str: str) -> (str, str):
         md_file = os.path.join(self.md_dir, f"briefing_{date_str}.md")
         html_file = os.path.join(self.html_dir, f"briefing_{date_str}.html")
-        latest_md = os.path.join(self.md_dir, "latest_briefing.md")
-        latest_html = os.path.join(self.html_dir, "latest_briefing.html")
+        
+        # 1. Save standard HTML in outputs/html/ (Relative links: audio in ../audio/, archive in ../../archive.html)
+        html_content_archived = html_content.replace("AUDIO_BASE_PATH", "../audio/").replace("ARCHIVE_LINK_PATH", "../../archive.html")
+        with open(html_file, "w", encoding="utf-8") as f:
+            f.write(html_content_archived)
 
+        # 2. Save root index.html as TODAY's briefing (Relative links: audio in outputs/audio/, archive in archive.html)
+        index_file = os.path.join(self.root_dir, "index.html")
+        html_content_root = html_content.replace("AUDIO_BASE_PATH", "outputs/audio/").replace("ARCHIVE_LINK_PATH", "archive.html")
+        with open(index_file, "w", encoding="utf-8") as f:
+            f.write(html_content_root)
+
+        # 3. Save standard Markdown
         with open(md_file, "w", encoding="utf-8") as f:
             f.write(md_content)
-        with open(latest_md, "w", encoding="utf-8") as f:
-            f.write(md_content)
 
-        with open(html_file, "w", encoding="utf-8") as f:
-            f.write(html_content)
-        with open(latest_html, "w", encoding="utf-8") as f:
-            f.write(html_content)
+        # 4. Generate the chronological archive page
+        self.build_archive()
 
-        self.build_index()
-
-        return md_file, html_file
+        return md_file, index_file

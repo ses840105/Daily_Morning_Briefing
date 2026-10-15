@@ -82,14 +82,12 @@ def main():
     builder = PaperBuilder(outputs_dir)
     md_content = builder.build_markdown(tech_data, econ_data, daily_affirmation, date_str)
     html_content = builder.build_html(tech_data, econ_data, scripts, daily_affirmation, date_str)
-    md_path, html_path = builder.save(md_content, html_content, date_str)
-    index_path = os.path.join(BASE_DIR, "index.html")
+    md_path, index_path = builder.save(md_content, html_content, date_str)
 
     print("\n" + "=" * 70)
     print("✨ [발행 완료] 다국어 5분 모닝 브리핑 신문 및 음성이 성공적으로 생성되었습니다!")
-    print(f"  • 인덱스 페이지 : {index_path}")
-    print(f"  • 오늘 웹 신문  : {html_path}")
-    print(f"  • 한국어 오디오 : {audio_paths.get('ko')}")
+    print(f"  • 오늘 웹 신문(Root) : {index_path}")
+    print(f"  • 한국어 오디오      : {audio_paths.get('ko')}")
     print("=" * 70)
 
     # macOS 시스템 알림
