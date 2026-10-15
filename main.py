@@ -73,9 +73,13 @@ def main():
         tts.save_audio(text, a_path)
         audio_paths[lang] = a_path
 
-    latest_audio = os.path.join(audio_dir, "latest_briefing_ko.m4a")
+    latest_audio_m4a = os.path.join(audio_dir, "latest_briefing_ko.m4a")
+    latest_audio_mp3 = os.path.join(audio_dir, "latest_briefing_ko.mp3")
     if os.path.exists(audio_paths["ko"]):
-        subprocess.run(["cp", audio_paths["ko"], latest_audio], check=False)
+        subprocess.run(["cp", audio_paths["ko"], latest_audio_m4a], check=False)
+    ko_mp3 = audio_paths["ko"].rsplit('.', 1)[0] + ".mp3"
+    if os.path.exists(ko_mp3):
+        subprocess.run(["cp", ko_mp3, latest_audio_mp3], check=False)
 
     # 5. 신문 생성 단계 (MD & HTML) - 오디오 생성 후 실행 (HTML에서 오디오 경로를 참조하기 때문)
     print("[4/4] 📄 상세 뉴스 링크가 포함된 다국어 웹 신문(HTML) 및 인덱스 렌더링 중...")

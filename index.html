@@ -32,6 +32,157 @@
             padding: 10px 20px; border-radius: 20px; font-size: 1rem; font-weight: bold; cursor: pointer; margin-top: 15px; transition: background 0.2s;
         }
         .play-btn:hover { background: #1d4ed8; }
+
+        /* Modern Audio Player Card */
+        .audio-player-card {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 20px auto 10px auto;
+            max-width: 760px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.25);
+            text-align: left;
+            border: 1px solid #334155;
+        }
+        .player-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .player-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #93c5fd;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .player-badge {
+            background: rgba(59, 130, 246, 0.25);
+            border: 1px solid #3b82f6;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            color: #bfdbfe;
+            font-weight: 600;
+        }
+        .progress-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+        .time-text {
+            font-size: 0.85rem;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            color: #94a3b8;
+            min-width: 45px;
+        }
+        .progress-bar-slider {
+            flex-grow: 1;
+            height: 6px;
+            border-radius: 3px;
+            background: #334155;
+            outline: none;
+            cursor: pointer;
+            -webkit-appearance: none;
+        }
+        .progress-bar-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #38bdf8;
+            cursor: pointer;
+            box-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+        }
+        .player-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .controls-main {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .ctrl-btn {
+            background: #334155;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }
+        .ctrl-btn:hover {
+            background: #475569;
+            transform: scale(1.06);
+        }
+        .ctrl-btn-play {
+            background: #2563eb;
+            width: 48px;
+            height: 48px;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+        }
+        .ctrl-btn-play:hover {
+            background: #1d4ed8;
+        }
+        .controls-extra {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .speed-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .speed-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .volume-slider {
+            width: 75px;
+            height: 5px;
+            -webkit-appearance: none;
+            background: #334155;
+            border-radius: 3px;
+        }
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #94a3b8;
+            cursor: pointer;
+        }
+        .player-status-msg {
+            font-size: 0.82rem;
+            color: #94a3b8;
+            margin-top: 10px;
+            text-align: center;
+        }
         
         .tabs { display: flex; gap: 10px; margin-bottom: -1px; position: relative; z-index: 10; }
         .tab-btn {
@@ -87,27 +238,97 @@
     </style>
     <script>
         let currentLang = 'ko';
-        function switchTab(lang) {
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.script-content').forEach(content => content.classList.remove('active'));
-            
-            document.getElementById('btn-' + lang).classList.add('active');
-            document.getElementById('content-' + lang).classList.add('active');
-            
-            pauseAllAudio();
-            currentLang = lang;
-            updatePlayButtonUI(false);
+        const langNames = { ko: '🇰🇷 한국어 (Korean)', en: '🇺🇸 English', zh: '🇨🇳 中文 (Chinese)' };
+        let currentRate = 1.0;
+
+        function getActiveAudio() {
+            return document.getElementById('audio-' + currentLang);
+        }
+
+        function formatTime(seconds) {
+            if (isNaN(seconds) || seconds < 0) return '00:00';
+            const m = Math.floor(seconds / 60);
+            const s = Math.floor(seconds % 60);
+            return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+        }
+
+        function updatePlayerUI() {
+            const audio = getActiveAudio();
+            const playBtn = document.getElementById('playMainBtn');
+            const statusBadge = document.getElementById('playerStatusBadge');
+            const titleEl = document.getElementById('playerCurrentTitle');
+            const timeCur = document.getElementById('timeCurrent');
+            const timeDur = document.getElementById('timeDuration');
+            const slider = document.getElementById('progressSlider');
+
+            if (titleEl) titleEl.innerText = '🎙️ 5분 브리핑: ' + langNames[currentLang];
+
+            if (audio.paused) {
+                if (playBtn) playBtn.innerHTML = '▶️';
+                if (statusBadge) statusBadge.innerText = '준비됨';
+            } else {
+                if (playBtn) playBtn.innerHTML = '⏸️';
+                if (statusBadge) statusBadge.innerText = '재생 중...';
+            }
+
+            if (timeCur) timeCur.innerText = formatTime(audio.currentTime);
+            if (timeDur && audio.duration) timeDur.innerText = formatTime(audio.duration);
+
+            if (slider && audio.duration) {
+                slider.max = audio.duration;
+                slider.value = audio.currentTime;
+            }
         }
 
         function togglePlay() {
-            const audio = document.getElementById('audio-' + currentLang);
+            const audio = getActiveAudio();
+            const statusMsg = document.getElementById('playerStatusMsg');
             if (audio.paused) {
                 pauseAllAudio();
-                audio.play();
-                updatePlayButtonUI(true);
+                audio.playbackRate = currentRate;
+                const playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        updatePlayerUI();
+                        if (statusMsg) statusMsg.innerText = '🔊 오디오가 정상적으로 재생되고 있습니다.';
+                    }).catch(err => {
+                        console.error('Audio play error:', err);
+                        updatePlayerUI();
+                        if (statusMsg) statusMsg.innerText = '⚠️ 브라우저 정책으로 인해 재생이 제한되었습니다. 화면을 클릭 후 다시 시도해주세요.';
+                    });
+                }
             } else {
                 audio.pause();
-                updatePlayButtonUI(false);
+                updatePlayerUI();
+                if (statusMsg) statusMsg.innerText = '일시정지되었습니다.';
+            }
+        }
+
+        function seekAudio(val) {
+            const audio = getActiveAudio();
+            audio.currentTime = parseFloat(val);
+            updatePlayerUI();
+        }
+
+        function skipTime(delta) {
+            const audio = getActiveAudio();
+            audio.currentTime = Math.max(0, Math.min(audio.duration || 0, audio.currentTime + delta));
+            updatePlayerUI();
+        }
+
+        function cycleSpeed() {
+            const speeds = [1.0, 1.25, 1.5, 2.0];
+            const nextIdx = (speeds.indexOf(currentRate) + 1) % speeds.length;
+            currentRate = speeds[nextIdx];
+            const audio = getActiveAudio();
+            audio.playbackRate = currentRate;
+            document.getElementById('speedBtn').innerText = currentRate + 'x';
+        }
+
+        function setVolume(val) {
+            const audios = document.getElementsByTagName('audio');
+            for(let i=0; i<audios.length; i++) {
+                audios[i].volume = parseFloat(val);
             }
         }
 
@@ -118,20 +339,42 @@
             }
         }
 
-        function updatePlayButtonUI(isPlaying) {
-            const btn = document.getElementById('playBtn');
-            if(isPlaying) {
-                btn.innerHTML = '⏸️ 브리핑 일시정지 (Pause)';
-            } else {
-                btn.innerHTML = '🔊 브리핑 읽어주기 (Play)';
-            }
+        function switchTab(lang) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.script-content').forEach(content => content.classList.remove('active'));
+            
+            const btn = document.getElementById('btn-' + lang);
+            const content = document.getElementById('content-' + lang);
+            if (btn) btn.classList.add('active');
+            if (content) content.classList.add('active');
+            
+            pauseAllAudio();
+            currentLang = lang;
+            updatePlayerUI();
         }
 
         document.addEventListener('DOMContentLoaded', () => {
             const audios = document.getElementsByTagName('audio');
             for(let i=0; i<audios.length; i++) {
-                audios[i].onended = function() { updatePlayButtonUI(false); };
+                const a = audios[i];
+                a.addEventListener('timeupdate', () => {
+                    if (a === getActiveAudio()) updatePlayerUI();
+                });
+                a.addEventListener('loadedmetadata', () => {
+                    if (a === getActiveAudio()) updatePlayerUI();
+                });
+                a.addEventListener('ended', () => {
+                    updatePlayerUI();
+                    const statusMsg = document.getElementById('playerStatusMsg');
+                    if (statusMsg) statusMsg.innerText = '브리핑 재생이 완료되었습니다.';
+                });
+                a.addEventListener('error', (e) => {
+                    console.error('Audio element error:', e);
+                    const statusMsg = document.getElementById('playerStatusMsg');
+                    if (statusMsg) statusMsg.innerText = '오디오 로드 중 오류가 발생했습니다.';
+                });
             }
+            updatePlayerUI();
         });
     </script>
 </head>
@@ -146,11 +389,47 @@
             <h1>📰 The Daily Intelligence Times</h1>
             <div class="meta">발행 일시: 2026-10-16 09:00 | Global Morning Briefing | Multi-Language Edition</div>
             
-            <audio id="audio-ko" src="outputs/audio/briefing_2026-10-16_ko.m4a"></audio>
-            <audio id="audio-en" src="outputs/audio/briefing_2026-10-16_en.m4a"></audio>
-            <audio id="audio-zh" src="outputs/audio/briefing_2026-10-16_zh.m4a"></audio>
+            <!-- Dual format sources: MP3 (Standard) + M4A (Apple AAC) for 100% universal browser support -->
+            <audio id="audio-ko" preload="metadata">
+                <source src="outputs/audio/briefing_2026-10-16_ko.mp3" type="audio/mpeg">
+                <source src="outputs/audio/briefing_2026-10-16_ko.m4a" type="audio/mp4">
+            </audio>
+            <audio id="audio-en" preload="metadata">
+                <source src="outputs/audio/briefing_2026-10-16_en.mp3" type="audio/mpeg">
+                <source src="outputs/audio/briefing_2026-10-16_en.m4a" type="audio/mp4">
+            </audio>
+            <audio id="audio-zh" preload="metadata">
+                <source src="outputs/audio/briefing_2026-10-16_zh.mp3" type="audio/mpeg">
+                <source src="outputs/audio/briefing_2026-10-16_zh.m4a" type="audio/mp4">
+            </audio>
             
-            <button id="playBtn" class="play-btn" onclick="togglePlay()">🔊 브리핑 읽어주기 (Play)</button>
+            <!-- Interactive Modern Audio Player -->
+            <div class="audio-player-card">
+                <div class="player-header">
+                    <div class="player-title" id="playerCurrentTitle">🎙️ 5분 브리핑: 🇰🇷 한국어 (Korean)</div>
+                    <div class="player-badge" id="playerStatusBadge">준비됨</div>
+                </div>
+                <div class="progress-container">
+                    <span class="time-text" id="timeCurrent">00:00</span>
+                    <input type="range" class="progress-bar-slider" id="progressSlider" min="0" max="100" value="0" oninput="seekAudio(this.value)">
+                    <span class="time-text" id="timeDuration">--:--</span>
+                </div>
+                <div class="player-controls">
+                    <div class="controls-main">
+                        <button class="ctrl-btn" onclick="skipTime(-10)" title="10초 뒤로">⏪</button>
+                        <button class="ctrl-btn ctrl-btn-play" id="playMainBtn" onclick="togglePlay()" title="재생 / 일시정지">▶️</button>
+                        <button class="ctrl-btn" onclick="skipTime(10)" title="10초 앞으로">⏩</button>
+                    </div>
+                    <div class="controls-extra">
+                        <button class="speed-btn" id="speedBtn" onclick="cycleSpeed()" title="재생 속도 조절">1.0x</button>
+                        <div class="volume-control" title="볼륨 조절">
+                            <span style="font-size: 0.85rem;">🔊</span>
+                            <input type="range" class="volume-slider" min="0" max="1" step="0.05" value="1" oninput="setVolume(this.value)">
+                        </div>
+                    </div>
+                </div>
+                <div class="player-status-msg" id="playerStatusMsg">재생 버튼을 누르면 오늘의 5분 음성 브리핑이 시작됩니다.</div>
+            </div>
         </header>
 
         <!-- AFFIRMATION SECTION -->
@@ -169,9 +448,9 @@
             <button id="btn-zh" class="tab-btn" onclick="switchTab('zh')">🇨🇳 中文</button>
         </div>
         <div class="script-container">
-            <div id="content-ko" class="script-content active">안녕하십니까. 2026년 10월 16일, 데일리 모닝 인텔리전스 브리핑을 시작하겠습니다.<br><br>오늘 하루를 준비하시는 여러분을 위해, 어제부터 밤사이 일어난 핵심 뉴스와 글로벌 동향을 심도 있게 전해드립니다.<br><br>본 브리핑은 인공지능 기술과 논문 동향, 유튜브 테크 트렌드, 글로벌 거시 경제와 지정학적 이슈, 그리고 아침 긍정 명상 순서로 진행됩니다.<br><br>그럼 첫 번째 소식부터 자세히 살펴보겠습니다.<br><br><br><br>첫 번째 섹션, 최신 인공지능과 IT 기술, 그리고 연구 논문 동향입니다.<br><br>먼저 가장 눈에 띄는 AI 주요 소식입니다.<br><br>가장 헤드라인을 장식한 뉴스로는, AI·머신러닝의 판을 바꾸는 16가지 오픈소스 프로젝트 소식이 있습니다.<br><br>이어서 주목할 만한 소식으로 브로드컴·오픈AI, 자체 AI 추론용 칩 '할라페뇨' 공개에 대한 내용이 보고되었습니다.<br><br>또한 AI·소프트웨어 특허, 김용덕 변리사의 수행경력 관련 동향도 포착되어, 업계 관계자들의 면밀한 분석이 이어지고 있습니다.<br><br><br><br>다음은 학계에서 주목받고 있는 최신 AI 머신러닝 논문 소식입니다.<br><br>오늘 새롭게 발표된 주요 논문으로는, Modeling and Understanding Neural Weights of Humanoid Policies with Diffusion 연구가 학계의 높은 관심을 받고 있습니다.<br><br><br><br>다음은 유튜브 테크 트렌드입니다.<br><br>Two Minute Papers 채널에서는 OpenAI’s New AI Is Doing Things We Barely Understand 영상을 공개하여 기술적인 분석과 함께 높은 조회수를 기록하고 있습니다.<br><br>Two Minute Papers 채널에서는 DeepSeek Solved AI’s Memory Problem 영상을 공개하여 기술적인 분석과 함께 높은 조회수를 기록하고 있습니다.<br><br><br><br>두 번째 섹션, 글로벌 거시 경제 및 군사 안보 동향입니다.<br><br>글로벌 경제 및 금융 시장의 주요 소식입니다.<br><br>가장 핵심적인 매크로 경제 지표 관련 뉴스로, 8월 글로벌 경제 및 금융시장 전망 : 글로벌 중앙은행 긴축 조짐, 더욱 커질 시장 변동성 소식이 시장의 주목을 받고 있습니다.<br><br>아울러 투자자들의 이목이 쏠린 美 기준금리 4% 시대... 대출·투자 어떻게 하나 소식이 전해지면서, 관련 자산군의 가격 흐름에 영향을 줄 가능성이 높습니다.<br><br>추가적으로 금융시장에서 미국 금리 오르면 한국은 어디부터 흔들리나…대출·환율·증시 동시 압박에 관한 분석 보고서가 나오며 투자 심리에 변수로 작용할 전망입니다.<br><br><br><br>국제 외교 및 국방 분야에서는 [기고] 유럽전쟁 교훈 '방산이 곧 전력이다' 관련 소식이 가장 중요한 사안으로 대두되었습니다.<br><br>또한 지역 안보와 관련해 한·필리핀 국방장관, 군사교류 넓히고 방산 협력 강화키로 사태가 지속되며 긴장감을 늦출 수 없는 상황입니다.<br><br><br><br>세 번째 섹션, 오늘 하루 성공적인 비즈니스를 위해 반드시 체크해야 할 관전 포인트입니다.<br><br>첫째, 글로벌 빅테크 기업들의 신규 AI 모델 성능 공개 여부와 최신 논문들의 응용 가능성을 지속적으로 모니터링해야 합니다.<br><br>둘째, 원달러 환율의 단기 변동성과 주요국 중앙은행의 기준금리 관련 발언을 주시하시기 바랍니다.<br><br>셋째, 지정학적 이슈와 글로벌 무역 규제 동향에 따른 경제적 파급 효과를 주의 깊게 살피시길 권해드립니다.<br><br><br><br>마지막으로, 당신의 하루를 눈부시게 밝혀줄 오늘의 긍정 확언입니다.<br><br>편안하게 숨을 들이마시고 내쉬며, 이 문장을 마음속으로 세 번 되뇌어 보십시오.<br><br>'오늘은 내 인생의 가장 멋진 기회들이 찾아오는 하루가 될 것이다.'<br><br>오늘 하루도 당신의 잠재력을 마음껏 발휘하시기를 바라며, 이상으로 오늘의 모닝 브리핑을 모두 마치겠습니다. 대단히 감사합니다.</div>
-            <div id="content-en" class="script-content">hello.We will begin the Daily Morning Intelligence Briefing on October 16, 2026.<br><br>For those of you preparing for today, we provide in-depth information on key news and global trends that have occurred from yesterday to overnight.<br><br>This briefing will be conducted in the following order: artificial intelligence technology and paper trends, YouTube tech trends, global macroeconomic and geopolitical issues, and morning positive meditation.<br><br>Now, let’s take a closer look, starting with the first news.<br><br><br><br>The first section is about the latest artificial intelligence and IT technologies, and research paper trends.<br><br>First, the most notable AI news.<br><br>Among the most headline-making news, there are 16 open source projects that are changing the game of AI and machine learning.<br><br>Next, noteworthy news was reported about Broadcom and OpenAI unveiling their own AI inference chip ‘Jalapeño’.<br><br>In addition, trends related to AI/software patents and patent attorney Kim Yong-deok's performance experience have been captured, and industry officials are continuing to closely analyze them.<br><br><br><br>The following is news about the latest AI machine learning papers that are attracting attention in academia.<br><br>As a major newly published paper today, the study Modeling and Understanding Neural Weights of Humanoid Policies with Diffusion is receiving a lot of attention from the academic world.<br><br><br><br>Below are YouTube tech trends.<br><br>The Two Minute Papers channel has released the OpenAI’s New AI Is Doing Things We Barely Understand video, which is receiving high views along with technical analysis.<br><br>The Two Minute Papers channel has released a video called DeepSeek Solved AI’s Memory Problem, which is receiving high views along with technical analysis.<br><br><br><br>The second section is global macroeconomic and military security trends.<br><br>Key news from the global economy and financial markets.<br><br>As for news related to the most core macro economic indicators, the global economic and financial market outlook for August: signs of global central bank tightening and news of further market volatility are attracting market attention.<br><br>In addition, the era of the US base interest rate of 4% attracted the attention of investors... As news about loans and investments spreads, it is highly likely that it will affect the price trends of related asset classes.<br><br>Additionally, if US interest rates rise in the financial market, where will Korea start to shake?An analysis report on the simultaneous pressure on loans, exchange rates, and the stock market is coming out, and it is expected to act as a variable in investment sentiment.<br><br><br><br>In the field of international diplomacy and national defense, the news related to [Contribution] Lessons learned from the European War, ‘Defense industry is power,’ has emerged as the most important issue.<br><br>In addition, regarding regional security, the Korean and Philippine defense ministers agreed to expand military exchanges and strengthen defense industry cooperation. As the situation continues, tensions cannot be eased.<br><br><br><br>The third section is the observation points that must be checked for a successful business today.<br><br>First, we must continuously monitor whether global big tech companies disclose new AI model performance and the applicability of the latest papers.<br><br>Second, please keep an eye on the short-term volatility of the won-dollar exchange rate and statements regarding base interest rates by central banks in major countries.<br><br>Third, we recommend that you carefully examine the economic ramifications of geopolitical issues and global trade regulation trends.<br><br><br><br>Lastly, here is a positive affirmation of the day that will brighten your day.<br><br>Breathe in and out comfortably and repeat this sentence in your mind three times.<br><br>'Today will be the day when the greatest opportunities of my life come.'<br><br>I hope you unleash your full potential today, and this concludes today's morning briefing.thank you so much.</div>
-            <div id="content-zh" class="script-content">你好。我们将于 2026 年 10 月 16 日开始每日早间情报简报。<br><br>对于那些为今天做准备的人，我们提供有关从昨天到隔夜发生的关键新闻和全球趋势的深入信息。<br><br>本次简报将按照以下顺序进行：人工智能技术和论文趋势、YouTube技术趋势、全球宏观经济和地缘政治问题以及晨间积极冥想。<br><br>现在，让我们仔细看看，从第一个新闻开始。<br><br><br><br>第一部分介绍最新的人工智能和IT技术以及研究论文趋势。<br><br>首先，最引人注目的人工智能新闻。<br><br>在最热门的新闻中，有 16 个开源项目正在改变人工智能和机器学习的游戏规则。<br><br>接下来，有值得注意的消息报道，博通和 OpenAI 推出了自己的人工智能推理芯片“Jalapeño”。<br><br>此外，还掌握了与人工智能/软件专利相关的趋势以及专利律师金永德的业绩经验，行业官员正在继续密切分析它们。<br><br><br><br>以下是学术界关注的最新人工智能机器学习论文的新闻。<br><br>作为今天新发表的一篇重要论文，《利用扩散对人形策略的神经权重进行建模和理解》研究受到了学术界的广泛关注。<br><br><br><br>以下是 YouTube 技术趋势。<br><br>两分钟论文频道发布了 OpenAI 的《新人工智能正在做我们几乎无法理解的事情》视频，该视频和技术分析都获得了很高的观看次数。<br><br>两分钟论文频道发布了一段名为《DeepSeek 解决了人工智能的内存问题》的视频，该视频和技术分析都获得了很高的观看次数。<br><br><br><br>第二部分是全球宏观经济和军事安全趋势。<br><br>来自全球经济和金融市场的重要新闻。<br><br>与最核心宏观经济指标相关的消息方面，8月份全球经济金融市场展望：全球央行紧缩迹象以及市场进一步波动的消息正吸引市场关注。<br><br>此外，美国4%基础利率时代也吸引了投资者的关注……随着贷款和投资消息传出，极有可能影响相关资产类别的价格走势。<br><br>另外，如果美国金融市场利率上升，韩国会从哪里开始动摇呢？贷款、汇率、股市同时承压的分析报告即将出炉，预计将成为投资情绪的变量。<br><br><br><br>在国际外交和国防领域，有关欧洲战争教训“国防工业就是力量”的新闻成为最重要的话题。<br><br>此外，在地区安全方面，韩国和菲律宾国防部长同意扩大军事交流，加强国防工业合作。随着局势持续发展，紧张局势无法缓和。<br><br><br><br>第三部分是当今成功企业必须检查的观察点。<br><br>首先，我们必须持续监控全球大型科技公司是否披露新的人工智能模型性能以及最新论文的适用性。<br><br>其次，请关注韩元兑美元汇率短期波动以及主要国家央行基准利率表态。<br><br>第三，我们建议您仔细审视地缘政治问题和全球贸易监管趋势的经济影响。<br><br><br><br>最后，这是对这一天的积极肯定，这将使您的一天变得更加美好。<br><br>舒适地吸气和呼气，在心里重复这句话三遍。<br><br>“今天将是我一生中最大的机会到来的一天。”<br><br>我希望你们今天充分发挥潜力，今天的上午简报到此结束。太感谢了。</div>
+            <div id="content-ko" class="script-content active">안녕하십니까. 2026년 10월 16일, 데일리 모닝 인텔리전스 브리핑을 시작하겠습니다.<br><br>오늘 하루를 준비하시는 여러분을 위해, 어제부터 밤사이 일어난 핵심 뉴스와 글로벌 동향을 심도 있게 전해드립니다.<br><br>본 브리핑은 인공지능 기술과 논문 동향, 유튜브 테크 트렌드, 글로벌 거시 경제와 지정학적 이슈, 그리고 아침 긍정 명상 순서로 진행됩니다.<br><br>그럼 첫 번째 소식부터 자세히 살펴보겠습니다.<br><br><br><br>첫 번째 섹션, 최신 인공지능과 IT 기술, 그리고 연구 논문 동향입니다.<br><br>먼저 가장 눈에 띄는 AI 주요 소식입니다.<br><br>가장 헤드라인을 장식한 뉴스로는, AI·머신러닝의 판을 바꾸는 16가지 오픈소스 프로젝트 소식이 있습니다.<br><br>이어서 주목할 만한 소식으로 브로드컴·오픈AI, 자체 AI 추론용 칩 '할라페뇨' 공개에 대한 내용이 보고되었습니다.<br><br>또한 AI·소프트웨어 특허, 김용덕 변리사의 수행경력 관련 동향도 포착되어, 업계 관계자들의 면밀한 분석이 이어지고 있습니다.<br><br><br><br>다음은 학계에서 주목받고 있는 최신 AI 머신러닝 논문 소식입니다.<br><br>오늘 새롭게 발표된 주요 논문으로는, Modeling and Understanding Neural Weights of Humanoid Policies with Diffusion 연구가 학계의 높은 관심을 받고 있습니다.<br><br><br><br>다음은 유튜브 테크 트렌드입니다.<br><br>Two Minute Papers 채널에서는 OpenAI’s New AI Is Doing Things We Barely Understand 영상을 공개하여 기술적인 분석과 함께 높은 조회수를 기록하고 있습니다.<br><br>Two Minute Papers 채널에서는 DeepSeek Solved AI’s Memory Problem 영상을 공개하여 기술적인 분석과 함께 높은 조회수를 기록하고 있습니다.<br><br><br><br>두 번째 섹션, 글로벌 거시 경제 및 군사 안보 동향입니다.<br><br>글로벌 경제 및 금융 시장의 주요 소식입니다.<br><br>가장 핵심적인 매크로 경제 지표 관련 뉴스로, 8월 글로벌 경제 및 금융시장 전망 : 글로벌 중앙은행 긴축 조짐, 더욱 커질 시장 변동성 소식이 시장의 주목을 받고 있습니다.<br><br>아울러 투자자들의 이목이 쏠린 美 기준금리 4% 시대... 대출·투자 어떻게 하나 소식이 전해지면서, 관련 자산군의 가격 흐름에 영향을 줄 가능성이 높습니다.<br><br>추가적으로 금융시장에서 미국 금리 오르면 한국은 어디부터 흔들리나…대출·환율·증시 동시 압박에 관한 분석 보고서가 나오며 투자 심리에 변수로 작용할 전망입니다.<br><br><br><br>국제 외교 및 국방 분야에서는 한·필리핀 국방장관, 군사교류 넓히고 방산 협력 강화키로 관련 소식이 가장 중요한 사안으로 대두되었습니다.<br><br>또한 지역 안보와 관련해 [글로벌 방산] 도미니카공화국 독립회복일: 한국전쟁 시기 27만 5,200달러…중남미 3위 규모의 지원국 도미니카 사태가 지속되며 긴장감을 늦출 수 없는 상황입니다.<br><br><br><br>세 번째 섹션, 오늘 하루 성공적인 비즈니스를 위해 반드시 체크해야 할 관전 포인트입니다.<br><br>첫째, 글로벌 빅테크 기업들의 신규 AI 모델 성능 공개 여부와 최신 논문들의 응용 가능성을 지속적으로 모니터링해야 합니다.<br><br>둘째, 원달러 환율의 단기 변동성과 주요국 중앙은행의 기준금리 관련 발언을 주시하시기 바랍니다.<br><br>셋째, 지정학적 이슈와 글로벌 무역 규제 동향에 따른 경제적 파급 효과를 주의 깊게 살피시길 권해드립니다.<br><br><br><br>마지막으로, 당신의 하루를 눈부시게 밝혀줄 오늘의 긍정 확언입니다.<br><br>편안하게 숨을 들이마시고 내쉬며, 이 문장을 마음속으로 세 번 되뇌어 보십시오.<br><br>'오늘은 내 인생의 가장 멋진 기회들이 찾아오는 하루가 될 것이다.'<br><br>오늘 하루도 당신의 잠재력을 마음껏 발휘하시기를 바라며, 이상으로 오늘의 모닝 브리핑을 모두 마치겠습니다. 대단히 감사합니다.</div>
+            <div id="content-en" class="script-content">hello.We will begin the Daily Morning Intelligence Briefing on October 16, 2026.<br><br>For those of you preparing for today, we provide in-depth information on key news and global trends that have occurred from yesterday to overnight.<br><br>This briefing will be conducted in the following order: artificial intelligence technology and paper trends, YouTube tech trends, global macroeconomic and geopolitical issues, and morning positive meditation.<br><br>Now, let’s take a closer look, starting with the first news.<br><br><br><br>The first section is about the latest artificial intelligence and IT technologies, and research paper trends.<br><br>First, the most notable AI news.<br><br>Among the most headline-making news, there are 16 open source projects that are changing the game of AI and machine learning.<br><br>Next, noteworthy news was reported about Broadcom and OpenAI unveiling their own AI inference chip ‘Jalapeño’.<br><br>In addition, trends related to AI/software patents and patent attorney Kim Yong-deok's performance experience have been captured, and industry officials are continuing to closely analyze them.<br><br><br><br>The following is news about the latest AI machine learning papers that are attracting attention in academia.<br><br>As a major newly published paper today, the study Modeling and Understanding Neural Weights of Humanoid Policies with Diffusion is receiving a lot of attention from the academic world.<br><br><br><br>Below are YouTube tech trends.<br><br>The Two Minute Papers channel has released the OpenAI’s New AI Is Doing Things We Barely Understand video, which is receiving high views along with technical analysis.<br><br>The Two Minute Papers channel has released a video called DeepSeek Solved AI’s Memory Problem, which is receiving high views along with technical analysis.<br><br><br><br>The second section is global macroeconomic and military security trends.<br><br>Key news from the global economy and financial markets.<br><br>As for news related to the most core macro economic indicators, the global economic and financial market outlook for August: signs of global central bank tightening and news of further market volatility are attracting market attention.<br><br>In addition, the era of the US base interest rate of 4% attracted the attention of investors... As news about loans and investments spreads, it is highly likely that it will affect the price trends of related asset classes.<br><br>Additionally, if US interest rates rise in the financial market, where will Korea start to shake?An analysis report on the simultaneous pressure on loans, exchange rates, and the stock market is coming out, and it is expected to act as a variable in investment sentiment.<br><br><br><br>In the field of international diplomacy and defense, the news that the Korean and Philippine defense ministers agreed to expand military exchanges and strengthen defense industry cooperation emerged as the most important issue.<br><br>Also, regarding regional security, [Global Defense Industry] Dominican Republic Independence Recovery Day: $275,200 during the Korean War...As the crisis in Dominica, the third largest donor country in Latin America, continues, tensions cannot be eased.<br><br><br><br>The third section is the observation points that must be checked for a successful business today.<br><br>First, we must continuously monitor whether global big tech companies disclose new AI model performance and the applicability of the latest papers.<br><br>Second, please keep an eye on the short-term volatility of the won-dollar exchange rate and statements regarding base interest rates by central banks in major countries.<br><br>Third, we recommend that you carefully examine the economic ramifications of geopolitical issues and global trade regulation trends.<br><br><br><br>Lastly, here is a positive affirmation of the day that will brighten your day.<br><br>Breathe in and out comfortably and repeat this sentence in your mind three times.<br><br>'Today will be the day when the greatest opportunities of my life come.'<br><br>I hope you unleash your full potential today, and this concludes today's morning briefing.thank you so much.</div>
+            <div id="content-zh" class="script-content">你好。我们将于 2026 年 10 月 16 日开始每日早间情报简报。<br><br>对于那些为今天做准备的人，我们提供有关从昨天到隔夜发生的关键新闻和全球趋势的深入信息。<br><br>本次简报将按照以下顺序进行：人工智能技术和论文趋势、YouTube技术趋势、全球宏观经济和地缘政治问题以及晨间积极冥想。<br><br>现在，让我们仔细看看，从第一个新闻开始。<br><br><br><br>第一部分介绍最新的人工智能和IT技术以及研究论文趋势。<br><br>首先，最引人注目的人工智能新闻。<br><br>在最热门的新闻中，有 16 个开源项目正在改变人工智能和机器学习的游戏规则。<br><br>接下来，有值得注意的消息报道，博通和 OpenAI 推出了自己的人工智能推理芯片“Jalapeño”。<br><br>此外，还掌握了与人工智能/软件专利相关的趋势以及专利律师金永德的业绩经验，行业官员正在继续密切分析它们。<br><br><br><br>以下是学术界关注的最新人工智能机器学习论文的新闻。<br><br>作为今天新发表的一篇重要论文，《利用扩散对人形策略的神经权重进行建模和理解》研究受到了学术界的广泛关注。<br><br><br><br>以下是 YouTube 技术趋势。<br><br>两分钟论文频道发布了 OpenAI 的《新人工智能正在做我们几乎无法理解的事情》视频，该视频和技术分析都获得了很高的观看次数。<br><br>两分钟论文频道发布了一段名为《DeepSeek 解决了人工智能的内存问题》的视频，该视频和技术分析都获得了很高的观看次数。<br><br><br><br>第二部分是全球宏观经济和军事安全趋势。<br><br>来自全球经济和金融市场的重要新闻。<br><br>与最核心宏观经济指标相关的消息方面，8月份全球经济金融市场展望：全球央行紧缩迹象以及市场进一步波动的消息正吸引市场关注。<br><br>此外，美国4%基础利率时代也吸引了投资者的关注……随着贷款和投资消息传出，极有可能影响相关资产类别的价格走势。<br><br>另外，如果美国金融市场利率上升，韩国会从哪里开始动摇呢？贷款、汇率、股市同时承压的分析报告即将出炉，预计将成为投资情绪的变量。<br><br><br><br>在国际外交和防务领域，韩国和菲律宾国防部长同意扩大军事交流、加强国防工业合作的消息成为最重要的话题。<br><br>另外，关于地区安全，【全球国防工业】多米尼加共和国独立恢复日：朝鲜战争期间275,200美元……随着拉美第三大捐助国多米尼加危机持续，紧张局势无法缓解。<br><br><br><br>第三部分是当今成功企业必须检查的观察点。<br><br>首先，我们必须持续监控全球大型科技公司是否披露新的人工智能模型性能以及最新论文的适用性。<br><br>其次，请关注韩元兑美元汇率短期波动以及主要国家央行基准利率表态。<br><br>第三，我们建议您仔细审视地缘政治问题和全球贸易监管趋势的经济影响。<br><br><br><br>最后，这是对这一天的积极肯定，这将使您的一天变得更加美好。<br><br>舒适地吸气和呼气，在心里重复这句话三遍。<br><br>“今天将是我一生中最大的机会到来的一天。”<br><br>我希望你们今天充分发挥潜力，今天的上午简报到此结束。太感谢了。</div>
         </div>
 
         <article class="page-card">
@@ -276,8 +555,8 @@
                 
                 <div class="news-item">
                     <span class="source-badge badge-yt">YouTube</span>
-                    <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UZGpaa2FhU3J6cHFFTFFDY1R6bFFNZWVnaGFZNVVLRkNWdl85WE8wZXJXZjlBamo3WWtwX2JnTEhXTlRxNEwtZHVTV21Mb3ZRSmxXVU9R?oc=5" target="_blank" class="news-link">"삼전닉스, 못하는 게 아니라 안 하는 것"…CXMT 쇼크에 냉정한 분석 [지금이뉴스] / YTN</a>
-                    <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UZGpaa2FhU3J6cHFFTFFDY1R6bFFNZWVnaGFZNVVLRkNWdl85WE8wZXJXZjlBamo3WWtwX2JnTEhXTlRxNEwtZHVTV21Mb3ZRSmxXVU9R?oc=5" target="_blank" class="detail-btn">유튜브 시청 &rarr;</a>
+                    <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE44djExdUFhTEtoNlpBRU1GeGlRRG1rcVQ0bGtCeHpGMkJPbGxfSHY2SHl4VVk5M3hlQnJqNlREWFp4eVpjeF9yV0VfOUp5dGtqYUZBV0hB?oc=5" target="_blank" class="news-link">하이닉스 콕 집은 월가의 전설…시퍼렇게 물든 코스피는 기회? [지금이뉴스] / YTN</a>
+                    <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE44djExdUFhTEtoNlpBRU1GeGlRRG1rcVQ0bGtCeHpGMkJPbGxfSHY2SHl4VVk5M3hlQnJqNlREWFp4eVpjeF9yV0VfOUp5dGtqYUZBV0hB?oc=5" target="_blank" class="detail-btn">유튜브 시청 &rarr;</a>
                 </div>
                 
             
@@ -296,15 +575,15 @@
                 </div>
                 
                 <div class="news-item">
-                    <span class="source-badge badge-news">디일렉</span>
-                    <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1INTRBRGYzdzZSN19neHBKMWh6YUpvVDZFSDMzMVNuZkVWNlFsRlVRZHE3Q2RmaFF3TDFWZFJuY2N4QnptSDVhakhHdmNvb2t2cXZEcWJ6X1l6R2lkYkx1N0NudVJsUQ?oc=5" target="_blank" class="news-link">SK, 글로벌 빅테크들과 AI 인프라 협력 확대</a>
-                    <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1INTRBRGYzdzZSN19neHBKMWh6YUpvVDZFSDMzMVNuZkVWNlFsRlVRZHE3Q2RmaFF3TDFWZFJuY2N4QnptSDVhakhHdmNvb2t2cXZEcWJ6X1l6R2lkYkx1N0NudVJsUQ?oc=5" target="_blank" class="detail-btn">기사 읽기 &rarr;</a>
-                </div>
-                
-                <div class="news-item">
                     <span class="source-badge badge-news">지디넷코리아</span>
                     <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9tOF9hSlYtSng1OG8ybG93ZDcwRnRsRXVxeU5xLTJRNzdaZGRmY3ltQWU0cXdwR0VLNWhJby0zUTNpWFc5cUpKaHpRakFUeXlmTjgwdnRn?oc=5" target="_blank" class="news-link">[AI 고속도로] 빅테크 AI 투자 1200조원…패권 경쟁 승부처는 인프라</a>
                     <a href="https://news.google.com/rss/articles/CBMiVkFVX3lxTE9tOF9hSlYtSng1OG8ybG93ZDcwRnRsRXVxeU5xLTJRNzdaZGRmY3ltQWU0cXdwR0VLNWhJby0zUTNpWFc5cUpKaHpRakFUeXlmTjgwdnRn?oc=5" target="_blank" class="detail-btn">기사 읽기 &rarr;</a>
+                </div>
+                
+                <div class="news-item">
+                    <span class="source-badge badge-news">디일렉</span>
+                    <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1INTRBRGYzdzZSN19neHBKMWh6YUpvVDZFSDMzMVNuZkVWNlFsRlVRZHE3Q2RmaFF3TDFWZFJuY2N4QnptSDVhakhHdmNvb2t2cXZEcWJ6X1l6R2lkYkx1N0NudVJsUQ?oc=5" target="_blank" class="news-link">SK, 글로벌 빅테크들과 AI 인프라 협력 확대</a>
+                    <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1INTRBRGYzdzZSN19neHBKMWh6YUpvVDZFSDMzMVNuZkVWNlFsRlVRZHE3Q2RmaFF3TDFWZFJuY2N4QnptSDVhakhHdmNvb2t2cXZEcWJ6X1l6R2lkYkx1N0NudVJsUQ?oc=5" target="_blank" class="detail-btn">기사 읽기 &rarr;</a>
                 </div>
                 
                 <div class="news-item">
@@ -358,12 +637,6 @@
             <div class="section-title">🛡️ 군사 · 국방 안보 & 지정학 이슈 (Military & Geopolitics)</div>
             
                 <div class="news-item">
-                    <span class="source-badge badge-news">뉴스핌</span>
-                    <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE42STFXWUdqNGxTSkhzendUdEVHdEE1UEZoQ01kNkhtMzVtUk1McU9GRVBiemhDRDQ1LS1EWGo3X1FtMGdSVXdodGloVHFRQXByaTVEQS1kVEZXNXVT?oc=5" target="_blank" class="news-link">[기고] 유럽전쟁 교훈 '방산이 곧 전력이다'</a>
-                    <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE42STFXWUdqNGxTSkhzendUdEVHdEE1UEZoQ01kNkhtMzVtUk1McU9GRVBiemhDRDQ1LS1EWGo3X1FtMGdSVXdodGloVHFRQXByaTVEQS1kVEZXNXVT?oc=5" target="_blank" class="detail-btn">기사 읽기 &rarr;</a>
-                </div>
-                
-                <div class="news-item">
                     <span class="source-badge badge-news">㈜한국탑뉴스</span>
                     <a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE5WdDlQX0JacHRLS3VEZzdha1VOdVBLNzBTeDJuVWM0WF85dHV4VXZJUjhpdXdIRVZBZDJPck1xSU1TOVJjOFF4ZzZ1NHBWTlJhaDZQaXRwRUY2UklTMnhmYzdR?oc=5" target="_blank" class="news-link">한·필리핀 국방장관, 군사교류 넓히고 방산 협력 강화키로</a>
                     <a href="https://news.google.com/rss/articles/CBMiYkFVX3lxTE5WdDlQX0JacHRLS3VEZzdha1VOdVBLNzBTeDJuVWM0WF85dHV4VXZJUjhpdXdIRVZBZDJPck1xSU1TOVJjOFF4ZzZ1NHBWTlJhaDZQaXRwRUY2UklTMnhmYzdR?oc=5" target="_blank" class="detail-btn">기사 읽기 &rarr;</a>
@@ -376,15 +649,21 @@
                 </div>
                 
                 <div class="news-item">
-                    <span class="source-badge badge-news">경인방송 뉴스</span>
-                    <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5jUG9vMVFmZUszREMtelgtc04xOHcxc1Nva3c0R2RfeFJXQXhiZlBRQmJFUjFCY0g3bzZVZEtIbm5iWUZxOFY1NGVrcDlmQWJUWTRYS2hHYWlXM25EWnNvaThJb1o?oc=5" target="_blank" class="news-link">K-방산 수주 잔고 110조 돌파…"글로벌 안보 위기 속 품귀 현상" [굿모닝 인천 - 국방 헤드라인]</a>
-                    <a href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE5jUG9vMVFmZUszREMtelgtc04xOHcxc1Nva3c0R2RfeFJXQXhiZlBRQmJFUjFCY0g3bzZVZEtIbm5iWUZxOFY1NGVrcDlmQWJUWTRYS2hHYWlXM25EWnNvaThJb1o?oc=5" target="_blank" class="detail-btn">기사 읽기 &rarr;</a>
-                </div>
-                
-                <div class="news-item">
                     <span class="source-badge badge-news">신아일보</span>
                     <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBiMEV4VU5hUmhZVGY4dHZTNTBZSXdVd1E4ZEF1NXVxOVI5a3p2WXRrX2xibWt2RlJIV2N1UlVjaUJSSWdvdzR2Q2cwRmFwcGtGODNtVEQ5R2VYU1ZxdGsycmhuMzZXNURGSEoyTnVodE4?oc=5" target="_blank" class="news-link">한·인도 군 수뇌부 통화…군사교류·방산협력 확대</a>
                     <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBiMEV4VU5hUmhZVGY4dHZTNTBZSXdVd1E4ZEF1NXVxOVI5a3p2WXRrX2xibWt2RlJIV2N1UlVjaUJSSWdvdzR2Q2cwRmFwcGtGODNtVEQ5R2VYU1ZxdGsycmhuMzZXNURGSEoyTnVodE4?oc=5" target="_blank" class="detail-btn">기사 읽기 &rarr;</a>
+                </div>
+                
+                <div class="news-item">
+                    <span class="source-badge badge-news">뉴스핌</span>
+                    <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE42STFXWUdqNGxTSkhzendUdEVHdEE1UEZoQ01kNkhtMzVtUk1McU9GRVBiemhDRDQ1LS1EWGo3X1FtMGdSVXdodGloVHFRQXByaTVEQS1kVEZXNXVT?oc=5" target="_blank" class="news-link">[기고] 유럽전쟁 교훈 '방산이 곧 전력이다'</a>
+                    <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE42STFXWUdqNGxTSkhzendUdEVHdEE1UEZoQ01kNkhtMzVtUk1McU9GRVBiemhDRDQ1LS1EWGo3X1FtMGdSVXdodGloVHFRQXByaTVEQS1kVEZXNXVT?oc=5" target="_blank" class="detail-btn">기사 읽기 &rarr;</a>
+                </div>
+                
+                <div class="news-item">
+                    <span class="source-badge badge-news">아주경제</span>
+                    <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1pTU9VNUtWZXpIOXZKenpMdG9ZU2lvRzZCTmhuMVlGbS1kcTl3MWstWWhfelJMVElxUXdsYk94WlUtcFhXUDdEV2dtMFh4U3RtY3JhMkxHVzFCUdIBWEFVX3lxTFBMaEJ3c2ZBUlZFSnJGWmZxRFhxbVVTUEFLNHQ5S1kxY0NkeU1zbGNKejFjWjk4R2dpTk1FLWZfcXdLeS1nTVUta0llLVhxRWp0QkQzakVwMVg?oc=5" target="_blank" class="news-link">[전문가 기고] 韓-EU 협력, 방산을 넘어 안보 전략으로</a>
+                    <a href="https://news.google.com/rss/articles/CBMiWkFVX3lxTE1pTU9VNUtWZXpIOXZKenpMdG9ZU2lvRzZCTmhuMVlGbS1kcTl3MWstWWhfelJMVElxUXdsYk94WlUtcFhXUDdEV2dtMFh4U3RtY3JhMkxHVzFCUdIBWEFVX3lxTFBMaEJ3c2ZBUlZFSnJGWmZxRFhxbVVTUEFLNHQ5S1kxY0NkeU1zbGNKejFjWjk4R2dpTk1FLWZfcXdLeS1nTVUta0llLVhxRWp0QkQzakVwMVg?oc=5" target="_blank" class="detail-btn">기사 읽기 &rarr;</a>
                 </div>
                 
             <div class="section-title">🌍 국제 외교 & 글로벌 주요 뉴스 (World Diplomacy)</div>

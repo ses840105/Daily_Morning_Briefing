@@ -14,12 +14,32 @@ class TTSEngine:
 
     def save_audio(self, text: str, output_path: str) -> bool:
         """
-        대본을 오디오 파일(.m4a / .mp3)로 변환 저장
+        대본을 오디오 파일(.mp3 및 .m4a)로 변환 저장
+        gTTS로 MP3를 생성한 후, macOS 환경의 경우 afconvert를 통해 정품 AAC .m4a로 변환하여
+        Safari, Chrome 등 모든 브라우저 및 플레이어 호환성을 100% 확보합니다.
         """
         os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
+        base_path = output_path.rsplit('.', 1)[0]
+        mp3_path = base_path + ".mp3"
+        m4a_path = base_path + ".m4a"
+
         try:
             tts = gTTS(text=text, lang=self.lang, slow=False)
-            tts.save(output_path)
+            tts.save(mp3_path)
+            
+            # macOS afconvert로 AAC .m4a 변환
+            try:
+                subprocess.run(
+                    ["afconvert", "-f", "m4af", "-d", "aac", mp3_path, m4a_path],
+                    check=True,
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL
+                )
+            except Exception:
+                if mp3_path != m4a_path:
+                    import shutil
+                    shutil.copy(mp3_path, m4a_path)
+
             return os.path.exists(output_path)
         except Exception as e:
             print(f"[TTSEngine] Error saving audio file with gTTS: {e}")

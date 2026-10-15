@@ -151,6 +151,157 @@ class PaperBuilder:
             padding: 10px 20px; border-radius: 20px; font-size: 1rem; font-weight: bold; cursor: pointer; margin-top: 15px; transition: background 0.2s;
         }}
         .play-btn:hover {{ background: #1d4ed8; }}
+
+        /* Modern Audio Player Card */
+        .audio-player-card {{
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 20px auto 10px auto;
+            max-width: 760px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.25);
+            text-align: left;
+            border: 1px solid #334155;
+        }}
+        .player-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }}
+        .player-title {{
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #93c5fd;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }}
+        .player-badge {{
+            background: rgba(59, 130, 246, 0.25);
+            border: 1px solid #3b82f6;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            color: #bfdbfe;
+            font-weight: 600;
+        }}
+        .progress-container {{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }}
+        .time-text {{
+            font-size: 0.85rem;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            color: #94a3b8;
+            min-width: 45px;
+        }}
+        .progress-bar-slider {{
+            flex-grow: 1;
+            height: 6px;
+            border-radius: 3px;
+            background: #334155;
+            outline: none;
+            cursor: pointer;
+            -webkit-appearance: none;
+        }}
+        .progress-bar-slider::-webkit-slider-thumb {{
+            -webkit-appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #38bdf8;
+            cursor: pointer;
+            box-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+        }}
+        .player-controls {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }}
+        .controls-main {{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }}
+        .ctrl-btn {{
+            background: #334155;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 38px;
+            height: 38px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 0.95rem;
+        }}
+        .ctrl-btn:hover {{
+            background: #475569;
+            transform: scale(1.06);
+        }}
+        .ctrl-btn-play {{
+            background: #2563eb;
+            width: 48px;
+            height: 48px;
+            font-size: 1.25rem;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+        }}
+        .ctrl-btn-play:hover {{
+            background: #1d4ed8;
+        }}
+        .controls-extra {{
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }}
+        .speed-btn {{
+            background: rgba(255, 255, 255, 0.1);
+            color: #e2e8f0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.2s;
+        }}
+        .speed-btn:hover {{
+            background: rgba(255, 255, 255, 0.2);
+        }}
+        .volume-control {{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }}
+        .volume-slider {{
+            width: 75px;
+            height: 5px;
+            -webkit-appearance: none;
+            background: #334155;
+            border-radius: 3px;
+        }}
+        .volume-slider::-webkit-slider-thumb {{
+            -webkit-appearance: none;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #94a3b8;
+            cursor: pointer;
+        }}
+        .player-status-msg {{
+            font-size: 0.82rem;
+            color: #94a3b8;
+            margin-top: 10px;
+            text-align: center;
+        }}
         
         .tabs {{ display: flex; gap: 10px; margin-bottom: -1px; position: relative; z-index: 10; }}
         .tab-btn {{
@@ -206,27 +357,97 @@ class PaperBuilder:
     </style>
     <script>
         let currentLang = 'ko';
-        function switchTab(lang) {{
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.script-content').forEach(content => content.classList.remove('active'));
-            
-            document.getElementById('btn-' + lang).classList.add('active');
-            document.getElementById('content-' + lang).classList.add('active');
-            
-            pauseAllAudio();
-            currentLang = lang;
-            updatePlayButtonUI(false);
+        const langNames = {{ ko: '🇰🇷 한국어 (Korean)', en: '🇺🇸 English', zh: '🇨🇳 中文 (Chinese)' }};
+        let currentRate = 1.0;
+
+        function getActiveAudio() {{
+            return document.getElementById('audio-' + currentLang);
+        }}
+
+        function formatTime(seconds) {{
+            if (isNaN(seconds) || seconds < 0) return '00:00';
+            const m = Math.floor(seconds / 60);
+            const s = Math.floor(seconds % 60);
+            return (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+        }}
+
+        function updatePlayerUI() {{
+            const audio = getActiveAudio();
+            const playBtn = document.getElementById('playMainBtn');
+            const statusBadge = document.getElementById('playerStatusBadge');
+            const titleEl = document.getElementById('playerCurrentTitle');
+            const timeCur = document.getElementById('timeCurrent');
+            const timeDur = document.getElementById('timeDuration');
+            const slider = document.getElementById('progressSlider');
+
+            if (titleEl) titleEl.innerText = '🎙️ 5분 브리핑: ' + langNames[currentLang];
+
+            if (audio.paused) {{
+                if (playBtn) playBtn.innerHTML = '▶️';
+                if (statusBadge) statusBadge.innerText = '준비됨';
+            }} else {{
+                if (playBtn) playBtn.innerHTML = '⏸️';
+                if (statusBadge) statusBadge.innerText = '재생 중...';
+            }}
+
+            if (timeCur) timeCur.innerText = formatTime(audio.currentTime);
+            if (timeDur && audio.duration) timeDur.innerText = formatTime(audio.duration);
+
+            if (slider && audio.duration) {{
+                slider.max = audio.duration;
+                slider.value = audio.currentTime;
+            }}
         }}
 
         function togglePlay() {{
-            const audio = document.getElementById('audio-' + currentLang);
+            const audio = getActiveAudio();
+            const statusMsg = document.getElementById('playerStatusMsg');
             if (audio.paused) {{
                 pauseAllAudio();
-                audio.play();
-                updatePlayButtonUI(true);
+                audio.playbackRate = currentRate;
+                const playPromise = audio.play();
+                if (playPromise !== undefined) {{
+                    playPromise.then(() => {{
+                        updatePlayerUI();
+                        if (statusMsg) statusMsg.innerText = '🔊 오디오가 정상적으로 재생되고 있습니다.';
+                    }}).catch(err => {{
+                        console.error('Audio play error:', err);
+                        updatePlayerUI();
+                        if (statusMsg) statusMsg.innerText = '⚠️ 브라우저 정책으로 인해 재생이 제한되었습니다. 화면을 클릭 후 다시 시도해주세요.';
+                    }});
+                }}
             }} else {{
                 audio.pause();
-                updatePlayButtonUI(false);
+                updatePlayerUI();
+                if (statusMsg) statusMsg.innerText = '일시정지되었습니다.';
+            }}
+        }}
+
+        function seekAudio(val) {{
+            const audio = getActiveAudio();
+            audio.currentTime = parseFloat(val);
+            updatePlayerUI();
+        }}
+
+        function skipTime(delta) {{
+            const audio = getActiveAudio();
+            audio.currentTime = Math.max(0, Math.min(audio.duration || 0, audio.currentTime + delta));
+            updatePlayerUI();
+        }}
+
+        function cycleSpeed() {{
+            const speeds = [1.0, 1.25, 1.5, 2.0];
+            const nextIdx = (speeds.indexOf(currentRate) + 1) % speeds.length;
+            currentRate = speeds[nextIdx];
+            const audio = getActiveAudio();
+            audio.playbackRate = currentRate;
+            document.getElementById('speedBtn').innerText = currentRate + 'x';
+        }}
+
+        function setVolume(val) {{
+            const audios = document.getElementsByTagName('audio');
+            for(let i=0; i<audios.length; i++) {{
+                audios[i].volume = parseFloat(val);
             }}
         }}
 
@@ -237,20 +458,42 @@ class PaperBuilder:
             }}
         }}
 
-        function updatePlayButtonUI(isPlaying) {{
-            const btn = document.getElementById('playBtn');
-            if(isPlaying) {{
-                btn.innerHTML = '⏸️ 브리핑 일시정지 (Pause)';
-            }} else {{
-                btn.innerHTML = '🔊 브리핑 읽어주기 (Play)';
-            }}
+        function switchTab(lang) {{
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.script-content').forEach(content => content.classList.remove('active'));
+            
+            const btn = document.getElementById('btn-' + lang);
+            const content = document.getElementById('content-' + lang);
+            if (btn) btn.classList.add('active');
+            if (content) content.classList.add('active');
+            
+            pauseAllAudio();
+            currentLang = lang;
+            updatePlayerUI();
         }}
 
         document.addEventListener('DOMContentLoaded', () => {{
             const audios = document.getElementsByTagName('audio');
             for(let i=0; i<audios.length; i++) {{
-                audios[i].onended = function() {{ updatePlayButtonUI(false); }};
+                const a = audios[i];
+                a.addEventListener('timeupdate', () => {{
+                    if (a === getActiveAudio()) updatePlayerUI();
+                }});
+                a.addEventListener('loadedmetadata', () => {{
+                    if (a === getActiveAudio()) updatePlayerUI();
+                }});
+                a.addEventListener('ended', () => {{
+                    updatePlayerUI();
+                    const statusMsg = document.getElementById('playerStatusMsg');
+                    if (statusMsg) statusMsg.innerText = '브리핑 재생이 완료되었습니다.';
+                }});
+                a.addEventListener('error', (e) => {{
+                    console.error('Audio element error:', e);
+                    const statusMsg = document.getElementById('playerStatusMsg');
+                    if (statusMsg) statusMsg.innerText = '오디오 로드 중 오류가 발생했습니다.';
+                }});
             }}
+            updatePlayerUI();
         }});
     </script>
 </head>
@@ -265,11 +508,47 @@ class PaperBuilder:
             <h1>📰 The Daily Intelligence Times</h1>
             <div class="meta">발행 일시: {date_str} 09:00 | Global Morning Briefing | Multi-Language Edition</div>
             
-            <audio id="audio-ko" src="AUDIO_BASE_PATHbriefing_{date_str}_ko.m4a"></audio>
-            <audio id="audio-en" src="AUDIO_BASE_PATHbriefing_{date_str}_en.m4a"></audio>
-            <audio id="audio-zh" src="AUDIO_BASE_PATHbriefing_{date_str}_zh.m4a"></audio>
+            <!-- Dual format sources: MP3 (Standard) + M4A (Apple AAC) for 100% universal browser support -->
+            <audio id="audio-ko" preload="metadata">
+                <source src="AUDIO_BASE_PATHbriefing_{date_str}_ko.mp3" type="audio/mpeg">
+                <source src="AUDIO_BASE_PATHbriefing_{date_str}_ko.m4a" type="audio/mp4">
+            </audio>
+            <audio id="audio-en" preload="metadata">
+                <source src="AUDIO_BASE_PATHbriefing_{date_str}_en.mp3" type="audio/mpeg">
+                <source src="AUDIO_BASE_PATHbriefing_{date_str}_en.m4a" type="audio/mp4">
+            </audio>
+            <audio id="audio-zh" preload="metadata">
+                <source src="AUDIO_BASE_PATHbriefing_{date_str}_zh.mp3" type="audio/mpeg">
+                <source src="AUDIO_BASE_PATHbriefing_{date_str}_zh.m4a" type="audio/mp4">
+            </audio>
             
-            <button id="playBtn" class="play-btn" onclick="togglePlay()">🔊 브리핑 읽어주기 (Play)</button>
+            <!-- Interactive Modern Audio Player -->
+            <div class="audio-player-card">
+                <div class="player-header">
+                    <div class="player-title" id="playerCurrentTitle">🎙️ 5분 브리핑: 🇰🇷 한국어 (Korean)</div>
+                    <div class="player-badge" id="playerStatusBadge">준비됨</div>
+                </div>
+                <div class="progress-container">
+                    <span class="time-text" id="timeCurrent">00:00</span>
+                    <input type="range" class="progress-bar-slider" id="progressSlider" min="0" max="100" value="0" oninput="seekAudio(this.value)">
+                    <span class="time-text" id="timeDuration">--:--</span>
+                </div>
+                <div class="player-controls">
+                    <div class="controls-main">
+                        <button class="ctrl-btn" onclick="skipTime(-10)" title="10초 뒤로">⏪</button>
+                        <button class="ctrl-btn ctrl-btn-play" id="playMainBtn" onclick="togglePlay()" title="재생 / 일시정지">▶️</button>
+                        <button class="ctrl-btn" onclick="skipTime(10)" title="10초 앞으로">⏩</button>
+                    </div>
+                    <div class="controls-extra">
+                        <button class="speed-btn" id="speedBtn" onclick="cycleSpeed()" title="재생 속도 조절">1.0x</button>
+                        <div class="volume-control" title="볼륨 조절">
+                            <span style="font-size: 0.85rem;">🔊</span>
+                            <input type="range" class="volume-slider" min="0" max="1" step="0.05" value="1" oninput="setVolume(this.value)">
+                        </div>
+                    </div>
+                </div>
+                <div class="player-status-msg" id="playerStatusMsg">재생 버튼을 누르면 오늘의 5분 음성 브리핑이 시작됩니다.</div>
+            </div>
         </header>
 
         <!-- AFFIRMATION SECTION -->

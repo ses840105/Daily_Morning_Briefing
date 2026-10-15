@@ -20,7 +20,10 @@ export PYTHONPATH="$SCRIPT_DIR:$PYTHONPATH"
 cd "$SCRIPT_DIR"
 
 if [ "$1" == "--play" ]; then
-    AUDIO_FILE="$SCRIPT_DIR/outputs/audio/latest_briefing_ko.m4a"
+    AUDIO_FILE="$SCRIPT_DIR/outputs/audio/latest_briefing_ko.mp3"
+    if [ ! -f "$AUDIO_FILE" ]; then
+        AUDIO_FILE="$SCRIPT_DIR/outputs/audio/latest_briefing_ko.m4a"
+    fi
     if [ -f "$AUDIO_FILE" ]; then
         echo "🔊 [Playing latest audio briefing: $AUDIO_FILE]"
         afplay "$AUDIO_FILE"
