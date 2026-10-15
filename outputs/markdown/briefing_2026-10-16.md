@@ -1,0 +1,74 @@
+# 📰 DAILY MORNING BRIEFING | 데일리 모닝 인텔리전스
+> **발행 일시**: 2026-10-16 09:00 KST | **에디션**: 제20261016호 | **총 3페이지 특집**
+
+================================================================================
+
+## 📄 [PAGE 1] 🤖 최신 ML · AI · IT 테크 동향 & 유튜브 인사이트
+
+### 🧠 1. 인공지능 & 머신러닝 (AI & Frontier LLM)
+1. **[www.itworld.co.kr]** [AI·머신러닝의 판을 바꾸는 16가지 오픈소스 프로젝트](https://news.google.com/rss/articles/CBMi3wJBVV95cUxPcmJBYy1mVjloUzJvUmVIel8zUVBCOEZKRHQtNEQ4SkhxbHBuZGtDNTV2bU1uQnhfQnJtd3c3WVgtNmxRdG5MaWxDUlJPTzNPa2lyTWRlUkZlci1uYkFocXJaYU0zS2ViT29vUmdWc290dTl3M3NDQ2x3aEFqMHNLaDJ2ZFhPbGVMZnVRTWt0TW1QUkpmaGZnOG1rZ3BvTlVLZkZjT1FVdU12YWVPdy01RDVyUnRFNUo0c0lZanBtTnJDVmdOQkhoTjl2UnFOWmVla05hVWFlelYyTDN0bE5xTVdiR3FMdEdBblFxd0JUdmRMRFNvdXp3NmFsampUQV9Sa3FieG1rczFmQXRfSDRoMWRIUHBpaFMxdGI0eUx0MG5GR3pYbWxjeTBrd2Y4aS1kZ0JJdzZnV1JXb3lZbUQxSTVacUoyMXhaNjdMMGlxbUFLX2Zsam5OLUlVbVNtUkU?oc=5)
+2. **[디일렉]** [브로드컴·오픈AI, 자체 AI 추론용 칩 '할라페뇨' 공개](https://news.google.com/rss/articles/CBMiZkFVX3lxTE9KaFBlTGV3UFNWVWVkOElxZXVNVHdJemNwQUdFT2RxX1BLOG1LN0tQSUdkemN3MldyZzZJdWY3Yzlhb2gtOXRGZGlQdVVJcW0yS0dZeU1rU3pqSFF1UjQtd1piX0VQQQ?oc=5)
+3. **[브런치]** [AI·소프트웨어 특허, 김용덕 변리사의 수행경력](https://news.google.com/rss/articles/CBMiVEFVX3lxTE51OU9QblpYdVN0SE5yOGNKbUd3cTZ6V3FzWnFhQWVlRXdEZXJRejZGbmwwaGthNDhLQ1d2QUFhX21rS2NkRmhpeWN4ZzNhZDE3X3Jraw?oc=5)
+4. **[스타트업엔(StartupN)]** [노타, ICML 2026 'Efficient Qwen Competition' 3위…오픈소스 AI 최적화 기술력 입증](https://news.google.com/rss/articles/CBMiaEFVX3lxTE5iczJzdzl2SmhxNWNfYVV5R1YxTE5PaV8ycXdBNmgzdm5XTlJaNVBSMVZHM0l6TDRLNU9PM1Y4OFBJbU5xWkVfNEdEbXl4RUp1b1RjSlQzejlKcVFNZTFha2hzME1LQ3dJ0gFsQVVfeXFMTWc0ZmdNOURTbUV1akItbVJfb25oSjFUandtNUdtUHAydmZlWC1RZjZSRXFkYm93SGZiX3I2bWZsU2FjdHFPc09PeU90dWRiRERZRF9IN19BNU93MnkwQTZLTWtTVDhSUVYwaHF3?oc=5)
+5. **[이코노미트리뷴]** [오픈AI, 브로드컴과 자체 AI칩 ‘할라페뇨’ 공개…HBM 수요 주목](https://news.google.com/rss/articles/CBMid0FVX3lxTE5WckdjUk9fYW1EQWJnOVZZQ3ZvNXFBU25tMlRiRjF3clpET3ZXaFh2SVRjT2VtcWh5UHRlT0p3M0VkMXRseERLeU9qcThiaXNBTnFxMlZrOTB4WlhtWjV1a1ZINWFEZ1RVRUVDdGVjRDJDd3M5V0xv?oc=5)
+
+### 📺 2. 유튜브 추천 테크 영상 (YouTube Tech Picks)
+• **[Two Minute Papers]** [OpenAI’s New AI Is Doing Things We Barely Understand](https://www.youtube.com/watch?v=z_sXLlLVUls)
+• **[Two Minute Papers]** [DeepSeek Solved AI’s Memory Problem](https://www.youtube.com/watch?v=4fLVq6HJsKc)
+• **[Yannic Kilcher]** [I BUILT A FULLY AUTOMATIC MANSPLAINER](https://www.youtube.com/watch?v=xHi8PUIVyoo)
+• **[Yannic Kilcher]** [Traditional X-Mas Stream](https://www.youtube.com/watch?v=Dr6jw-WAd9E)
+• **[YouTube]** ["삼전닉스, 못하는 게 아니라 안 하는 것"…CXMT 쇼크에 냉정한 분석 [지금이뉴스] / YTN](https://news.google.com/rss/articles/CBMiVkFVX3lxTE9UZGpaa2FhU3J6cHFFTFFDY1R6bFFNZWVnaGFZNVVLRkNWdl85WE8wZXJXZjlBamo3WWtwX2JnTEhXTlRxNEwtZHVTV21Mb3ZRSmxXVU9R?oc=5)
+
+### 📚 3. 최신 AI/ML 논문 (ArXiv Papers)
+
+### 💻 4. 빅테크 · 반도체 & 엔지니어링 기술 동향
+- **엔비디아, AI 서버값 15% 전격 인상…빅테크 투자 비상** (글로벌이코노믹)
+- **한미 빅테크 1천400조원 AI 동맹…반도체·AI공급망 구축 본격화(종합)** (연합뉴스)
+- **SK, 글로벌 빅테크들과 AI 인프라 협력 확대** (디일렉)
+- **[AI 고속도로] 빅테크 AI 투자 1200조원…패권 경쟁 승부처는 인프라** (지디넷코리아)
+
+--------------------------------------------------------------------------------
+
+## 📄 [PAGE 2] 🌐 글로벌 경제 · 군사/안보 · 세계 정세
+
+### 📈 1. 글로벌 거시 경제 & 금융 지표 (Macro Economy & Markets)
+1. **[KB Think]** [8월 글로벌 경제 및 금융시장 전망 : 글로벌 중앙은행 긴축 조짐, 더욱 커질 시장 변동성](https://news.google.com/rss/articles/CBMiZkFVX3lxTFA2Q0U1QVFTY2RGakZ5dVVCRnJ3aWxUb3piallfdkJYaDFYOUtfX09KTnR0V0UxZm41N0NXYVhDd0hCanlfZnlsdk5qVGpXaGRRYWkwdjRya3dvbmxOdDZsVGZXc1J0QQ?oc=5)
+2. **[조선일보]** [美 기준금리 4% 시대... 대출·투자 어떻게 하나](https://news.google.com/rss/articles/CBMiiAFBVV95cUxPX19hUk9LSUdFUFZxd1QxNVFVNXJOa3pzZ1F0WXkxQWlFc09IM25Pd1lPcE1DSk5RcnFRZ25WeUlycW1IWDdUYjF5TUFRREpLRUlJNlB5cEhVUjZ6amMzR0ZaOFhPQjk1ZDRVS1A5dm5BMVdfbm9wYU80ODE0bXAydHdZTGJEMVdy?oc=5)
+3. **[경북매일]** [미국 금리 오르면 한국은 어디부터 흔들리나…대출·환율·증시 동시 압박](https://news.google.com/rss/articles/CBMiWkFVX3lxTFBiZUtzYWdsdUFXQ19FeTJCNFNtaWQwc3ZIa2c5Z0RpYm03ekpKNTZyZi12Q1dybUlfbEE2YW5nM3JiMnZqREFJRDJZN3FPLWc5VVB1V3J2Y3NFdw?oc=5)
+4. **[데일리머니]** [연준發 매파 공습에 4% 족쇄 채워진 시장 -> 개미들 패닉 셀링 멈춰라 => "인플레 잡힐 때까지 자비란 없다" > 미 연준 추가 인상 강행의 내막 >> 한미 금리 역전폭 비상 = 한국은행, 환율 방어와 가계부채 외통수 직면](https://news.google.com/rss/articles/CBMickFVX3lxTFBEbXc5WlJHRmhTNVhGQU5TblFKaF8zX0N6YTZHamllejhYOXc1UmJBRDZTU3JaaExnRVFEZkhwREwweEVTd2FjUFdnNzRCeGVrRXpFVVlIVHV3VklwUHczVW03czI4ZUE4OFdESFZnS0VUQQ?oc=5)
+5. **[산경일보]** [外人 주식 무더기 매도에 환율 안정 ‘무소용’…외환위기 수준 치솟은 원·달러](https://news.google.com/rss/articles/CBMicEFVX3lxTE94WENhMzVVX3ViZTRSbm9WV1BnRHA1MlpWSDEzMFdRajF1TVVOWjJnamd5WHhfUThrazZGXzFyN1VpVEhkaVgtY3dlM3E4YnYtdm1XTzI5eXdrUU13bWtmcjJRSGJUX0E2QUg2R3VpcnY?oc=5)
+
+### 🛡️ 2. 군사 · 국방 안보 & 지정학 이슈 (Military & Defense Intelligence)
+• **[뉴스핌]** [[기고] 유럽전쟁 교훈 '방산이 곧 전력이다'](https://news.google.com/rss/articles/CBMiXEFVX3lxTE42STFXWUdqNGxTSkhzendUdEVHdEE1UEZoQ01kNkhtMzVtUk1McU9GRVBiemhDRDQ1LS1EWGo3X1FtMGdSVXdodGloVHFRQXByaTVEQS1kVEZXNXVT?oc=5)
+• **[㈜한국탑뉴스]** [한·필리핀 국방장관, 군사교류 넓히고 방산 협력 강화키로](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5WdDlQX0JacHRLS3VEZzdha1VOdVBLNzBTeDJuVWM0WF85dHV4VXZJUjhpdXdIRVZBZDJPck1xSU1TOVJjOFF4ZzZ1NHBWTlJhaDZQaXRwRUY2UklTMnhmYzdR?oc=5)
+• **[디펜스투데이]** [[글로벌 방산] 도미니카공화국 독립회복일: 한국전쟁 시기 27만 5,200달러…중남미 3위 규모의 지원국 도미니카](https://news.google.com/rss/articles/CBMibkFVX3lxTE5qUEdGWVV6YXI4eUxIaERnR3RiX0Z0Zzhpb0x2NjJnVXBjbEtISGZYVVlJMnY5YVlERHFHU3QyaVM5bHFwYlN3YVZqWVJMa091R2MyTnhNeUEtN2ZobV9hUDMtNXlHOUQ2dmYtc1NB?oc=5)
+• **[경인방송 뉴스]** [K-방산 수주 잔고 110조 돌파…"글로벌 안보 위기 속 품귀 현상" [굿모닝 인천 - 국방 헤드라인]](https://news.google.com/rss/articles/CBMiZEFVX3lxTE5jUG9vMVFmZUszREMtelgtc04xOHcxc1Nva3c0R2RfeFJXQXhiZlBRQmJFUjFCY0g3bzZVZEtIbm5iWUZxOFY1NGVrcDlmQWJUWTRYS2hHYWlXM25EWnNvaThJb1o?oc=5)
+• **[신아일보]** [한·인도 군 수뇌부 통화…군사교류·방산협력 확대](https://news.google.com/rss/articles/CBMicEFVX3lxTFBiMEV4VU5hUmhZVGY4dHZTNTBZSXdVd1E4ZEF1NXVxOVI5a3p2WXRrX2xibWt2RlJIV2N1UlVjaUJSSWdvdzR2Q2cwRmFwcGtGODNtVEQ5R2VYU1ZxdGsycmhuMzZXNURGSEoyTnVodE4?oc=5)
+
+### 🌍 3. 국제 외교 & 글로벌 정세 (World Diplomacy)
+- **대만, 미중 정상회담에 촉각…"미국과 긴밀히 소통"(종합)** (연합뉴스)
+- **유엔총회부터 트럼프·시진핑 미중 정상회담까지: 이번 주 국제 정세 가를 '외교 슈퍼위크' 핵심 정리 🌎✅** (뉴닉)
+- **미중 정상회담 앞두고 베이징서 중·이란 외교 접촉… 중동 정세 놓고 전략 조율** (sisaworld.kr)
+- **유엔총회 이어 미중 정상회담…글로벌 외교전 ‘분수령’** (전국매일신문)
+
+--------------------------------------------------------------------------------
+
+## 📄 [PAGE 3] 💡 오늘의 인사이트 & 1분 초압축 총괄 브리핑
+
+### ⚡ 오늘 아침 꼭 알아야 할 3대 헤드라인
+1. **AI/기술**: AI·머신러닝의 판을 바꾸는 16가지 오픈소스 프로젝트
+2. **경제/금융**: 8월 글로벌 경제 및 금융시장 전망 : 글로벌 중앙은행 긴축 조짐, 더욱 커질 시장 변동성
+3. **안보/세계**: [기고] 유럽전쟁 교훈 '방산이 곧 전력이다'
+
+### 🎯 오늘 하루 관전 포인트 (Today's Watchpoints)
+- **엔지니어링/AI**: 신규 AI 모델 성능 공개 여부 및 반도체 공급망 현황 지속 모니터링
+- **경제/투자**: 원달러 환율 단기 변동성 및 주요국 중앙은행 기준금리 관련 발언 주시
+- **안보/지정학**: 우크라이나/중동 군사 움직임 및 글로벌 무역 규제 동향 주의
+
+================================================================================
+
+## 🌅 [SPECIAL] 아침 긍정 명상 & 확언
+
+> **"오늘은 내 인생의 가장 멋진 기회들이 찾아오는 하루가 될 것이다."**
+
+*이 문장을 마음속으로 3번 되뇌어 보세요. 당신의 하루가 긍정적인 에너지로 가득 찰 것입니다.*
