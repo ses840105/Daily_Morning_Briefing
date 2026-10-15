@@ -9,6 +9,8 @@
 이어서 주목할 만한 소식으로 브로드컴·오픈AI, 자체 AI 추론용 칩 '할라페뇨' 공개에 대한 내용이 보고되었습니다.
 또한 AI·소프트웨어 특허, 김용덕 변리사의 수행경력 관련 동향도 포착되어, 업계 관계자들의 면밀한 분석이 이어지고 있습니다.
 
+다음은 학계에서 주목받고 있는 최신 AI 머신러닝 논문 소식입니다.
+오늘 새롭게 발표된 주요 논문으로는, Modeling and Understanding Neural Weights of Humanoid Policies with Diffusion 연구가 학계의 높은 관심을 받고 있습니다.
 
 다음은 유튜브 테크 트렌드입니다.
 Two Minute Papers 채널에서는 OpenAI’s New AI Is Doing Things We Barely Understand 영상을 공개하여 기술적인 분석과 함께 높은 조회수를 기록하고 있습니다.

@@ -1,34 +1,36 @@
-안녕하십니까. 2026년 10월 16일, 데일리 모닝 인텔리전스 브리핑을 시작하겠습니다.
-오늘 하루를 준비하시는 여러분을 위해, 어제부터 밤사이 일어난 핵심 뉴스와 글로벌 동향을 심도 있게 전해드립니다.
-본 브리핑은 인공지능 기술과 논문 동향, 유튜브 테크 트렌드, 글로벌 거시 경제와 지정학적 이슈, 그리고 아침 긍정 명상 순서로 진행됩니다.
-그럼 첫 번째 소식부터 자세히 살펴보겠습니다.
+hello.We will begin the Daily Morning Intelligence Briefing on October 16, 2026.
+For those of you preparing for today, we provide in-depth information on key news and global trends that have occurred from yesterday to overnight.
+This briefing will be conducted in the following order: artificial intelligence technology and paper trends, YouTube tech trends, global macroeconomic and geopolitical issues, and morning positive meditation.
+Now, let’s take a closer look, starting with the first news.
 
-첫 번째 섹션, 최신 인공지능과 IT 기술, 그리고 연구 논문 동향입니다.
-먼저 가장 눈에 띄는 AI 주요 소식입니다.
-가장 헤드라인을 장식한 뉴스로는, AI·머신러닝의 판을 바꾸는 16가지 오픈소스 프로젝트 소식이 있습니다.
-이어서 주목할 만한 소식으로 브로드컴·오픈AI, 자체 AI 추론용 칩 '할라페뇨' 공개에 대한 내용이 보고되었습니다.
-또한 AI·소프트웨어 특허, 김용덕 변리사의 수행경력 관련 동향도 포착되어, 업계 관계자들의 면밀한 분석이 이어지고 있습니다.
+The first section is about the latest artificial intelligence and IT technologies, and research paper trends.
+First, the most notable AI news.
+Among the most headline-making news, there are 16 open source projects that are changing the game of AI and machine learning.
+Next, noteworthy news was reported about Broadcom and OpenAI unveiling their own AI inference chip ‘Jalapeño’.
+In addition, trends related to AI/software patents and patent attorney Kim Yong-deok's performance experience have been captured, and industry officials are continuing to closely analyze them.
 
+The following is news about the latest AI machine learning papers that are attracting attention in academia.
+As a major newly published paper today, the study Modeling and Understanding Neural Weights of Humanoid Policies with Diffusion is receiving a lot of attention from the academic world.
 
-다음은 유튜브 테크 트렌드입니다.
-Two Minute Papers 채널에서는 OpenAI’s New AI Is Doing Things We Barely Understand 영상을 공개하여 기술적인 분석과 함께 높은 조회수를 기록하고 있습니다.
-Two Minute Papers 채널에서는 DeepSeek Solved AI’s Memory Problem 영상을 공개하여 기술적인 분석과 함께 높은 조회수를 기록하고 있습니다.
+Below are YouTube tech trends.
+The Two Minute Papers channel has released the OpenAI’s New AI Is Doing Things We Barely Understand video, which is receiving high views along with technical analysis.
+The Two Minute Papers channel has released a video called DeepSeek Solved AI’s Memory Problem, which is receiving high views along with technical analysis.
 
-두 번째 섹션, 글로벌 거시 경제 및 군사 안보 동향입니다.
-글로벌 경제 및 금융 시장의 주요 소식입니다.
-가장 핵심적인 매크로 경제 지표 관련 뉴스로, 8월 글로벌 경제 및 금융시장 전망 : 글로벌 중앙은행 긴축 조짐, 더욱 커질 시장 변동성 소식이 시장의 주목을 받고 있습니다.
-아울러 투자자들의 이목이 쏠린 美 기준금리 4% 시대... 대출·투자 어떻게 하나 소식이 전해지면서, 관련 자산군의 가격 흐름에 영향을 줄 가능성이 높습니다.
-추가적으로 금융시장에서 미국 금리 오르면 한국은 어디부터 흔들리나…대출·환율·증시 동시 압박에 관한 분석 보고서가 나오며 투자 심리에 변수로 작용할 전망입니다.
+The second section is global macroeconomic and military security trends.
+Key news from the global economy and financial markets.
+As for news related to the most core macro economic indicators, the global economic and financial market outlook for August: signs of global central bank tightening and news of further market volatility are attracting market attention.
+In addition, the era of the US base interest rate of 4% attracted the attention of investors... As news about loans and investments spreads, it is highly likely that it will affect the price trends of related asset classes.
+Additionally, if US interest rates rise in the financial market, where will Korea start to shake?An analysis report on the simultaneous pressure on loans, exchange rates, and the stock market is coming out, and it is expected to act as a variable in investment sentiment.
 
-국제 외교 및 국방 분야에서는 [기고] 유럽전쟁 교훈 '방산이 곧 전력이다' 관련 소식이 가장 중요한 사안으로 대두되었습니다.
-또한 지역 안보와 관련해 한·필리핀 국방장관, 군사교류 넓히고 방산 협력 강화키로 사태가 지속되며 긴장감을 늦출 수 없는 상황입니다.
+In the field of international diplomacy and national defense, the news related to [Contribution] Lessons learned from the European War, ‘Defense industry is power,’ has emerged as the most important issue.
+In addition, regarding regional security, the Korean and Philippine defense ministers agreed to expand military exchanges and strengthen defense industry cooperation. As the situation continues, tensions cannot be eased.
 
-세 번째 섹션, 오늘 하루 성공적인 비즈니스를 위해 반드시 체크해야 할 관전 포인트입니다.
-첫째, 글로벌 빅테크 기업들의 신규 AI 모델 성능 공개 여부와 최신 논문들의 응용 가능성을 지속적으로 모니터링해야 합니다.
-둘째, 원달러 환율의 단기 변동성과 주요국 중앙은행의 기준금리 관련 발언을 주시하시기 바랍니다.
-셋째, 지정학적 이슈와 글로벌 무역 규제 동향에 따른 경제적 파급 효과를 주의 깊게 살피시길 권해드립니다.
+The third section is the observation points that must be checked for a successful business today.
+First, we must continuously monitor whether global big tech companies disclose new AI model performance and the applicability of the latest papers.
+Second, please keep an eye on the short-term volatility of the won-dollar exchange rate and statements regarding base interest rates by central banks in major countries.
+Third, we recommend that you carefully examine the economic ramifications of geopolitical issues and global trade regulation trends.
 
-마지막으로, 당신의 하루를 눈부시게 밝혀줄 오늘의 긍정 확언입니다.
-편안하게 숨을 들이마시고 내쉬며, 이 문장을 마음속으로 세 번 되뇌어 보십시오.
-'오늘은 내 인생의 가장 멋진 기회들이 찾아오는 하루가 될 것이다.'
-오늘 하루도 당신의 잠재력을 마음껏 발휘하시기를 바라며, 이상으로 오늘의 모닝 브리핑을 모두 마치겠습니다. 대단히 감사합니다.
+Lastly, here is a positive affirmation of the day that will brighten your day.
+Breathe in and out comfortably and repeat this sentence in your mind three times.
+'Today will be the day when the greatest opportunities of my life come.'
+I hope you unleash your full potential today, and this concludes today's morning briefing.thank you so much.

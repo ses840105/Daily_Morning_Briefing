@@ -67,7 +67,7 @@ class TechAICollector:
         return videos
 
     def _fetch_arxiv_papers(self) -> List[Dict[str, str]]:
-        url = 'http://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL&sortBy=submittedDate&sortOrder=desc&max_results=5'
+        url = 'https://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL&sortBy=submittedDate&sortOrder=descending&max_results=5'
         papers = []
         try:
             req = urllib.request.Request(url, headers=self.headers)

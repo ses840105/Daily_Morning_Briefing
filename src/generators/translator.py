@@ -1,22 +1,24 @@
-from deep_translator import MyMemoryTranslator
-from concurrent.futures import ThreadPoolExecutor
+from googletrans import Translator
+import time
 
 def _translate_chunk(text: str, target_lang: str) -> str:
     if not text.strip(): return text
-    # Map target language to MyMemory code
-    target_code = "en-US" if target_lang == "en" else "zh-CN"
+    # Map target language to googletrans code
+    target_code = "en" if target_lang == "en" else "zh-cn"
     try:
-        return MyMemoryTranslator(source='ko-KR', target=target_code).translate(text)
+        translator = Translator()
+        time.sleep(0.1)
+        result = translator.translate(text, src='ko', dest=target_code)
+        return result.text
     except Exception as e:
         print(f"[Translator Error] {e}")
         return text
 
 def translate_text(text: str, target_lang: str) -> str:
-    # Split text into sentences or paragraphs to avoid 500-char limit of MyMemory
     lines = text.split("\n")
     translated_lines = []
     
-    with ThreadPoolExecutor(max_workers=5) as executor:
-        translated_lines = list(executor.map(lambda t: _translate_chunk(t, target_lang), lines))
+    for t in lines:
+        translated_lines.append(_translate_chunk(t, target_lang))
         
     return "\n".join(translated_lines)
