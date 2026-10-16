@@ -3,61 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morning Briefing Archives</title>
+    <meta name="description" content="Google News 스타일 데일리 모닝 카드뉴스 브리핑 아카이브">
+    <title>Google News Daily Briefing - 지난 브리핑 아카이브</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { --bg-color: #f8fafc; --text-main: #1e293b; --accent-blue: #2563eb; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", sans-serif; background-color: var(--bg-color); color: var(--text-main); margin: 0; padding: 40px 20px; }
-        .container { max-width: 800px; margin: 0 auto; }
-        .top-nav { margin-bottom: 30px; text-align: left; }
-        .nav-btn { background: #ffffff; border: 1px solid #cbd5e1; padding: 8px 16px; border-radius: 8px; color: #475569; text-decoration: none; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.2s; }
-        .nav-btn:hover { background: #f1f5f9; color: var(--accent-blue); }
-        .header { text-align: center; margin-bottom: 40px; }
-        .header h1 { font-size: 2.8rem; margin: 0 0 10px 0; color: #0f172a; }
-        .header p { font-size: 1.1rem; color: #64748b; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px; }
-        .date-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; text-decoration: none; color: inherit; transition: all 0.2s; box-shadow: 0 2px 4px rgba(0,0,0,0.02); display: flex; flex-direction: column; }
-        .date-card:hover { transform: translateY(-4px); box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1); border-color: #cbd5e1; }
-        .date-header { font-size: 1.5rem; font-weight: 700; color: var(--accent-blue); margin-bottom: 8px; }
-        .date-desc { font-size: 0.95rem; color: #64748b; margin-bottom: 20px; flex-grow: 1; }
-        .read-more { font-size: 0.9rem; font-weight: 600; color: #0f172a; text-align: right; }
+        :root {
+            --gn-bg: #f8f9fa;
+            --gn-surface: #ffffff;
+            --gn-text-primary: #1f1f1f;
+            --gn-text-secondary: #444746;
+            --gn-text-muted: #5f6368;
+            --gn-border: #dadce0;
+            --gn-blue: #1a73e8;
+            --gn-blue-surface: #e8f0fe;
+        }
+        * { box-sizing: border-box; }
+        body {
+            font-family: "Pretendard", "Noto Sans KR", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--gn-bg);
+            color: var(--gn-text-primary);
+            margin: 0;
+            padding: 0;
+        }
+        .gn-app-header {
+            background: var(--gn-surface);
+            border-bottom: 1px solid var(--gn-border);
+            padding: 14px 24px;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .gn-top-row {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .gn-brand {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--gn-text-primary);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+        .gn-g-blue { color: #4285F4; }
+        .gn-g-red { color: #EA4335; }
+        .gn-g-yellow { color: #FBBC04; }
+        .gn-g-green { color: #34A853; }
+        .gn-back-btn {
+            background: var(--gn-blue);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 700;
+            transition: background 0.15s ease;
+        }
+        .gn-back-btn:hover { background: #1557b0; }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 36px 24px 64px 24px;
+        }
+        .archive-hero {
+            margin-bottom: 32px;
+        }
+        .archive-hero h1 {
+            margin: 0 0 8px 0;
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+        .archive-hero p {
+            margin: 0;
+            color: var(--gn-text-muted);
+            font-size: 0.98rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 22px;
+        }
+        .gn-archive-card {
+            background: var(--gn-surface);
+            border: 1px solid var(--gn-border);
+            border-radius: 16px;
+            text-decoration: none;
+            color: inherit;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 1px 3px rgba(60,64,67,0.08);
+        }
+        .gn-archive-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(60,64,67,0.14);
+            border-color: var(--gn-blue);
+        }
+        .gn-archive-banner {
+            background: var(--gn-blue-surface);
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .gn-archive-badge {
+            font-size: 0.74rem;
+            font-weight: 800;
+            color: var(--gn-blue);
+            letter-spacing: 0.5px;
+        }
+        .gn-archive-icon { font-size: 1.2rem; }
+        .gn-archive-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .gn-archive-date {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--gn-text-primary);
+            margin-bottom: 4px;
+        }
+        .gn-archive-sub {
+            font-size: 0.84rem;
+            color: var(--gn-text-muted);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .gn-archive-desc {
+            font-size: 0.88rem;
+            color: var(--gn-text-secondary);
+            line-height: 1.55;
+            margin: 0 0 18px 0;
+            flex: 1;
+        }
+        .gn-archive-cta {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--gn-blue);
+            text-align: right;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="top-nav">
-            <a href="index.html" class="nav-btn">&larr; 오늘의 브리핑으로 돌아가기</a>
+    <header class="gn-app-header">
+        <div class="gn-top-row">
+            <a href="index.html" class="gn-brand">
+                <span><span class="gn-g-blue">G</span><span class="gn-g-red">o</span><span class="gn-g-yellow">o</span><span class="gn-g-blue">g</span><span class="gn-g-green">l</span><span class="gn-g-red">e</span> News</span>
+                <span style="color:#5f6368; font-weight:600; font-size:1rem;">| Daily Briefing Archives</span>
+            </a>
+            <a href="index.html" class="gn-back-btn">&larr; 오늘의 카드뉴스 브리핑으로 돌아가기</a>
         </div>
-        <div class="header">
-            <h1>🗂️ Morning Briefing Archives</h1>
-            <p>날짜별로 발행된 지난 데일리 모닝 인텔리전스 목록입니다.</p>
+    </header>
+    <main class="container">
+        <div class="archive-hero">
+            <h1>🗂️ 데일리 모닝 카드뉴스 아카이브</h1>
+            <p>날짜별로 발행된 Google News 스타일 카드뉴스 브리핑 및 5분 다국어 음성 에디션 전체 목록입니다.</p>
         </div>
         <div class="grid">
             
-            <a href="outputs/html/briefing_2026-10-16.html" class="date-card">
-                <div class="date-header">2026-10-16</div>
-                <div class="date-desc">Daily Intelligence Edition</div>
-                <div class="read-more">열람하기 &rarr;</div>
+            <a href="outputs/html/briefing_2026-10-16.html" class="gn-archive-card">
+                <div class="gn-archive-banner">
+                    <span class="gn-archive-badge">LATEST EDITION</span>
+                    <span class="gn-archive-icon">📰</span>
+                </div>
+                <div class="gn-archive-body">
+                    <div class="gn-archive-date">2026-10-16</div>
+                    <div class="gn-archive-sub">2026년 10월 16일 (금요일) · 09:00 KST 발행</div>
+                    <p class="gn-archive-desc">AI · 빅테크 · ArXiv 논문 · 테크 유튜브 · 글로벌 경제 · 안보 · 외교 카드뉴스 및 5분 다국어 음성 브리핑</p>
+                    <div class="gn-archive-cta">카드뉴스 에디션 열람하기 &rarr;</div>
+                </div>
             </a>
             
-            <a href="outputs/html/briefing_2026-10-15.html" class="date-card">
-                <div class="date-header">2026-10-15</div>
-                <div class="date-desc">Daily Intelligence Edition</div>
-                <div class="read-more">열람하기 &rarr;</div>
+            <a href="outputs/html/briefing_2026-10-15.html" class="gn-archive-card">
+                <div class="gn-archive-banner">
+                    <span class="gn-archive-badge">ARCHIVE #03</span>
+                    <span class="gn-archive-icon">📰</span>
+                </div>
+                <div class="gn-archive-body">
+                    <div class="gn-archive-date">2026-10-15</div>
+                    <div class="gn-archive-sub">2026년 10월 15일 (목요일) · 09:00 KST 발행</div>
+                    <p class="gn-archive-desc">AI · 빅테크 · ArXiv 논문 · 테크 유튜브 · 글로벌 경제 · 안보 · 외교 카드뉴스 및 5분 다국어 음성 브리핑</p>
+                    <div class="gn-archive-cta">카드뉴스 에디션 열람하기 &rarr;</div>
+                </div>
             </a>
             
-            <a href="outputs/html/briefing_2026-10-14.html" class="date-card">
-                <div class="date-header">2026-10-14</div>
-                <div class="date-desc">Daily Intelligence Edition</div>
-                <div class="read-more">열람하기 &rarr;</div>
+            <a href="outputs/html/briefing_2026-10-14.html" class="gn-archive-card">
+                <div class="gn-archive-banner">
+                    <span class="gn-archive-badge">ARCHIVE #02</span>
+                    <span class="gn-archive-icon">📰</span>
+                </div>
+                <div class="gn-archive-body">
+                    <div class="gn-archive-date">2026-10-14</div>
+                    <div class="gn-archive-sub">2026년 10월 14일 (수요일) · 09:00 KST 발행</div>
+                    <p class="gn-archive-desc">AI · 빅테크 · ArXiv 논문 · 테크 유튜브 · 글로벌 경제 · 안보 · 외교 카드뉴스 및 5분 다국어 음성 브리핑</p>
+                    <div class="gn-archive-cta">카드뉴스 에디션 열람하기 &rarr;</div>
+                </div>
             </a>
             
-            <a href="outputs/html/briefing_2026-10-13.html" class="date-card">
-                <div class="date-header">2026-10-13</div>
-                <div class="date-desc">Daily Intelligence Edition</div>
-                <div class="read-more">열람하기 &rarr;</div>
+            <a href="outputs/html/briefing_2026-10-13.html" class="gn-archive-card">
+                <div class="gn-archive-banner">
+                    <span class="gn-archive-badge">ARCHIVE #01</span>
+                    <span class="gn-archive-icon">📰</span>
+                </div>
+                <div class="gn-archive-body">
+                    <div class="gn-archive-date">2026-10-13</div>
+                    <div class="gn-archive-sub">2026년 10월 13일 (화요일) · 09:00 KST 발행</div>
+                    <p class="gn-archive-desc">AI · 빅테크 · ArXiv 논문 · 테크 유튜브 · 글로벌 경제 · 안보 · 외교 카드뉴스 및 5분 다국어 음성 브리핑</p>
+                    <div class="gn-archive-cta">카드뉴스 에디션 열람하기 &rarr;</div>
+                </div>
             </a>
             
         </div>
-    </div>
+    </main>
 </body>
 </html>
