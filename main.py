@@ -22,11 +22,28 @@ from src.generators.voice_script_builder import VoiceScriptBuilder
 from src.generators.affirmations import get_daily_affirmation
 from src.voice.tts_engine import TTSEngine
 
+def push_to_github(base_dir: str, date_str: str):
+    """생성된 카드뉴스 브리핑 및 오디오 파일을 GitHub 원격 저장소(origin/main)에 자동 업데이트합니다."""
+    try:
+        print("[+] 🚀 GitHub 원격 저장소(origin/main)로 최신 브리핑 업데이트 중...")
+        subprocess.run(["git", "-C", base_dir, "add", "-A"], check=False)
+        commit_msg = f"Update Daily Morning Card Briefing ({date_str})"
+        subprocess.run(["git", "-C", base_dir, "commit", "-m", commit_msg], check=False, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        res = subprocess.run(["git", "-C", base_dir, "push", "origin", "main"], capture_output=True, text=True)
+        if res.returncode == 0:
+            print("  • GitHub 업데이트 완료 : https://github.com/ses840105/Daily_Morning_Briefing")
+        else:
+            print(f"  • GitHub 푸시 알림: {res.stderr.strip()}")
+    except Exception as e:
+        print(f"[GitHub Push Warning] {e}")
+
+
 def main():
     parser = argparse.ArgumentParser(description="Daily Morning Briefing Generator")
     parser.add_argument("--voice", action="store_true", help="생성 완료 후 음성(TTS)으로 브리핑 낭독")
     parser.add_argument("--open-html", action="store_true", help="생성된 신문 HTML을 브라우저로 열기")
     parser.add_argument("--print", action="store_true", help="터미널에 마크다운 신문 전문 출력")
+    parser.add_argument("--no-push", action="store_true", help="GitHub 자동 푸시 생략")
     args = parser.parse_args()
 
     date_str = datetime.now().strftime("%Y-%m-%d")
@@ -82,14 +99,17 @@ def main():
         subprocess.run(["cp", ko_mp3, latest_audio_mp3], check=False)
 
     # 5. 신문 생성 단계 (MD & HTML) - 오디오 생성 후 실행 (HTML에서 오디오 경로를 참조하기 때문)
-    print("[4/4] 📄 상세 뉴스 링크가 포함된 다국어 웹 신문(HTML) 및 인덱스 렌더링 중...")
+    print("[4/4] 📄 Google News 스타일 다국어 카드뉴스 웹 신문(HTML) 및 인덱스 렌더링 중...")
     builder = PaperBuilder(outputs_dir)
     md_content = builder.build_markdown(tech_data, econ_data, daily_affirmation, date_str)
     html_content = builder.build_html(tech_data, econ_data, scripts, daily_affirmation, date_str)
     md_path, index_path = builder.save(md_content, html_content, date_str)
 
+    if not args.no_push:
+        push_to_github(BASE_DIR, date_str)
+
     print("\n" + "=" * 70)
-    print("✨ [발행 완료] 다국어 5분 모닝 브리핑 신문 및 음성이 성공적으로 생성되었습니다!")
+    print("✨ [발행 완료] Google News 스타일 카드뉴스 브리핑 및 음성이 성공적으로 생성되었습니다!")
     print(f"  • 오늘 웹 신문(Root) : {index_path}")
     print(f"  • 한국어 오디오      : {audio_paths.get('ko')}")
     print("=" * 70)
