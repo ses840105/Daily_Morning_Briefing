@@ -9,14 +9,16 @@ Among the most headline-making news, there are 16 open source projects that are 
 Next, noteworthy news was reported about Broadcom and OpenAI unveiling their own AI inference chip ‘Jalapeño’.
 In addition, trends related to AI/software patents and patent attorney Kim Yong-deok's performance experience have been captured, and industry officials are continuing to closely analyze them.
 
+The following is news about the latest AI machine learning papers that are attracting attention in academia.
+As a major newly published paper today, The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock is receiving a lot of attention from the academic world.
 
 Below are YouTube tech trends.
 Samsung Electronics’ ‘Shocking New Technology’ unveiled on Seoul Economic Daily TV channel…A video featuring ‘3D memory’, which will shake up AI semiconductors, has been released and is recording a high number of views along with technical analysis.
-The MBCNEWS channel has released a video titled China's new AI release, "America has caught up with everyone"...Global semiconductor 'whispering' (2026.07.20/News Desk/MBC), which is recording a high number of views along with technical analysis.
+On the Yonhap News TV channel, our AI semiconductor technology..."Be on par with the United States in 2030" / YonhapnewsTV video has been released and is receiving high views along with technical analysis.
 
 The second section is global macroeconomic and military security trends.
 Key news from the global economy and financial markets.
-As news related to the most core macro economic indicator, the news of net outflow of foreign stock funds again after a month is attracting the market's attention.
+As news related to the most important macro economic indicator, the news of net outflow of foreign stock funds again after a month is attracting the market's attention.
 In addition, the global economic and financial market outlook for August, which attracted investors' attention: As signs of global central bank tightening and news of further market volatility are reported, it is highly likely that the price trends of related asset classes will be affected.
 Additionally, if US interest rates rise in the financial market, where will Korea start to shake?An analysis report on the simultaneous pressure on loans, exchange rates, and the stock market is coming out, and it is expected to act as a variable in investment sentiment.
 

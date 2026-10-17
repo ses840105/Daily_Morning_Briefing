@@ -142,13 +142,13 @@ class TechAICollector:
             print(f"[TechAICollector] YouTube feed error ({channel_name}): {e}")
         return videos
 
-    def _fetch_korean_youtube_search(self, query: str = "인공지능 AI 반도체 신기술 뉴스") -> List[Dict[str, Any]]:
-        """한국어 최신 AI/테크 유튜브 영상을 실제 썸네일 및 조회수와 함께 수집합니다."""
+    def _fetch_korean_youtube_search(self, query: str = "인공지능 AI 반도체 신기술 뉴스", max_items: int = 6) -> List[Dict[str, Any]]:
+        """최신 AI/테크 유튜브 영상을 실제 썸네일 및 조회수와 함께 수집합니다."""
         videos = []
         try:
             url = "https://www.youtube.com/results?search_query=" + urllib.parse.quote(query) + "&sp=CAI%253D"
             req = urllib.request.Request(url, headers=self.headers)
-            with urllib.request.urlopen(req, timeout=8) as resp:
+            with urllib.request.urlopen(req, timeout=12) as resp:
                 html = resp.read().decode("utf-8", errors="ignore")
                 if "var ytInitialData = " in html:
                     raw = html.split("var ytInitialData = ", 1)[1].split(";</script>", 1)[0]
@@ -188,75 +188,112 @@ class TechAICollector:
                                 "views": views,
                                 "published": pub
                             })
-                            if len(videos) >= 4:
+                            if len(videos) >= max_items:
                                 return videos
         except Exception as e:
             print(f"[TechAICollector] Korean YouTube search fallback ({e})")
         return videos
 
     def _fetch_arxiv_papers(self) -> List[Dict[str, Any]]:
-        url = 'https://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL&sortBy=submittedDate&sortOrder=descending&max_results=6'
+        urls = [
+            'https://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL&sortBy=submittedDate&sortOrder=descending&max_results=6',
+            'http://export.arxiv.org/api/query?search_query=cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL&sortBy=submittedDate&sortOrder=descending&max_results=6'
+        ]
         papers = []
+        for url in urls:
+            try:
+                req = urllib.request.Request(url, headers=self.headers)
+                with urllib.request.urlopen(req, timeout=20) as resp:
+                    tree = ET.fromstring(resp.read())
+                    ns = {
+                        'atom': 'http://www.w3.org/2005/Atom',
+                        'arxiv': 'http://arxiv.org/schemas/atom'
+                    }
+                    for entry in tree.findall('atom:entry', ns):
+                        title_el = entry.find('atom:title', ns)
+                        title = title_el.text.replace('\n', ' ').strip() if (title_el is not None and title_el.text) else ""
+                        title = re.sub(r"\s+", " ", title)
+
+                        summary_el = entry.find('atom:summary', ns)
+                        summary = summary_el.text.replace('\n', ' ').strip() if (summary_el is not None and summary_el.text) else ""
+                        summary = re.sub(r"\s+", " ", summary)
+
+                        pdf_link = ""
+                        abs_link = ""
+                        for link_el in entry.findall('atom:link', ns):
+                            if link_el.attrib.get('title') == 'pdf':
+                                pdf_link = link_el.attrib.get('href', '')
+                            elif link_el.attrib.get('rel') == 'alternate':
+                                abs_link = link_el.attrib.get('href', '')
+                        if not abs_link:
+                            id_el = entry.find('atom:id', ns)
+                            abs_link = id_el.text.strip() if (id_el is not None and id_el.text) else ""
+                        link = pdf_link or abs_link
+
+                        authors = []
+                        for author in entry.findall('atom:author', ns):
+                            name = author.find('atom:name', ns)
+                            if name is not None and name.text:
+                                authors.append(name.text.strip())
+                        author_str = (authors[0] + (" et al." if len(authors) > 1 else "")) if authors else "ArXiv"
+
+                        prim_cat_el = entry.find('arxiv:primary_category', ns)
+                        primary_category = prim_cat_el.attrib.get('term', 'cs.AI') if prim_cat_el is not None else "cs.AI"
+
+                        comment_el = entry.find('arxiv:comment', ns)
+                        comment = comment_el.text.strip() if (comment_el is not None and comment_el.text) else ""
+
+                        pub_el = entry.find('atom:published', ns)
+                        published = pub_el.text[:10] if (pub_el is not None and pub_el.text) else ""
+
+                        papers.append({
+                            "title": title,
+                            "source": f"ArXiv ({author_str})",
+                            "source_url": "https://arxiv.org",
+                            "link": link,
+                            "abs_link": abs_link,
+                            "pdf_link": pdf_link,
+                            "summary": summary,
+                            "primary_category": primary_category,
+                            "comment": comment,
+                            "pub_date": published
+                        })
+                if papers:
+                    return papers
+            except Exception as e:
+                print(f"[TechAICollector] ArXiv API attempt failed: {e}")
+
+        # Fallback to fast ArXiv RSS feed (rss.arxiv.org) if export.arxiv.org API times out
         try:
-            req = urllib.request.Request(url, headers=self.headers)
-            with urllib.request.urlopen(req, timeout=8) as resp:
+            rss_req = urllib.request.Request("https://rss.arxiv.org/rss/cs.AI", headers=self.headers)
+            with urllib.request.urlopen(rss_req, timeout=15) as resp:
                 tree = ET.fromstring(resp.read())
-                ns = {
-                    'atom': 'http://www.w3.org/2005/Atom',
-                    'arxiv': 'http://arxiv.org/schemas/atom'
-                }
-                for entry in tree.findall('atom:entry', ns):
-                    title_el = entry.find('atom:title', ns)
-                    title = title_el.text.replace('\n', ' ').strip() if (title_el is not None and title_el.text) else ""
-                    title = re.sub(r"\s+", " ", title)
-
-                    summary_el = entry.find('atom:summary', ns)
-                    summary = summary_el.text.replace('\n', ' ').strip() if (summary_el is not None and summary_el.text) else ""
-                    summary = re.sub(r"\s+", " ", summary)
-
-                    # Find main PDF or abs link
-                    pdf_link = ""
-                    abs_link = ""
-                    for link_el in entry.findall('atom:link', ns):
-                        if link_el.attrib.get('title') == 'pdf':
-                            pdf_link = link_el.attrib.get('href', '')
-                        elif link_el.attrib.get('rel') == 'alternate':
-                            abs_link = link_el.attrib.get('href', '')
-                    if not abs_link:
-                        id_el = entry.find('atom:id', ns)
-                        abs_link = id_el.text.strip() if (id_el is not None and id_el.text) else ""
-                    link = pdf_link or abs_link
-
-                    authors = []
-                    for author in entry.findall('atom:author', ns):
-                        name = author.find('atom:name', ns)
-                        if name is not None and name.text:
-                            authors.append(name.text.strip())
-                    author_str = (authors[0] + (" et al." if len(authors) > 1 else "")) if authors else "ArXiv"
-
-                    prim_cat_el = entry.find('arxiv:primary_category', ns)
-                    primary_category = prim_cat_el.attrib.get('term', 'cs.AI') if prim_cat_el is not None else "cs.AI"
-
-                    comment_el = entry.find('arxiv:comment', ns)
-                    comment = comment_el.text.strip() if (comment_el is not None and comment_el.text) else ""
-
-                    pub_el = entry.find('atom:published', ns)
-                    published = pub_el.text[:10] if (pub_el is not None and pub_el.text) else ""
-
+                dc_ns = "{http://purl.org/dc/elements/1.1/}"
+                for item in tree.findall(".//item")[:6]:
+                    title = (item.findtext("title") or "").replace("\n", " ").strip()
+                    link = (item.findtext("link") or "").strip()
+                    desc = (item.findtext("description") or "").replace("\n", " ").strip()
+                    desc = re.sub(r"<[^>]+>", "", desc)
+                    if "Abstract:" in desc:
+                        desc = desc.split("Abstract:", 1)[1].strip()
+                    creator = (item.findtext(f"{dc_ns}creator") or "ArXiv").strip()
+                    first_author = creator.split(",")[0].strip()
+                    author_str = f"{first_author} et al." if "," in creator else first_author
+                    pdf_link = link.replace("/abs/", "/pdf/") if "/abs/" in link else link
                     papers.append({
                         "title": title,
                         "source": f"ArXiv ({author_str})",
                         "source_url": "https://arxiv.org",
-                        "link": link,
-                        "abs_link": abs_link,
+                        "link": pdf_link,
+                        "abs_link": link,
                         "pdf_link": pdf_link,
-                        "summary": summary,
-                        "primary_category": primary_category,
-                        "comment": comment,
-                        "pub_date": published
+                        "summary": desc,
+                        "primary_category": "cs.AI",
+                        "comment": "",
+                        "pub_date": datetime.now().strftime("%Y-%m-%d")
                     })
         except Exception as e:
-            print(f"[TechAICollector] ArXiv feed error: {e}")
+            print(f"[TechAICollector] ArXiv RSS fallback error: {e}")
         return papers
 
     def collect_all(self) -> Dict[str, Any]:
@@ -268,7 +305,7 @@ class TechAICollector:
             f_tech = ex.submit(self._fetch_rss, f"https://news.google.com/rss/search?q={q_tech}&hl=ko&gl=KR&ceid=KR:ko")
             f_yt_tm = ex.submit(self._fetch_youtube_channel_feed, "UCbfYPyITQ-7l4upoX8nvctg", "Two Minute Papers")
             f_yt_yk = ex.submit(self._fetch_youtube_channel_feed, "UCZHmQk67mSJgfCCTn7xBfew", "Yannic Kilcher")
-            f_yt_kr = ex.submit(self._fetch_korean_youtube_search, "인공지능 AI 반도체 신기술 뉴스")
+            f_yt_kr = ex.submit(self._fetch_korean_youtube_search, "인공지능 AI 반도체 신기술 뉴스", 6)
             f_arxiv = ex.submit(self._fetch_arxiv_papers)
 
             ai_news = f_ai.result()
@@ -285,12 +322,14 @@ class TechAICollector:
             yt_combined.append(v)
 
         if yt_korea_direct:
-            for v in yt_korea_direct[:2]:
+            needed = max(2, 6 - len(yt_combined))
+            for v in yt_korea_direct[:needed]:
                 yt_combined.append(v)
         else:
             q_yt = urllib.parse.quote("site:youtube.com AI 인공지능 신기술")
             yt_korea_rss = self._fetch_rss(f"https://news.google.com/rss/search?q={q_yt}&hl=ko&gl=KR&ceid=KR:ko")
-            for v in yt_korea_rss[:2]:
+            needed = max(2, 6 - len(yt_combined))
+            for v in yt_korea_rss[:needed]:
                 yt_combined.append({
                     "title": v["title"],
                     "channel": v["source"],

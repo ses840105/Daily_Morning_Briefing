@@ -1,5 +1,5 @@
 # 📰 GOOGLE NEWS BRIEFING | 데일리 모닝 카드뉴스 인텔리전스
-> **발행 일시**: 2026-10-17 09:00 KST | **에디션**: Google News Style Card Edition | **총 30개 카드뉴스**
+> **발행 일시**: 2026-10-17 09:00 KST | **에디션**: Google News Style Card Edition | **총 38개 카드뉴스**
 
 ================================================================================
 
@@ -46,14 +46,38 @@
   - 🏷️ **키워드**: #엔비디아 #글로벌증시 #지정학안보
 
 ### 📚 3. 최신 AI/ML 연구 논문 (ArXiv Papers)
+- **[CARD 01 | ArXiv (Ningxin Pan et al.)]** [The World Won't Wait: Evaluating and Teaching Agents Under a Live Clock](https://arxiv.org/pdf/2610.20665) `4시간 전`
+  - 💡 **핵심 요약**: [cs.AI] Large language model (LLM) agents can solve complex interactive tasks, yet reasoning and tool calls take time. In continuously changing environments, an otherwise correct action may...
+  - 🏷️ **키워드**: #AI아키텍처 #ArXiv #AI논문
+- **[CARD 02 | ArXiv (Morio Hamada et al.)]** [Evaluating Model Capabilities After Benchmark Saturation](https://arxiv.org/pdf/2610.20667) `4시간 전`
+  - 💡 **핵심 요약**: [cs.AI] Rapid advances in AI capabilities are causing benchmarks to saturate. Once several models approach perfect scores, a benchmark loses its power to differentiate between them, and with...
+  - 🏷️ **키워드**: #ArXiv #AI논문 #딥러닝연구
+- **[CARD 03 | ArXiv (Jaehyeon Kim et al.)]** [Value-Informed Schedule Trimming for Accelerated Sequential Monte Carlo Guidance in Discrete Diffusion](https://arxiv.org/pdf/2610.20669) `4시간 전`
+  - 💡 **핵심 요약**: [cs.AI] Reward-guided discrete diffusion enables test-time alignment with downstream objectives, but applying Sequential Monte Carlo (SMC) guidance at every denoising step is computationally...
+  - 🏷️ **키워드**: #AI아키텍처 #ArXiv #AI논문
+- **[CARD 04 | ArXiv (Zhanke Zhou et al.)]** [AlphaDiana: A Measurement System for Agents in Verifiable Reasoning Tasks](https://arxiv.org/pdf/2610.20675) `4시간 전`
+  - 💡 **핵심 요약**: [cs.AI] Agents pair reasoning models with harnesses that organize model calls, execute tools, load skill instructions, and retain history in memory. Understanding agent performance requires...
+  - 🏷️ **키워드**: #HBM반도체 #AI아키텍처 #ArXiv
+- **[CARD 05 | ArXiv (Adarsh Agrawal (Independent Researcher))]** [When Correctness Feedback Erases Evidence: Phase-Separated Completeness Auditing in Verus](https://arxiv.org/pdf/2610.20676) `4시간 전`
+  - 💡 **핵심 요약**: [cs.AI] Correctness feedback suppresses the very evidence that specification-completeness auditing is designed to uncover: programs that satisfy a written contract but violate intended...
+  - 🏷️ **키워드**: #ArXiv #AI논문 #딥러닝연구
 
 ### 📺 4. 유튜브 추천 테크 영상 (YouTube Tech Picks)
 - **[CARD 01 | 서울경제TV]** [삼성전자 ‘충격의 신기술’ 공개…AI 반도체 뒤흔들 ‘3D 메모리’ 등장](https://www.youtube.com/watch?v=yjU45hCFDAI) `1일 전`
   - 💡 **핵심 요약**: [조회수 5,056회] 서울경제TV 채널의 최신 테크 브리핑 영상입니다. 삼성전자 #3D메모리 #AI반도체 #차세대메모리 #메모리반도체 #반도체신기술 #HBM #반도체기술 #삼성전자주가 #반도체전망.
   - 🏷️ **키워드**: #HBM반도체 #테크유튜브 #AI트렌드
-- **[CARD 02 | MBCNEWS]** [중국 새 AI 공개 "미국 다 따라잡았다"‥글로벌 반도체 '휘청' (2026.07.20/뉴스데스크/MBC)](https://www.youtube.com/watch?v=cNhP1sY5VCM) `2개월 전`
+- **[CARD 02 | 연합뉴스TV]** [AI 반도체 우리 기술로…"2030년 미국과 대등하게" / 연합뉴스TV (YonhapnewsTV)](https://www.youtube.com/watch?v=O-Fd38rpLDg) `3년 전`
+  - 💡 **핵심 요약**: [조회수 962회] 연합뉴스TV 채널의 최신 테크 브리핑 영상입니다. 정부가 구원투수로 주목받는 인공지능, AI반도체 육성에 나서기로 했습니다. 서형석 기자입니다. [기자] 거리 위 많은 사람과 차량의 ...
+  - 🏷️ **키워드**: #테크유튜브 #AI트렌드 #인사이트
+- **[CARD 03 | MBCNEWS]** [중국 새 AI 공개 "미국 다 따라잡았다"‥글로벌 반도체 '휘청' (2026.07.20/뉴스데스크/MBC)](https://www.youtube.com/watch?v=cNhP1sY5VCM) `2개월 전`
   - 💡 **핵심 요약**: [조회수 45,466회] MBCNEWS 채널의 최신 테크 브리핑 영상입니다. 중국이 AI 개발 경쟁에서 독주하던 미국을 위협하고 있습니다. 중국 스타트업이 새로 공개한 인공지능 모델이 높은 평가를 받고 ...
   - 🏷️ **키워드**: #테크유튜브 #AI트렌드 #인사이트
+- **[CARD 04 | KBS News]** [중국, AI굴기 과시…시 주석도 “AI 기술 국제협력” 자신감 [9시 뉴스] / KBS  2026.07.17.](https://www.youtube.com/watch?v=f1GN5Wx0s2Y) `2개월 전`
+  - 💡 **핵심 요약**: [조회수 9,768회] KBS News 채널의 최신 테크 브리핑 영상입니다. 오늘(17일) 세계 최대 규모의 AI 박람회가 중국 상하이에서 개막했습니다. 미국의 대중 기술 통제 속에서도 중국이 예상을 뛰어넘는 AI ...
+  - 🏷️ **키워드**: #테크유튜브 #AI트렌드 #인사이트
+- **[CARD 05 | 연합뉴스TV]** [불붙은 AI 반도체 전쟁…인력·기술 유출 우려 / 연합뉴스TV (YonhapnewsTV)](https://www.youtube.com/watch?v=muv_JpHB0WI) `2년 전`
+  - 💡 **핵심 요약**: [조회수 729회] 연합뉴스TV 채널의 최신 테크 브리핑 영상입니다. 불붙은 AI 반도체 전쟁…인력·기술 유출 우려 [앵커] 최근 인공지능이 주목을 받으면서 HBM과 같은 고성능 메모리 반도체 수요가 급증 ...
+  - 🏷️ **키워드**: #지정학안보 #테크유튜브 #AI트렌드
 
 --------------------------------------------------------------------------------
 
