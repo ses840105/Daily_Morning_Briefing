@@ -42,8 +42,32 @@ class TTSEngine:
 
             return os.path.exists(output_path)
         except Exception as e:
-            print(f"[TTSEngine] Error saving audio file with gTTS: {e}")
-            return False
+            print(f"[TTSEngine] gTTS offline or failed ({e}), falling back to macOS native say + afconvert...")
+            try:
+                voice_map = {"ko": "Yuna", "en": "Samantha", "zh-CN": "Tingting", "zh": "Tingting"}
+                mac_voice = voice_map.get(self.lang, "Yuna")
+                aiff_path = base_path + ".aiff"
+                subprocess.run(
+                    ["say", "-v", mac_voice, "-r", "185", "-o", aiff_path, text],
+                    check=True,
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL,
+                )
+                subprocess.run(
+                    ["afconvert", "-f", "m4af", "-d", "aac", aiff_path, m4a_path],
+                    check=True,
+                    stdout=subprocess.DEVNULL,
+                    stderr=subprocess.DEVNULL,
+                )
+                if os.path.exists(aiff_path):
+                    os.remove(aiff_path)
+                if not os.path.exists(mp3_path) and os.path.exists(m4a_path):
+                    import shutil
+                    shutil.copy(m4a_path, mp3_path)
+                return os.path.exists(output_path)
+            except Exception as e2:
+                print(f"[TTSEngine] Fallback say+afconvert failed: {e2}")
+                return False
 
     def speak(self, text: str, background: bool = False):
         """
