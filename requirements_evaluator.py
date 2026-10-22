@@ -9,7 +9,7 @@ import os
 import sys
 import time
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 if BASE_DIR not in sys.path:
@@ -72,8 +72,9 @@ def run_evaluator():
 
     # EVAL-06: Daily Positive Affirmation Rotation
     t0 = time.perf_counter()
+    tomorrow_str = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
     aff_today = get_daily_affirmation(today_str)
-    aff_next = get_daily_affirmation("2026-10-22")
+    aff_next = get_daily_affirmation(tomorrow_str)
     lat_06 = (time.perf_counter() - t0) * 1000
     p06 = bool(aff_today and len(aff_today) > 10 and aff_today != aff_next)
     results.append(("EVAL-06", "REQ-05", "Daily Deterministic Positive Affirmation Rotation", p06, lat_06, {"today_aff": aff_today[:40]}))

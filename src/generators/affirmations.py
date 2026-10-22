@@ -16,15 +16,19 @@ AFFIRMATIONS = [
 
 def get_daily_affirmation(date_str: str = None) -> str:
     """
-    날짜를 시드로 사용하여 매일 고정된 하나의 확언을 반환합니다.
+    날짜를 시드로 사용하여 매일 고정된 하나의 확언을 순차 회전 방식으로 반환합니다.
     """
     if date_str:
         try:
-            seed_val = int(date_str.replace("-", ""))
-            random.seed(seed_val)
-        except:
-            random.seed()
+            dt = datetime.strptime(date_str, "%Y-%m-%d")
+            return AFFIRMATIONS[dt.toordinal() % len(AFFIRMATIONS)]
+        except Exception:
+            try:
+                seed_val = int(date_str.replace("-", ""))
+                return AFFIRMATIONS[seed_val % len(AFFIRMATIONS)]
+            except Exception:
+                random.seed()
     else:
-        random.seed()
+        return AFFIRMATIONS[datetime.now().toordinal() % len(AFFIRMATIONS)]
     
     return random.choice(AFFIRMATIONS)
