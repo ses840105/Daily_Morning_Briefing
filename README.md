@@ -54,7 +54,7 @@ macOS 시스템 데몬인 `launchd`에 등록되어 **매일 오전 09:00:00**�
 ## 🚀 수동 실행 명령어 (언제든 즉시 확인)
 
 ```bash
-cd /Users/essim/Desktop/Daily_Morning_Briefing
+cd /Users/essim/Desktop/private/02.Daily_Morning_Briefing
 
 # 1. 카드뉴스 신문 및 다국어 오디오 파일 즉시 생성 + macOS 알림
 ./run_briefing.sh
