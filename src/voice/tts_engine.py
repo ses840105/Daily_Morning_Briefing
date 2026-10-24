@@ -38,7 +38,7 @@ class TTSEngine:
         cleaned = text
 
         # 1. 기사 말머리 대괄호 제거 (예: [기고], [글로벌 방산], [기자수첩], (종합) 등)
-        cleaned = re.sub(r"\[[^\]]{1,15}\]\s*", "", cleaned)
+        cleaned = re.sub(r"\[[^\]]{1,30}\]\s*", "", cleaned)
         cleaned = re.sub(r"\((?:종합|상보|속보|단독|1보|2보)\)", "", cleaned)
 
         # 2. 화살표 및 클릭베이트 구분 기호 정제 (->, =>, >>, <<, ▶, ▷, |, =)

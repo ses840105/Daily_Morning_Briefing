@@ -9,7 +9,7 @@ def _clean_headline_for_speech(title: str) -> str:
     s = title.strip()
 
     # 1. 기사 말머리 및 분류 태그 제거
-    s = re.sub(r"\[[^\]]{1,15}\]\s*", "", s)
+    s = re.sub(r"\[[^\]]{1,30}\]\s*", "", s)
     s = re.sub(r"\((?:종합|상보|속보|단독|1보|2보)\)", "", s)
     s = re.sub(r"\([A-Za-z0-9\s&.\-/]{2,20}\)", "", s)
 
@@ -135,8 +135,9 @@ class VoiceScriptBuilder:
             lines.append("이어서 실무 개발자와 연구진이 주목해야 할 최신 AI/ML 툴과 기법 소개해 드립니다.")
             for i, item in enumerate(tools_items[:2]):
                 clean_tool_title = _clean_headline_for_speech(item["title"])
-                raw_tool_summary = item.get("summary", "")
-                clean_tool_desc = _clean_headline_for_speech(raw_tool_summary[:120])
+                raw_tool_summary = item.get("summary", "").strip()
+                first_sent = raw_tool_summary.split("다.")[0] + "다." if "다." in raw_tool_summary else raw_tool_summary
+                clean_tool_desc = _clean_headline_for_speech(first_sent)
                 if i == 0:
                     lines.append(f"먼저 주목할 도구로는, {clean_tool_title}입니다. {clean_tool_desc}")
                 else:
