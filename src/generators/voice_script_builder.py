@@ -5,13 +5,56 @@ from src.generators.translator import translate_text
 
 
 def _clean_headline_for_speech(title: str) -> str:
-    """헤드라인 내 말머리, 괄호 약어, 가운뎃점, 말줄임표를 자연스러운 구어체 호흡으로 정제합니다."""
-    s = re.sub(r"\[[^\]]{1,15}\]\s*", "", title)
+    """헤드라인 내 말머리, 클릭베이트 연쇄, 한자 약어, 괄호 약어, 기호를 자연스러운 구어체 호흡으로 정제합니다."""
+    s = title.strip()
+
+    # 1. 기사 말머리 및 분류 태그 제거
+    s = re.sub(r"\[[^\]]{1,15}\]\s*", "", s)
     s = re.sub(r"\((?:종합|상보|속보|단독|1보|2보)\)", "", s)
     s = re.sub(r"\([A-Za-z0-9\s&.\-/]{2,20}\)", "", s)
+
+    # 2. 클릭베이트 연쇄 및 화살표 구분자 분할 (->, =>, >>, <<, ▶, ▷, |, =)
+    parts = re.split(r"\s*(?:->|=>|>>|<<|▶|▷|►|▻|=|\|)\s*", s)
+    if parts:
+        valid_parts = [p.strip() for p in parts if p.strip()]
+        if valid_parts:
+            s = valid_parts[0]
+            # 첫 구절이 너무 짧은 경우(예: '속보') 두 번째 구절까지 자연스럽게 연결
+            if len(s) < 15 and len(valid_parts) > 1:
+                s = f"{s}, {valid_parts[1]}"
+
+    # 3. 주요 뉴스 한자 약어 자연스러운 한글 독음 변환
+    hanja_map = {
+        "發": "발 ",
+        "美": "미국 ",
+        "韓": "한국 ",
+        "中": "중국 ",
+        "日": "일본 ",
+        "北": "북한 ",
+        "對": "대 ",
+        "與": "여당 ",
+        "野": "야당 ",
+        "英": "영국 ",
+        "獨": "독일 ",
+        "佛": "프랑스 ",
+        "러": "러시아 ",
+        "軍": "군 ",
+        "尹": "윤 ",
+        "金": "김 ",
+        "李": "이 ",
+        "前": "전 ",
+        "後": "후 ",
+        "重": "중 ",
+        "行": "행 ",
+    }
+    for h, k in hanja_map.items():
+        s = s.replace(h, k)
+
+    # 4. 숫자 범위 및 호흡 부호 변환
     s = re.sub(r"(\d[\d,.]*)\s*~\s*(\d[\d,.]*)", r"\1에서 \2", s)
     s = s.replace("·", ", ").replace("…", ", ").replace("...", ", ")
-    s = s.replace("‘", "").replace("’", "").replace("“", "").replace("”", "")
+    s = s.replace("‘", "").replace("’", "").replace("“", "").replace("”", "").replace('"', "").replace("'", "")
+    s = re.sub(r"[:;,~]+$", "", s)
     s = re.sub(r"\s+", " ", s).strip()
     return s
 
@@ -43,27 +86,46 @@ class VoiceScriptBuilder:
             for i, item in enumerate(ai_items[:3]):
                 clean_title = _clean_headline_for_speech(item["title"])
                 if i == 0:
-                    lines.append(f"오늘 가장 주목받는 기술 소식입니다. {clean_title} 소식이 전해지며 업계의 큰 관심을 모으고 있습니다.")
+                    lines.append(f"오늘 가장 주목받는 기술 소식입니다. {clean_title} 소식이 전해지며 글로벌 테크 업계의 큰 관심을 모으고 있습니다.")
                 elif i == 1:
-                    lines.append(f"이와 함께, {clean_title} 소식도 이어지며 차세대 인공지능 생태계 경쟁이 한층 치열해지고 있습니다.")
+                    lines.append(f"이와 함께 차세대 모델 및 인프라 동향으로는, {clean_title} 흐름이 이어지며 생태계 주도권 경쟁이 한층 가열되는 모습입니다.")
                 else:
-                    lines.append(f"아울러 반도체와 인프라 분야에서는 {clean_title} 관련 흐름이 포착되어 시장의 이목이 집중되고 있습니다.")
+                    lines.append(f"아울러 반도체와 클라우드 공급망에서는 {clean_title} 관련 분석이 제기되어 시장 참여자들의 시선이 집중되고 있습니다.")
         
         lines.append("")
         papers = tech_data.get("arxiv_papers", [])
         if papers:
-            paper_title = _clean_headline_for_speech(papers[0]["title"])
-            lines.append("다음은 학계에서 주목받고 있는 아카이브 최신 인공지능 논문 소식입니다.")
-            lines.append(f"오늘 공개된 주요 연구로는, {paper_title} 논문이 실시간 에이전트 평가와 추론 고도화 분야에서 높은 평가를 받고 있습니다.")
+            raw_paper_title = papers[0]["title"]
+            clean_paper = _clean_headline_for_speech(raw_paper_title)
+            # 영문 제목인 경우 한국어로 자연스럽게 번역
+            if not re.search(r"[가-힣]", clean_paper):
+                try:
+                    clean_paper = translate_text(clean_paper, "ko")
+                    clean_paper = _clean_headline_for_speech(clean_paper)
+                except Exception:
+                    pass
+            lines.append("다음은 학계에서 주목받고 있는 아카이브 최신 인공지능 연구 소식입니다.")
+            lines.append(f"오늘 발표된 주요 논문으로는, {clean_paper} 연구가 공개되어 추론 효율성과 자율 에이전트 고도화 측면에서 높은 평가를 받고 있습니다.")
 
         lines.append("")
         yt_items = tech_data.get("youtube_picks", [])
         if yt_items:
-            lines.append("이어서 유튜브 테크 트렌드 살펴보겠습니다.")
+            lines.append("이어서 유튜브 화제의 테크 영상 살펴보겠습니다.")
             for i, item in enumerate(yt_items[:2]):
                 channel = item.get("channel") or item.get("source") or "주요 테크"
                 clean_yt = _clean_headline_for_speech(item["title"])
-                lines.append(f"{channel} 채널에서는, {clean_yt} 영상을 통해 핵심 기술 변화와 시장의 시사점을 심층 분석했습니다.")
+                # 영문 제목인 경우 한국어로 번역하여 아나운서 발음 최적화
+                if not re.search(r"[가-힣]", clean_yt):
+                    try:
+                        clean_yt = translate_text(clean_yt, "ko")
+                        clean_yt = _clean_headline_for_speech(clean_yt)
+                    except Exception:
+                        pass
+
+                if i == 0:
+                    lines.append(f"먼저 {channel}에서는 {clean_yt}를 집중 조명하며 기술 혁신이 가져올 변화를 짚었습니다.")
+                else:
+                    lines.append(f"또한 {channel} 채널에서는 {clean_yt}에 주목하며 실무진과 개발자들이 눈여겨볼 핵심 시사점을 전했습니다.")
         
         lines.append("")
 
@@ -75,11 +137,11 @@ class VoiceScriptBuilder:
             for i, item in enumerate(econ_items[:3]):
                 clean_econ = _clean_headline_for_speech(item["title"])
                 if i == 0:
-                    lines.append(f"먼저 금융 시장에서 가장 눈여겨볼 소식입니다. {clean_econ} 흐름이 나타나며 글로벌 투자자들의 시선이 집중되고 있습니다.")
+                    lines.append(f"먼저 금융 시장에서 가장 눈여겨볼 소식입니다. {clean_econ} 소식이 전해지며 투자자들의 관심이 쏠렸습니다.")
                 elif i == 1:
-                    lines.append(f"외환 및 자본 시장에서는, {clean_econ} 소식이 전해지면서 향후 외국인 수급과 자산 가격 흐름에 주요 변수로 작용할 전망입니다.")
+                    lines.append(f"이어서 외환 및 거시 지표를 보면, {clean_econ} 흐름이 감지되어 향후 자산 가격과 유동성에 주요 변수로 작용할 전망입니다.")
                 else:
-                    lines.append(f"또한 증시에서는 {clean_econ} 관련 분석이 제기되며 주요 섹터별 차별화 장세가 이어지고 있습니다.")
+                    lines.append(f"또한 산업과 증시 전반에서는 {clean_econ} 관련 진단이 나오며 섹터별 차별화 양상이 이어지고 있습니다.")
 
         lines.append("")
         mil_items = econ_data.get("military_headlines", [])
@@ -87,9 +149,9 @@ class VoiceScriptBuilder:
             for i, item in enumerate(mil_items[:2]):
                 clean_mil = _clean_headline_for_speech(item["title"])
                 if i == 0:
-                    lines.append(f"국제 안보와 국방 분야에서는, {clean_mil} 소식이 가장 중요한 의제로 떠올랐습니다.")
+                    lines.append(f"국제 안보와 국방 분야에서는, {clean_mil} 소식이 주요 의제로 부각되었습니다.")
                 else:
-                    lines.append(f"더불어 글로벌 방산 및 외교 무대에서는 {clean_mil} 움직임이 본격화되며 전략적 협력이 한층 강화되고 있습니다.")
+                    lines.append(f"아울러 글로벌 방산 및 외교 협력 무대에서는 {clean_mil} 동향이 확인되며 지정학적 리스크 관리가 강조되고 있습니다.")
         lines.append("")
 
         # 4. 3부: 오늘 하루 주목할 포인트

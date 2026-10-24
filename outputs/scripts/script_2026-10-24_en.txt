@@ -3,24 +3,24 @@ For those of you who are starting your day today, we summarize the key news that
 Today's briefing will be delivered in the following order: artificial intelligence and semiconductor technology trends, the latest academic research papers and YouTube tech trends, and global macroeconomic and security issues.
 
 First, the first section is about artificial intelligence, big tech semiconductors, and academic research trends.
-This is the most noteworthy technology news today.News of 16 open source projects that are changing the game of AI and machine learning is drawing great attention from the industry.
-In addition, with the news of Broadcom, OpenAI, and its own AI inference chip ‘Jalapeño’ being released, competition in the next-generation artificial intelligence ecosystem is becoming more intense.
-In addition, in the semiconductor and infrastructure fields, Nota, ranked 3rd in the ICML 2026 'Efficient Qwen Competition', is capturing the market's attention as trends related to proving open source AI optimization technology are captured.
+This is the most noteworthy technology news today.News of 16 open source projects that are changing the game of AI and Machine Russia is attracting great attention from the global tech industry.
+In addition, as next-generation models and infrastructure trends, Broadcom, OpenAI, and Jalapeño, their own AI inference chip, are being released, and the competition for leadership in the ecosystem is intensifying.
+In addition, in the semiconductor and cloud supply chain, language and intelligence are separate, and superintelligence cannot be achieved with an LLM, so related analyzes have been raised and the attention of market participants is focused.
 
-The following is news about the latest artificial intelligence papers from the archive that are attracting attention in academia.
-Among the major studies released today, the paper Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success is highly regarded in the field of real-time agent evaluation and inference advancement.
+The following is the archive's latest artificial intelligence research news that is attracting attention in academia.
+The main paper published today is Sensorimotor Alignment: A Platonic Proxy Study for Concrete Policy Success, which is highly regarded in terms of inference efficiency and autonomous agent advancement.
 
-Next, let’s look at YouTube tech trends.
-The Two Minute Papers channel conducted an in-depth analysis of key technological changes and market implications through the Gemini 4 Argon Is Not What I Expected video.
-The Two Minute Papers channel conducted an in-depth analysis of key technological changes and market implications through the OpenAIs New AI Is Doing Things We Barely Understand video.
+Next, let’s look at popular tech videos on YouTube.
+First, Two Minute Papers focused on Gemini 4 Argon is not what I expected and pointed out the changes that technological innovation will bring.
+Additionally, the Two Minute Papers channel focused on OpenAI's new AI doing things we barely understand, and delivered key implications for practitioners and developers to pay attention to.
 
 We continue with the second section, global macroeconomic and financial markets, and security diplomacy trends.
-First of all, this is the most noteworthy news in the financial market.AI investment is booming, and as foreigners leave, the Korean won shows a sullen trend, attracting the attention of global investors.
-In the foreign exchange and capital markets, if the US interest rate rises, where will Korea be shaken? As news of simultaneous pressures on loans, exchange rates, and the stock market spread, it is expected to act as a major variable in future foreign supply and demand and asset price trends.
-Also, in the stock market, the market is shackled by 4% due to the Federal Reserve's hawkish attack -> Ants stop panic selling => "There is no mercy until inflation is controlled" > The inside story of the US Federal Reserve's push for additional hikes >> Emergency reversal in interest rates between Korea and the US = Bank of Korea, analysis of the need to defend the exchange rate and face external pressure on household debt is being raised, with differentiated markets by major sectors continuing.
+First of all, this is the most noteworthy news in the financial market.Investors' attention was focused on the news that AI investment would fall flat and the won would become sullen if foreigners left.
+Next, looking at foreign exchange and macro indicators, where will Korea start to sway if the US interest rate rises? Simultaneous pressures on loans, exchange rates, and the stock market are detected, which is expected to act as a major variable in asset prices and liquidity in the future.
+In addition, across industries and the stock market, there is a diagnosis that the market is shackled by 4% due to the Federal Reserve's hawkish offensive, and differentiation by sector continues.
 
-In the field of international security and defense, the news that the defense ministers of Korea and the Philippines agreed to expand military exchanges and strengthen defense industry cooperation emerged as the most important agenda.
-In addition, on the global defense industry and diplomatic stage, strategic cooperation is being further strengthened with the Dominican Republic's independence recovery date: $275,200 during the Korean War, and the Dominican Republic's movement as the third largest donor country in Latin America is in full swing.
+In the field of international security and defense, the news that the defense ministers of Korea and the Philippines agreed to expand military exchanges and strengthen cooperation in the defense industry was highlighted as a major agenda item.
+In addition, on the global defense industry and diplomatic cooperation stage, geopolitical risk management is being emphasized as the Dominican Republic's independence recovery date: $275,200 during the Korean War and the trend of Dominica being the third largest donor country in Latin America are confirmed.
 
 The third section is the three key observation points that you must pay attention to today.
 First, please pay attention to the development of next-generation artificial intelligence agent technology and the reorganization of customized semiconductor supply chains such as HBM Four.
@@ -28,6 +28,6 @@ Second, you should closely examine the direction of the U.S. Federal Reserve's m
 Third, we recommend that you prepare for market volatility by keeping an eye on the expansion of global defense orders and the schedules of trade and diplomatic negotiations between major countries.
 
 Lastly, here are some positive morning affirmations that will energize your day.
-Please take a deep breath and repeat this sentence in your mind.
+Please take a comfortable breath and repeat this sentence in your mind together.
 I love myself as I am and believe strongly in my infinite potential.
 I hope that today is a meaningful day for you to fully demonstrate your potential.This concludes the daily morning intelligence briefing.Thank you for listening.

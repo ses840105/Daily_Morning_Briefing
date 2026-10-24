@@ -76,6 +76,7 @@ class PaperBuilder:
         return "\n".join(md)
 
     def build_html(self, tech_data: Dict[str, Any], econ_data: Dict[str, Any], scripts: Dict[str, str], affirmation: str, date_str: str) -> str:
+        cache_ts = int(datetime.now().timestamp())
         # 1. 섹션별 카드뉴스 데이터 생성
         ai_cards = enrich_section_items(tech_data.get("ai_headlines", [])[:6], "ai")
         tech_cards = enrich_section_items(tech_data.get("tech_headlines", [])[:6], "tech")
@@ -2169,16 +2170,16 @@ class PaperBuilder:
 <body>
     <!-- Audio Sources (MP3 + M4A Dual Format for 100% Browser Support) -->
     <audio id="audio-ko" preload="metadata">
-        <source src="AUDIO_BASE_PATHbriefing_{date_str}_ko.mp3" type="audio/mpeg">
-        <source src="AUDIO_BASE_PATHbriefing_{date_str}_ko.m4a" type="audio/mp4">
+        <source src="AUDIO_BASE_PATHbriefing_{date_str}_ko.mp3?v={cache_ts}" type="audio/mpeg">
+        <source src="AUDIO_BASE_PATHbriefing_{date_str}_ko.m4a?v={cache_ts}" type="audio/mp4">
     </audio>
     <audio id="audio-en" preload="metadata">
-        <source src="AUDIO_BASE_PATHbriefing_{date_str}_en.mp3" type="audio/mpeg">
-        <source src="AUDIO_BASE_PATHbriefing_{date_str}_en.m4a" type="audio/mp4">
+        <source src="AUDIO_BASE_PATHbriefing_{date_str}_en.mp3?v={cache_ts}" type="audio/mpeg">
+        <source src="AUDIO_BASE_PATHbriefing_{date_str}_en.m4a?v={cache_ts}" type="audio/mp4">
     </audio>
     <audio id="audio-zh" preload="metadata">
-        <source src="AUDIO_BASE_PATHbriefing_{date_str}_zh.mp3" type="audio/mpeg">
-        <source src="AUDIO_BASE_PATHbriefing_{date_str}_zh.m4a" type="audio/mp4">
+        <source src="AUDIO_BASE_PATHbriefing_{date_str}_zh.mp3?v={cache_ts}" type="audio/mpeg">
+        <source src="AUDIO_BASE_PATHbriefing_{date_str}_zh.m4a?v={cache_ts}" type="audio/mp4">
     </audio>
 
     <!-- ==========================================================================
@@ -2958,9 +2959,20 @@ class PaperBuilder:
             const el = document.getElementById('affirmationTextEl');
             if (!el || !('speechSynthesis' in window)) return;
             window.speechSynthesis.cancel();
-            const utter = new SpeechSynthesisUtterance(el.textContent.replace(/"/g, ''));
+            const text = el.textContent.replace(/"/g, '').trim();
+            const utter = new SpeechSynthesisUtterance(text);
             utter.lang = 'ko-KR';
             utter.rate = 0.95;
+            utter.pitch = 1.0;
+
+            const voices = window.speechSynthesis.getVoices() || [];
+            const koVoices = voices.filter(v => v.lang && (v.lang === 'ko-KR' || v.lang.startsWith('ko')));
+            if (koVoices.length > 0) {{
+                const preferredVoice = koVoices.find(v =>
+                    /natural|neural|premium|online|google|yuna|sunhi/i.test(v.name)
+                ) || koVoices[0];
+                utter.voice = preferredVoice;
+            }}
             window.speechSynthesis.speak(utter);
         }}
 
