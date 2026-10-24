@@ -12,18 +12,18 @@
 - **[CARD 02 | 디일렉]** [브로드컴·오픈AI, 자체 AI 추론용 칩 '할라페뇨' 공개](https://news.google.com/rss/articles/CBMiZkFVX3lxTE9KaFBlTGV3UFNWVWVkOElxZXVNVHdJemNwQUdFT2RxX1BLOG1LN0tQSUdkemN3MldyZzZJdWY3Yzlhb2gtOXRGZGlQdVVJcW0yS0dZeU1rU3pqSFF1UjQtd1piX0VQQQ?oc=5) `6월 29일`
   - 💡 **핵심 요약**: 디일렉 보도에 따르면 '할라페뇨' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
   - 🏷️ **키워드**: #오픈AI #AI추론칩 #생성형AI
-- **[CARD 03 | AI타임스]** [[12월2일] "언어와 지능은 별개...LLM으로는 초지능 달성할 수 없어"](https://news.google.com/rss/articles/CBMiakFVX3lxTE11cDgwbFRJUkRTYXFRZHVzbGVxLXZzNmM1MFZ4bzB4QlY0ZjdIeE4yTkJyY3ppZy1FOS1tX3ZKNnFyOEhyUDVLS3VaMDNUMy1oQVZaaTN2M09LdExIXzFhN3VOYWtkZUZ3UVE?oc=5) `12월 3일`
-  - 💡 **핵심 요약**: AI타임스 보도에 따르면 '"언어와 지능은 별개...LLM으로는 초지능…' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
-  - 🏷️ **키워드**: #프론티어LLM #생성형AI #LLM
-- **[CARD 04 | 연합뉴스]** [구글, AI 언어모델 '제미나이' 공개…"GPT-4·사람 능력 넘어"(종합)](https://news.google.com/rss/articles/CBMiW0FVX3lxTFA3b29UanY1dF9SOGkzZXpqTzl5UzM3dTctTE9sQ1NRNzdTelFkZ0owZ01lbG55UHNFNHBGc29Wazhia0lvX3pwX0JKa3pDYURNd2ZMNlNUaUhnLTTSAWBBVV95cUxNaDJGdlVOTUpkVjZwMmktLXZQejExYmhWbDJOVmdiNi1QLVpvQlN4WjVsNlhXbGFEa0pMRVlweDRLeVo2VDFIRUJMXzIwSkpIX29VQXFGZlpuc3ZhZkxGVEg?oc=5) `12월 7일`
-  - 💡 **핵심 요약**: 연합뉴스 보도에 따르면 '제미나이' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
-  - 🏷️ **키워드**: #오픈AI #GoogleAI #프론티어LLM
-- **[CARD 05 | IBM]** [대규모 언어 모델(LLM) 목록](https://news.google.com/rss/articles/CBMic0FVX3lxTE1aX2xlUVV6YXJDSTFtYkFwTFhTT1VvVm1YZ0lUXzYwSWt3OTZFWWttazlnMWJ0ZTY4MTBkSVdOc09udGNITnlza3NCYmdfNl84WXRhNl8zRFYtNzc5QXJkdVNFZFgyV2N5d3l6RjZ5ejBfYzg?oc=5) `5월 6일`
-  - 💡 **핵심 요약**: IBM 보도에 따르면 '대규모 언어 모델(LLM) 목록' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
-  - 🏷️ **키워드**: #프론티어LLM #생성형AI #LLM
-- **[CARD 06 | 인공지능신문]** [인공지능 특허 전문 변리사가 분석한 오픈AI의 'GUI 상호작용' 기술 특허 (16)](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE13eUl6c3B5NG15enRtMUVJQUh1MHRmY0dZeVZwX3pPZVhfTG1lWTZuZFFhbFhBZWVsb2JxS1RPd05OZnVYdkQxVFRITF8xSWZNbmRUYVVTY1JadkNYdkROMHJJWlhMU00?oc=5) `7월 22일`
-  - 💡 **핵심 요약**: 인공지능신문 보도에 따르면 'GUI 상호작용' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
-  - 🏷️ **키워드**: #오픈AI #테크정책 #생성형AI
+- **[CARD 03 | 스타트업엔(StartupN)]** [노타, ICML 2026 'Efficient Qwen Competition' 3위…오픈소스 AI 최적화 기술력 입증](https://news.google.com/rss/articles/CBMiaEFVX3lxTE5iczJzdzl2SmhxNWNfYVV5R1YxTE5PaV8ycXdBNmgzdm5XTlJaNVBSMVZHM0l6TDRLNU9PM1Y4OFBJbU5xWkVfNEdEbXl4RUp1b1RjSlQzejlKcVFNZTFha2hzME1LQ3dJ0gFsQVVfeXFMTWc0ZmdNOURTbUV1akItbVJfb25oSjFUandtNUdtUHAydmZlWC1RZjZSRXFkYm93SGZiX3I2bWZsU2FjdHFPc09PeU90dWRiRERZRF9IN19BNU93MnkwQTZLTWtTVDhSUVYwaHF3?oc=5) `7월 13일`
+  - 💡 **핵심 요약**: 스타트업엔(StartupN) 보도에 따르면 'Efficient Qwen Competition' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
+  - 🏷️ **키워드**: #오픈소스AI #생성형AI #LLM
+- **[CARD 04 | 바이라인네트워크]** [엠바크가 밝힌 ‘아크 레이더스’ AI 활용 비화…“쓰기 쉬운 도구가 중요”](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9tQUZ6QXYxYWhwdXdHaWlEUjB5S1NtWnpWcWpaeFVXalRtQVZnM09OVjA4UENjd1BjanA3TkZyTEp6RHZOOXMtTDduSFpnbEk?oc=5) `6월 17일`
+  - 💡 **핵심 요약**: 바이라인네트워크 보도에 따르면 '아크 레이더스' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
+  - 🏷️ **키워드**: #생성형AI #LLM #머신러닝
+- **[CARD 05 | 브런치]** [AI·소프트웨어 특허, 김용덕 변리사의 수행경력](https://news.google.com/rss/articles/CBMiVEFVX3lxTE51OU9QblpYdVN0SE5yOGNKbUd3cTZ6V3FzWnFhQWVlRXdEZXJRejZGbmwwaGthNDhLQ1d2QUFhX21rS2NkRmhpeWN4ZzNhZDE3X3Jraw?oc=5) `9월 11일`
+  - 💡 **핵심 요약**: 브런치 보도에 따르면 'AI·소프트웨어 특허' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
+  - 🏷️ **키워드**: #테크정책 #생성형AI #LLM
+- **[CARD 06 | 이코노미트리뷴]** [오픈AI, 브로드컴과 자체 AI칩 ‘할라페뇨’ 공개…HBM 수요 주목](https://news.google.com/rss/articles/CBMid0FVX3lxTE5WckdjUk9fYW1EQWJnOVZZQ3ZvNXFBU25tMlRiRjF3clpET3ZXaFh2SVRjT2VtcWh5UHRlT0p3M0VkMXRseERLeU9qcThiaXNBTnFxMlZrOTB4WlhtWjV1a1ZINWFEZ1RVRUVDdGVjRDJDd3M5V0xv?oc=5) `6월 25일`
+  - 💡 **핵심 요약**: 이코노미트리뷴 보도에 따르면 '할라페뇨' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
+  - 🏷️ **키워드**: #오픈AI #AI추론칩 #HBM반도체
 
 ### 💻 2. 빅테크 · 반도체 & 엔지니어링 동향
 - **[CARD 01 | 포쓰저널]** [빅테크 다음은 소버린 AI…젠슨 황, 유럽 정부 공략 본격](https://news.google.com/rss/articles/CBMiZEFVX3lxTE1KU1lSTm5GdVBhZnJSbW94QTJlREdNVnBNX2ZCeDlJaHpHZzF5eTNUdmZBV29mUzRCdGIwZ2VreWxHSlIzdHNCdmpKTVFSeHF6djNEODBJQ1I1dmtiMTYwdFVqVHg?oc=5) `2일 전`
@@ -64,10 +64,10 @@
 
 ### 📺 4. 유튜브 추천 테크 영상 (YouTube Tech Picks)
 - **[CARD 01 | Two Minute Papers]** [Gemini 4 Argon Is Not What I Expected](https://www.youtube.com/watch?v=LWxX6vvHfrc) `5일 전`
-  - 💡 **핵심 요약**: [조회수 223,437회] Two Minute Papers 채널의 최신 테크 브리핑 영상입니다. 📝 Gemini 4 Argon + report are available here: Sources: Adam Bridges, B Shang, Carlos Galarza, Christian Ahlin, Eric Tyson, Juan Benet, Lukas Biewald, ...
+  - 💡 **핵심 요약**: [조회수 223,475회] Two Minute Papers 채널의 최신 테크 브리핑 영상입니다. 📝 Gemini 4 Argon + report are available here: Sources: Adam Bridges, B Shang, Carlos Galarza, Christian Ahlin, Eric Tyson, Juan Benet, Lukas Biewald, ...
   - 🏷️ **키워드**: #GoogleAI #테크유튜브 #AI트렌드
 - **[CARD 02 | Two Minute Papers]** [OpenAI’s New AI Is Doing Things We Barely Understand](https://www.youtube.com/watch?v=z_sXLlLVUls) `10월 13일`
-  - 💡 **핵심 요약**: [조회수 360,526회] Two Minute Papers 채널의 최신 테크 브리핑 영상입니다. 📝 The papers are available here: Adam Bridges, B Shang, Carlos Galarza, Christian Ahlin, Eric Tyson, Juan Benet, Lukas Biewald, Michael Tedder, Owen S...
+  - 💡 **핵심 요약**: [조회수 360,544회] Two Minute Papers 채널의 최신 테크 브리핑 영상입니다. 📝 The papers are available here: Adam Bridges, B Shang, Carlos Galarza, Christian Ahlin, Eric Tyson, Juan Benet, Lukas Biewald, Michael Tedder, Owen S...
   - 🏷️ **키워드**: #오픈AI #테크유튜브 #AI트렌드
 - **[CARD 03 | Yannic Kilcher]** [I BUILT A FULLY AUTOMATIC MANSPLAINER](https://www.youtube.com/watch?v=xHi8PUIVyoo) `3월 6일`
   - 💡 **핵심 요약**: [조회수 12,878회] Yannic Kilcher 채널의 최신 테크 브리핑 영상입니다. All information about GTC and the DGX Spark Raffle is here: Links: Homepage: Merch: YouTube: Twitter: Discord: LinkedIn: If you want to support me, th...
@@ -75,8 +75,8 @@
 - **[CARD 04 | Yannic Kilcher]** [Traditional X-Mas Stream](https://www.youtube.com/watch?v=Dr6jw-WAd9E) `12월 29일`
   - 💡 **핵심 요약**: [조회수 4,545회] Yannic Kilcher 채널의 주요 테크 분석 영상으로, 'Traditional X-Mas Stream' 관련 핵심 기술 변화와 시사점을 다룹니다.
   - 🏷️ **키워드**: #테크유튜브 #AI트렌드 #인사이트
-- **[CARD 05 | MBCNEWS]** [중국 새 AI 공개 "미국 다 따라잡았다"‥글로벌 반도체 '휘청' (2026.07.20/뉴스데스크/MBC)](https://www.youtube.com/watch?v=cNhP1sY5VCM) `3개월 전`
-  - 💡 **핵심 요약**: [조회수 45,488회] MBCNEWS 채널의 최신 테크 브리핑 영상입니다. 중국이 AI 개발 경쟁에서 독주하던 미국을 위협하고 있습니다. 중국 스타트업이 새로 공개한 인공지능 모델이 높은 평가를 받고 ...
+- **[CARD 05 | 연합뉴스TV]** [AI 반도체 우리 기술로…"2030년 미국과 대등하게" / 연합뉴스TV (YonhapnewsTV)](https://www.youtube.com/watch?v=O-Fd38rpLDg) `3년 전`
+  - 💡 **핵심 요약**: [조회수 968회] 연합뉴스TV 채널의 최신 테크 브리핑 영상입니다. 정부가 구원투수로 주목받는 인공지능, AI반도체 육성에 나서기로 했습니다. 서형석 기자입니다. [기자] 거리 위 많은 사람과 차량의 ...
   - 🏷️ **키워드**: #테크유튜브 #AI트렌드 #인사이트
 
 --------------------------------------------------------------------------------

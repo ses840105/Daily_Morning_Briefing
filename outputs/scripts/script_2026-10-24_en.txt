@@ -1,11 +1,11 @@
 hello.This is the Daily Morning Intelligence Briefing, October 24, 2026.
 For those of you who are starting your day today, we summarize the key news that occurred overnight in the global market and technology ecosystem in an easy-to-understand manner.
-Today's briefing will be delivered in the following order: artificial intelligence and semiconductor technology trends, the latest academic research papers and YouTube tech trends, and global macroeconomic and security issues.
+Today's briefing will be delivered in the following order: artificial intelligence and semiconductor technology trends, the latest research papers from academia and YouTube tech trends, and global macroeconomic and security issues.
 
 First, the first section is about artificial intelligence, big tech semiconductors, and academic research trends.
-This is the most noteworthy technology news today.News of 16 open source projects that are changing the game of AI and Machine Russia is attracting great attention from the global tech industry.
-In addition, as next-generation models and infrastructure trends, Broadcom, OpenAI, and Jalapeño, their own AI inference chip, are being released, and the competition for leadership in the ecosystem is intensifying.
-In addition, in the semiconductor and cloud supply chain, language and intelligence are separate, and superintelligence cannot be achieved with an LLM, so related analyzes have been raised and the attention of market participants is focused.
+This is the most noteworthy technology news today.News of 16 open source projects that are changing the game of AI and machine learning is drawing great attention from the global tech industry.
+In addition, as next-generation models and infrastructure trends, Broadcom, OpenAI, and Jalapeño, their own AI inference chip, are being released, and the competition for leadership in the ecosystem appears to be intensifying.
+In addition, in the semiconductor and cloud supply chain, the attention of market participants is focused on the analysis of Nota, which ranked 3rd in the ICML 2026 Efficient Qwen Competition and proved its open source AI optimization technology.
 
 The following is the archive's latest artificial intelligence research news that is attracting attention in academia.
 The main paper published today is Sensorimotor Alignment: A Platonic Proxy Study for Concrete Policy Success, which is highly regarded in terms of inference efficiency and autonomous agent advancement.
@@ -15,12 +15,12 @@ First, Two Minute Papers focused on Gemini 4 Argon is not what I expected and po
 Additionally, the Two Minute Papers channel focused on OpenAI's new AI doing things we barely understand, and delivered key implications for practitioners and developers to pay attention to.
 
 We continue with the second section, global macroeconomic and financial markets, and security diplomacy trends.
-First of all, this is the most noteworthy news in the financial market.Investors' attention was focused on the news that AI investment would fall flat and the won would become sullen if foreigners left.
+First of all, this is the most noteworthy news in the financial market.Investors' attention was drawn to the news that AI investment was falling flat and the Korean won would become sullen if foreigners left.
 Next, looking at foreign exchange and macro indicators, where will Korea start to sway if the US interest rate rises? Simultaneous pressures on loans, exchange rates, and the stock market are detected, which is expected to act as a major variable in asset prices and liquidity in the future.
 In addition, across industries and the stock market, there is a diagnosis that the market is shackled by 4% due to the Federal Reserve's hawkish offensive, and differentiation by sector continues.
 
 In the field of international security and defense, the news that the defense ministers of Korea and the Philippines agreed to expand military exchanges and strengthen cooperation in the defense industry was highlighted as a major agenda item.
-In addition, on the global defense industry and diplomatic cooperation stage, geopolitical risk management is being emphasized as the Dominican Republic's independence recovery date: $275,200 during the Korean War and the trend of Dominica being the third largest donor country in Latin America are confirmed.
+In addition, on the stage of global defense industry and diplomatic cooperation, geopolitical risk management is being emphasized as the trend of Dominican Republic's recovery of independence: $275,200 during the Korean War and the 3rd largest donor country in Latin America is confirmed.
 
 The third section is the three key observation points that you must pay attention to today.
 First, please pay attention to the development of next-generation artificial intelligence agent technology and the reorganization of customized semiconductor supply chains such as HBM Four.

@@ -37,7 +37,7 @@ def _clean_headline_for_speech(title: str) -> str:
         "英": "영국 ",
         "獨": "독일 ",
         "佛": "프랑스 ",
-        "러": "러시아 ",
+        "俄": "러시아 ",
         "軍": "군 ",
         "尹": "윤 ",
         "金": "김 ",
@@ -49,6 +49,7 @@ def _clean_headline_for_speech(title: str) -> str:
     }
     for h, k in hanja_map.items():
         s = s.replace(h, k)
+    s = re.sub(r"(?<![가-힣])러\s*[·•,]\s*", "러시아, ", s)
 
     # 4. 숫자 범위 및 호흡 부호 변환
     s = re.sub(r"(\d[\d,.]*)\s*~\s*(\d[\d,.]*)", r"\1에서 \2", s)
