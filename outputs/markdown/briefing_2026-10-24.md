@@ -1,150 +1,182 @@
 # 📰 GOOGLE NEWS BRIEFING | 데일리 모닝 카드뉴스 인텔리전스
-> **발행 일시**: 2026-10-24 09:00 KST | **에디션**: Google News Style Card Edition | **총 38개 카드뉴스**
+> **발행 일시**: 2026-10-24 09:00 KST | **에디션**: Google News Style Card Edition | **총 48개 카드뉴스**
 
 ================================================================================
 
-## 📄 [SECTION 1] 🤖 최신 ML · AI · IT 테크 & 논문/유튜브 카드뉴스
+## 📄 [SECTION 1] 🤖 최신 ML · AI · IT 테크 & 논문/유튜브/신규 툴 카드뉴스
 
 ### 🧠 1. 인공지능 & 머신러닝 (AI & Frontier LLM)
-- **[CARD 01 | www.itworld.co.kr]** [AI·머신러닝의 판을 바꾸는 16가지 오픈소스 프로젝트](https://news.google.com/rss/articles/CBMi3wJBVV95cUxPcmJBYy1mVjloUzJvUmVIel8zUVBCOEZKRHQtNEQ4SkhxbHBuZGtDNTV2bU1uQnhfQnJtd3c3WVgtNmxRdG5MaWxDUlJPTzNPa2lyTWRlUkZlci1uYkFocXJaYU0zS2ViT29vUmdWc290dTl3M3NDQ2x3aEFqMHNLaDJ2ZFhPbGVMZnVRTWt0TW1QUkpmaGZnOG1rZ3BvTlVLZkZjT1FVdU12YWVPdy01RDVyUnRFNUo0c0lZanBtTnJDVmdOQkhoTjl2UnFOWmVla05hVWFlelYyTDN0bE5xTVdiR3FMdEdBblFxd0JUdmRMRFNvdXp3NmFsampUQV9Sa3FieG1rczFmQXRfSDRoMWRIUHBpaFMxdGI0eUx0MG5GR3pYbWxjeTBrd2Y4aS1kZ0JJdzZnV1JXb3lZbUQxSTVacUoyMXhaNjdMMGlxbUFLX2Zsam5OLUlVbVNtUkU?oc=5) `1월 30일`
-  - 💡 **핵심 요약**: www.itworld.co.kr 보도에 따르면 'AI·머신러닝의 판을 바꾸는 16가지 오픈소스…' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
-  - 🏷️ **키워드**: #오픈소스AI #생성형AI #LLM
-- **[CARD 02 | 디일렉]** [브로드컴·오픈AI, 자체 AI 추론용 칩 '할라페뇨' 공개](https://news.google.com/rss/articles/CBMiZkFVX3lxTE9KaFBlTGV3UFNWVWVkOElxZXVNVHdJemNwQUdFT2RxX1BLOG1LN0tQSUdkemN3MldyZzZJdWY3Yzlhb2gtOXRGZGlQdVVJcW0yS0dZeU1rU3pqSFF1UjQtd1piX0VQQQ?oc=5) `6월 29일`
-  - 💡 **핵심 요약**: 디일렉 보도에 따르면 '할라페뇨' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
-  - 🏷️ **키워드**: #오픈AI #AI추론칩 #생성형AI
-- **[CARD 03 | 스타트업엔(StartupN)]** [노타, ICML 2026 'Efficient Qwen Competition' 3위…오픈소스 AI 최적화 기술력 입증](https://news.google.com/rss/articles/CBMiaEFVX3lxTE5iczJzdzl2SmhxNWNfYVV5R1YxTE5PaV8ycXdBNmgzdm5XTlJaNVBSMVZHM0l6TDRLNU9PM1Y4OFBJbU5xWkVfNEdEbXl4RUp1b1RjSlQzejlKcVFNZTFha2hzME1LQ3dJ0gFsQVVfeXFMTWc0ZmdNOURTbUV1akItbVJfb25oSjFUandtNUdtUHAydmZlWC1RZjZSRXFkYm93SGZiX3I2bWZsU2FjdHFPc09PeU90dWRiRERZRF9IN19BNU93MnkwQTZLTWtTVDhSUVYwaHF3?oc=5) `7월 13일`
-  - 💡 **핵심 요약**: 스타트업엔(StartupN) 보도에 따르면 'Efficient Qwen Competition' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
-  - 🏷️ **키워드**: #오픈소스AI #생성형AI #LLM
-- **[CARD 04 | 바이라인네트워크]** [엠바크가 밝힌 ‘아크 레이더스’ AI 활용 비화…“쓰기 쉬운 도구가 중요”](https://news.google.com/rss/articles/CBMiT0FVX3lxTE9tQUZ6QXYxYWhwdXdHaWlEUjB5S1NtWnpWcWpaeFVXalRtQVZnM09OVjA4UENjd1BjanA3TkZyTEp6RHZOOXMtTDduSFpnbEk?oc=5) `6월 17일`
-  - 💡 **핵심 요약**: 바이라인네트워크 보도에 따르면 '아크 레이더스' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
+- **[CARD 01 | Naver Blog]** [충주시, 피지컬 AI 로봇 생산거점 유치](https://news.google.com/rss/articles/CBMiekFVX3lxTE96Ml9LYklsSFR4eE5CMDg5NmstMjZTYzIwVWtnbk1jRzJBQXRseExpMktyRjF6OHlzSzZ1TVplaFhUd0pNNVFmaUlhNjBBeHdqaFhFYTdvendYU0RETHdGb2U1VU8yZVFycW5ldmozM2pKM0FlaGp0Tk13?oc=5) `44분 전`
+  - 💡 **핵심 요약**: Naver Blog 보도에 따르면 '충주시' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
+  - 🏷️ **키워드**: #휴머노이드로봇 #생성형AI #LLM
+- **[CARD 02 | 중도일보]** [서산교육지원청, 생성형 AI 활용해 학교 행정업무 부담 줄인다](https://news.google.com/rss/articles/CBMiZEFVX3lxTFBpeXpqNGVZNEM0YU5meXRVOEZwcjVUdDB0UGJrdG5PbTF6WHU1TzhURmlRYnAyaDZNYUtZT1hsVE5TWllxdGFXb3RidWJ1ZXRtTFlPaG8tbnF5cVF6QkxGWm9VUTQ?oc=5) `1시간 전`
+  - 💡 **핵심 요약**: 중도일보 보도에 따르면 '서산교육지원청' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
   - 🏷️ **키워드**: #생성형AI #LLM #머신러닝
-- **[CARD 05 | 브런치]** [AI·소프트웨어 특허, 김용덕 변리사의 수행경력](https://news.google.com/rss/articles/CBMiVEFVX3lxTE51OU9QblpYdVN0SE5yOGNKbUd3cTZ6V3FzWnFhQWVlRXdEZXJRejZGbmwwaGthNDhLQ1d2QUFhX21rS2NkRmhpeWN4ZzNhZDE3X3Jraw?oc=5) `9월 11일`
-  - 💡 **핵심 요약**: 브런치 보도에 따르면 'AI·소프트웨어 특허' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
-  - 🏷️ **키워드**: #테크정책 #생성형AI #LLM
-- **[CARD 06 | 이코노미트리뷴]** [오픈AI, 브로드컴과 자체 AI칩 ‘할라페뇨’ 공개…HBM 수요 주목](https://news.google.com/rss/articles/CBMid0FVX3lxTE5WckdjUk9fYW1EQWJnOVZZQ3ZvNXFBU25tMlRiRjF3clpET3ZXaFh2SVRjT2VtcWh5UHRlT0p3M0VkMXRseERLeU9qcThiaXNBTnFxMlZrOTB4WlhtWjV1a1ZINWFEZ1RVRUVDdGVjRDJDd3M5V0xv?oc=5) `6월 25일`
-  - 💡 **핵심 요약**: 이코노미트리뷴 보도에 따르면 '할라페뇨' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
-  - 🏷️ **키워드**: #오픈AI #AI추론칩 #HBM반도체
+- **[CARD 03 | 아이뉴스24]** [AI가 고객 계좌에 멋대로 접속⋯美은행 '비상'](https://news.google.com/rss/articles/CBMiS0FVX3lxTE5halhCcDFEdVRhTjVDa01SU1hILXBHOWlZbG5VN2lkclJDY18waDBqeG1NNDlVU2JJVWJ0R29wbzBaTzNjYncxdW4wNA?oc=5) `1시간 전`
+  - 💡 **핵심 요약**: 아이뉴스24 보도에 따르면 'AI가 고객 계좌에 멋대로 접속⋯美은행 '비상'' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
+  - 🏷️ **키워드**: #생성형AI #LLM #머신러닝
+- **[CARD 04 | 인공지능신문]** [오픈AI, “AI 안전성, 기업 혼자서는 확보 못 한다”…폴란드와 공동 검증체계 구축](https://news.google.com/rss/articles/CBMiZ0FVX3lxTE40ZFY3MlVZcTFIUElXQmVTVVpJTHFMZ2VSQlJVYXpaX05BWFFiNU4zTTBuVTlxcDE4SlV5MndBblo3MTBrOXZJV2p5bi1XWUt0dzYzU3B2RWprT3Y0Tk14ZGJfU2FMeHc?oc=5) `2시간 전`
+  - 💡 **핵심 요약**: 인공지능신문 보도에 따르면 'AI 안전성, 기업 혼자서는 확보 못 한다' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
+  - 🏷️ **키워드**: #오픈AI #생성형AI #LLM
+- **[CARD 05 | 헬로티]** [옴론, 美 산업용 PC 명가 ‘온로직’ 6억 7,500만 달러에 전격 인수… ‘피지컬 AI’ 영토 확장](https://news.google.com/rss/articles/CBMiX0FVX3lxTE5yVkpuM3lYNG9ocjRhdzIxS1pTWktQUU1uaGxkZmZfenN6TDdONFZ4V0d3bUlYUXd0X016dUZCYXFDbVhCMURBUW9ScFNyMDJJelUwTTBIeFRCdHllT3dJ?oc=5) `2시간 전`
+  - 💡 **핵심 요약**: 헬로티 보도에 따르면 '온로직' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
+  - 🏷️ **키워드**: #생성형AI #LLM #머신러닝
+- **[CARD 06 | AI타임스]** [오픈AI 연구원 3명 해고, ‘순환 추론’ 유출 조사서 비롯…시그널 대화 쟁점](https://news.google.com/rss/articles/CBMiakFVX3lxTE5uSE1nc2l2SkRrQzBWaEtMTmctQ2xaay01UlZMZmlQYWV0NDZneFlkNENoSU1JUERnUjdUeUNJWjRpOG9wblhUaTVQWUZ0clQ1ZG5GT0lWWi11bURPNHExdWpBZU5qM2VlM3c?oc=5) `2시간 전`
+  - 💡 **핵심 요약**: AI타임스 보도에 따르면 '순환 추론' 이슈가 AI·머신러닝 생태계의 주요 화두로 부각되었습니다. 프론티어 모델 경쟁력 강화와 엔지니어링 최적화 관점에서 업계의 이목이 집중되고 있습니다.
+  - 🏷️ **키워드**: #오픈AI #생성형AI #LLM
 
 ### 💻 2. 빅테크 · 반도체 & 엔지니어링 동향
-- **[CARD 01 | 포쓰저널]** [빅테크 다음은 소버린 AI…젠슨 황, 유럽 정부 공략 본격](https://news.google.com/rss/articles/CBMiZEFVX3lxTE1KU1lSTm5GdVBhZnJSbW94QTJlREdNVnBNX2ZCeDlJaHpHZzF5eTNUdmZBV29mUzRCdGIwZ2VreWxHSlIzdHNCdmpKTVFSeHF6djNEODBJQ1I1dmtiMTYwdFVqVHg?oc=5) `2일 전`
-  - 💡 **핵심 요약**: 포쓰저널에서 전한 빅테크·반도체 주요 소식입니다. 글로벌 AI 인프라 확충과 차세대 반도체 공급망 재편 속에서 기업들의 대규모 투자 및 기술 동맹이 구체화되고 있습니다.
-  - 🏷️ **키워드**: #빅테크 #AI반도체 #클라우드
-- **[CARD 02 | 초이스스탁]** [엔비디아, AI 서버값 15% 전격 인상…빅테크 투자 비상](https://news.google.com/rss/articles/CBMiYkFVX3lxTFBVc2ZBWmtUR2pRWDRjUVE0MW1CUkhZRmZKNnFhWTJNWUFKZXhpVmdCUjc5TW1lYmg2cmljc1FvTVZPa1N3eDZ0V0JZWGotTFJlZVNiVnF5N0E2c2MtQjV6QXhB?oc=5) `8월 23일`
-  - 💡 **핵심 요약**: 초이스스탁에서 전한 빅테크·반도체 주요 소식입니다. 글로벌 AI 인프라 확충과 차세대 반도체 공급망 재편 속에서 기업들의 대규모 투자 및 기술 동맹이 구체화되고 있습니다.
-  - 🏷️ **키워드**: #엔비디아 #AI인프라 #글로벌증시
-- **[CARD 03 | 데일리시사닷컴]** [[기자수첩] 왜 삼성·하이닉스만 탓하나…AI 반도체 가격을 밀어올린 돈의 순환](https://news.google.com/rss/articles/CBMia0FVX3lxTE1sdFQ5ZlhmX1JhNmI3Yy1rTmd1SHF1MHBIQ3BSLWpBMWFueUlJSGNRZWhGRFJnX3kwZkpQako0UkdTdVN6VGpjTGpFa01KeUJkU2c4NlF4aWhqTGw2bEdRU3NzTkNPZjVIMnJn?oc=5) `10월 16일`
-  - 💡 **핵심 요약**: 데일리시사닷컴에서 전한 빅테크·반도체 주요 소식입니다. 글로벌 AI 인프라 확충과 차세대 반도체 공급망 재편 속에서 기업들의 대규모 투자 및 기술 동맹이 구체화되고 있습니다.
-  - 🏷️ **키워드**: #HBM반도체 #빅테크 #AI반도체
-- **[CARD 04 | 연합뉴스]** [한미 빅테크 1천400조원 AI 동맹…반도체·AI공급망 구축 본격화(종합)](https://news.google.com/rss/articles/CBMiW0FVX3lxTE5uOVoycjZFd2VZdEROWTI3Z1hpSEpWRG8yOW8xdEphYVd1R21HUjdYUURwOXAwZXlmOG5hYldpeXRHMFFZSTJCSFVHdVZMTEVKWmtQWktkbTFlNDjSAWBBVV95cUxOODJtZ3hTZEpwYXVBVFFRanZjWUNzcUFMMVpZMDgwcmMtOXp0T1dvSUt5M2xDRHRFMU9Nd3JZY094d0lFYzQ2cEpOQ3lnQmJ1ZENnVk1jRE91OEhqTWQwWHA?oc=5) `7월 25일`
-  - 💡 **핵심 요약**: 연합뉴스에서 전한 빅테크·반도체 주요 소식입니다. 글로벌 AI 인프라 확충과 차세대 반도체 공급망 재편 속에서 기업들의 대규모 투자 및 기술 동맹이 구체화되고 있습니다.
-  - 🏷️ **키워드**: #빅테크 #AI반도체 #클라우드
-- **[CARD 05 | 지디넷코리아]** [[AI 고속도로] 빅테크 AI 투자 1200조원…패권 경쟁 승부처는 인프라](https://news.google.com/rss/articles/CBMiVkFVX3lxTE9tOF9hSlYtSng1OG8ybG93ZDcwRnRsRXVxeU5xLTJRNzdaZGRmY3ltQWU0cXdwR0VLNWhJby0zUTNpWFc5cUpKaHpRakFUeXlmTjgwdnRn?oc=5) `8월 16일`
+- **[CARD 01 | 지디넷코리아]** ['중국판 엔비디아' 캠브리콘, 매출 급등…"국산화 노력 수혜"](https://news.google.com/rss/articles/CBMiVkFVX3lxTE5VQ1g4bnlPWmhTODI3WVR3d25YbFdsTzQxRmhMa2lMcklyeC1XLTZneTU0QjZibEdPTXBLajdJUThVTEU4VkJfd0t3M0pLeWF2MTVBdVZR?oc=5) `48분 전`
   - 💡 **핵심 요약**: 지디넷코리아에서 전한 빅테크·반도체 주요 소식입니다. 글로벌 AI 인프라 확충과 차세대 반도체 공급망 재편 속에서 기업들의 대규모 투자 및 기술 동맹이 구체화되고 있습니다.
-  - 🏷️ **키워드**: #AI인프라 #글로벌증시 #빅테크
-- **[CARD 06 | 디일렉]** [SK, 글로벌 빅테크들과 AI 인프라 협력 확대](https://news.google.com/rss/articles/CBMiZkFVX3lxTE1INTRBRGYzdzZSN19neHBKMWh6YUpvVDZFSDMzMVNuZkVWNlFsRlVRZHE3Q2RmaFF3TDFWZFJuY2N4QnptSDVhakhHdmNvb2t2cXZEcWJ6X1l6R2lkYkx1N0NudVJsUQ?oc=5) `7월 27일`
-  - 💡 **핵심 요약**: 디일렉에서 전한 빅테크·반도체 주요 소식입니다. 글로벌 AI 인프라 확충과 차세대 반도체 공급망 재편 속에서 기업들의 대규모 투자 및 기술 동맹이 구체화되고 있습니다.
-  - 🏷️ **키워드**: #HBM반도체 #AI인프라 #빅테크
+  - 🏷️ **키워드**: #엔비디아 #빅테크 #AI반도체
+- **[CARD 02 | Martin Cid Magazine]** [엔비디아 CEO 젠슨 황, 엔비디아 칩을 대출 담보로… 네오클라우드 채권 금리는 16%](https://news.google.com/rss/articles/CBMitAJBVV95cUxPMlB3UEpjamM2aWIxQ29Sc2RNT1RRMnljLVhWTWZNZzQzTW9sZDUxS2hUd1RCXzI0LXhCYTFwUFg3ODBDRkVzYXdZQ2RFNG9YYkFPVWdpekN1aVpRNWNPeFlSNUpqdVNwY29aeEllUllFRHJneGRlMHJoY2xiaTZtQThRTkUwYmZERkozY1FzTFBIano3d1J1NENPMFBfdWVWMmt0YTNrdGt2TTg2cDJ2OUVnbng2MXJFazdkcW9Hb0hFV0JIdUU3eE04T0F3R19USVNNTXdLQUl5UnduY0VfdC1WXzNSZnVjS1k4T00xdTVidlY1Z3ozY1Iydkc2NzBLV0RSTEZvby1vQVlfMVpMdWpxVUhrMHo3Ujh0Q1Qzdm14a1JrWE02WVBCM0NOdDhSSDRNRg?oc=5) `1시간 전`
+  - 💡 **핵심 요약**: Martin Cid Magazine에서 전한 빅테크·반도체 주요 소식입니다. 글로벌 AI 인프라 확충과 차세대 반도체 공급망 재편 속에서 기업들의 대규모 투자 및 기술 동맹이 구체화되고 있습니다.
+  - 🏷️ **키워드**: #엔비디아 #AI인프라 #기준금리
+- **[CARD 03 | 매일경제 마켓]** [“SK하닉 고점서 절반넘게 날아갔는데 중복상장?”…분노 잇따르자 철회](https://news.google.com/rss/articles/CBMiUkFVX3lxTFBDY1R0MDFIRVBqM3lwUWhNbUtlcWYwdmNiOGphc0NJU3pPbEpvdXA0SGtNYVNnNThsTTNFVjhXUU1FS01xMDR4X0FaTGZBSWtHUmc?oc=5) `1시간 전`
+  - 💡 **핵심 요약**: 매일경제 마켓에서 전한 빅테크·반도체 주요 소식입니다. 글로벌 AI 인프라 확충과 차세대 반도체 공급망 재편 속에서 기업들의 대규모 투자 및 기술 동맹이 구체화되고 있습니다.
+  - 🏷️ **키워드**: #HBM반도체 #빅테크 #AI반도체
+- **[CARD 04 | AI타임스]** [피차이 “클라우드 매출 포기하더라도 첨단 AI 개발에 컴퓨팅 우선 투입”](https://news.google.com/rss/articles/CBMiakFVX3lxTE9TX3VZV3d4R1BFTVlBLWtnZEtiTXhsNExPRHp2bkdoME50SElYdWhaT3JBa2dYWGVuVDVoWlA3OHFCU0hTLUM4QUZYQ0FqSWhfcy01WU1OY3JiNG5LVUJwRkFNaC1jMzQ0QWc?oc=5) `2시간 전`
+  - 💡 **핵심 요약**: AI타임스에서 전한 빅테크·반도체 주요 소식입니다. 글로벌 AI 인프라 확충과 차세대 반도체 공급망 재편 속에서 기업들의 대규모 투자 및 기술 동맹이 구체화되고 있습니다.
+  - 🏷️ **키워드**: #AI인프라 #빅테크 #AI반도체
+- **[CARD 05 | 네이버 프리미엄콘텐츠]** [월가가 엔비디아 '매도'를 외쳤습니다](https://news.google.com/rss/articles/CBMiiwFBVV95cUxPeHhQcnk0T2djQ3QydW03QnZOazBMNUJNc3JCdWZKc0VqTmU5ZEdSUWxwVGFjLVJZdWtVek44VHBQRmtqZnVBTUVFYVNFQkNnS3dtV21yOFIzVFFyR3hvci14ZUFqTWIwQVQ0NnVqYlRRUUdjQl9zcXh4all5QmtEUnNMQkNPWFN6cHY0?oc=5) `2시간 전`
+  - 💡 **핵심 요약**: 네이버 프리미엄콘텐츠에서 전한 빅테크·반도체 주요 소식입니다. 글로벌 AI 인프라 확충과 차세대 반도체 공급망 재편 속에서 기업들의 대규모 투자 및 기술 동맹이 구체화되고 있습니다.
+  - 🏷️ **키워드**: #엔비디아 #글로벌증시 #빅테크
+- **[CARD 06 | 뉴스스페이스]** [[빅테크칼럼] 게티이미지 파산 원인, AI 보다 투자자 소송 때문…영업은 유지하고 기존 주식은 소각](https://news.google.com/rss/articles/CBMiYEFVX3lxTE83RFBBcjk5RkJ2UVFITFo4VFUyMHVuQm03b3JMbmQxR2RLOWZEcWhrTXRBTHdVcUkyU1VPT1hvWGtmbTJMSGluejU5V0tZREM5R2JWTkVyWUd5ajBNTjhDcA?oc=5) `2시간 전`
+  - 💡 **핵심 요약**: 뉴스스페이스에서 전한 빅테크·반도체 주요 소식입니다. 글로벌 AI 인프라 확충과 차세대 반도체 공급망 재편 속에서 기업들의 대규모 투자 및 기술 동맹이 구체화되고 있습니다.
+  - 🏷️ **키워드**: #글로벌증시 #빅테크 #AI반도체
 
 ### 📚 3. 최신 AI/ML 연구 논문 (ArXiv Papers)
-- **[CARD 01 | ArXiv (Yunfei Xie et al.)]** [Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success](https://arxiv.org/pdf/2610.31670v1) `2일 전`
+- **[CARD 01 | ArXiv (Qiwen Gu et al.)]** [A Unified Framework for Image-to-3D Part Generation via Variable Granularity](https://arxiv.org/pdf/2610.31671v1) `2일 전`
+  - 💡 **핵심 요약**: [cs.CV] Controllable 3D part generation is pivotal for digital asset creation, yet existing methods lack the flexibility to accommodate diverse user workflows requiring varying levels of...
+  - 🏷️ **키워드**: #ArXiv #AI논문 #딥러닝연구
+- **[CARD 02 | ArXiv (Yunfei Xie et al.)]** [Sensorimotor Alignment: A Platonic Proxy for Embodied Policy Success](https://arxiv.org/pdf/2610.31670v1) `2일 전`
   - 💡 **핵심 요약**: [cs.CV] Robotic foundation models are typically evaluated through costly closed-loop rollouts, which motivates cheap offline proxies for model capability. The Platonic Representation...
   - 🏷️ **키워드**: #ArXiv #AI논문 #딥러닝연구
-- **[CARD 02 | ArXiv (Mahdi Salmani et al.)]** [Direct Pass@$k$ Optimization for Thought Pruning: Balancing Quality and Diversity in Test-Time Reasoning](https://arxiv.org/pdf/2610.31667v1) `2일 전`
+- **[CARD 03 | ArXiv (Mahdi Salmani et al.)]** [Direct Pass@$k$ Optimization for Thought Pruning: Balancing Quality and Diversity in Test-Time Reasoning](https://arxiv.org/pdf/2610.31667v1) `2일 전`
   - 💡 **핵심 요약**: [cs.AI] Test-time scaling has emerged as a key inference strategy for reasoning models, where a model generates a large number of candidate solutions in the hope of finding at least one...
   - 🏷️ **키워드**: #ArXiv #AI논문 #딥러닝연구
-- **[CARD 03 | ArXiv (Xin He et al.)]** [Phase Transition from Random Features to Fully Trainable Networks](https://arxiv.org/pdf/2610.31663v1) `2일 전`
+- **[CARD 04 | ArXiv (Xin He et al.)]** [Phase Transition from Random Features to Fully Trainable Networks](https://arxiv.org/pdf/2610.31663v1) `2일 전`
   - 💡 **핵심 요약**: [math.NA] Constructing accurate and computationally tractable approximation spaces is a fundamental task in scientific computing. Partially trainable neural networks bridge fixed random features...
   - 🏷️ **키워드**: #ArXiv #AI논문 #딥러닝연구
-- **[CARD 04 | ArXiv (Isaac Gibbs et al.)]** [Reliable AI-Assisted Decisions via Selective Auditing](https://arxiv.org/pdf/2610.31662v1) `2일 전`
+- **[CARD 05 | ArXiv (Isaac Gibbs et al.)]** [Reliable AI-Assisted Decisions via Selective Auditing](https://arxiv.org/pdf/2610.31662v1) `2일 전`
   - 💡 **핵심 요약**: [stat.ML] We consider online monitoring of an AI system that produces a sequence of decisions. At each round, the system outputs a proposed decision together with a confidence score estimating...
   - 🏷️ **키워드**: #ArXiv #AI논문 #딥러닝연구
-- **[CARD 05 | ArXiv (Sy-Tuyen Ho et al.)]** [SpectralCanary: Embarrassingly Simple Low-Frequency Traces for T2I Dataset-Use Auditing](https://arxiv.org/pdf/2610.31659v1) `2일 전`
-  - 💡 **핵심 요약**: [cs.CV] Auditing whether a text-to-image (T2I) model was fine-tuned on a particular image collection is difficult: a model can absorb collection-level visual characteristics without...
+- **[CARD 06 | ArXiv (Ariel Slepyan et al.)]** [OpenTac: An Open Ecosystem for Customizable, Scalable, and Transferable 3D Tactile Sensing](https://arxiv.org/pdf/2610.31661v1) `2일 전`
+  - 💡 **핵심 요약**: [cs.RO] We present OpenTac, a novel sensor and a full-stack ecosystem for tactile skins that are highly customizable, scalable, and readily deployed in downstream robot control and learning...
   - 🏷️ **키워드**: #ArXiv #AI논문 #딥러닝연구
 
 ### 📺 4. 유튜브 추천 테크 영상 (YouTube Tech Picks)
-- **[CARD 01 | Two Minute Papers]** [Gemini 4 Argon Is Not What I Expected](https://www.youtube.com/watch?v=LWxX6vvHfrc) `5일 전`
-  - 💡 **핵심 요약**: [조회수 223,475회] Two Minute Papers 채널의 최신 테크 브리핑 영상입니다. 📝 Gemini 4 Argon + report are available here: Sources: Adam Bridges, B Shang, Carlos Galarza, Christian Ahlin, Eric Tyson, Juan Benet, Lukas Biewald, ...
-  - 🏷️ **키워드**: #GoogleAI #테크유튜브 #AI트렌드
-- **[CARD 02 | Two Minute Papers]** [OpenAI’s New AI Is Doing Things We Barely Understand](https://www.youtube.com/watch?v=z_sXLlLVUls) `10월 13일`
-  - 💡 **핵심 요약**: [조회수 360,544회] Two Minute Papers 채널의 최신 테크 브리핑 영상입니다. 📝 The papers are available here: Adam Bridges, B Shang, Carlos Galarza, Christian Ahlin, Eric Tyson, Juan Benet, Lukas Biewald, Michael Tedder, Owen S...
+- **[CARD 01 | AI Explained]** [AI Labs Warn Race Makes Breach ‘Inevitable’](https://www.youtube.com/watch?v=C4Sq3Rot8FU) `10월 12일`
+  - 💡 **핵심 요약**: [조회수 152,524회] AI Explained 채널의 최신 테크 브리핑 영상입니다. In the week that software got reverse engineered, Sam Altman warned 6.1 Astra ‘tipped toward [breach risk], and Muse Wonder showed the race isn’t slow...
+  - 🏷️ **키워드**: #테크유튜브 #AI트렌드 #인사이트
+- **[CARD 02 | AI Explained]** [OpenAI Security: Controlling Models is Now ‘Hell’](https://www.youtube.com/watch?v=_rtp1XzaP6Q) `10월 1일`
+  - 💡 **핵심 요약**: [조회수 294,736회] AI Explained 채널의 최신 테크 브리핑 영상입니다. This video is hard to summarise. A cracked cipher, an OpenAI security warning, Gemini 4 Argon, RSI paper (co-authored by a who’s who of AI), Lab White...
   - 🏷️ **키워드**: #오픈AI #테크유튜브 #AI트렌드
-- **[CARD 03 | Yannic Kilcher]** [I BUILT A FULLY AUTOMATIC MANSPLAINER](https://www.youtube.com/watch?v=xHi8PUIVyoo) `3월 6일`
-  - 💡 **핵심 요약**: [조회수 12,878회] Yannic Kilcher 채널의 최신 테크 브리핑 영상입니다. All information about GTC and the DGX Spark Raffle is here: Links: Homepage: Merch: YouTube: Twitter: Discord: LinkedIn: If you want to support me, th...
+- **[CARD 03 | Fireship]** [The most vulnerable week in internet history...](https://www.youtube.com/watch?v=SMGg7iisHmc) `어제`
+  - 💡 **핵심 요약**: [조회수 1,060,697회] Fireship 채널의 최신 테크 브리핑 영상입니다. Semgrep Guardian catches the risky code and packages your agent introduces. Try it free for 60 days: PHP2Shell, a backdoored Python package with 23 mi...
   - 🏷️ **키워드**: #테크유튜브 #AI트렌드 #인사이트
-- **[CARD 04 | Yannic Kilcher]** [Traditional X-Mas Stream](https://www.youtube.com/watch?v=Dr6jw-WAd9E) `12월 29일`
-  - 💡 **핵심 요약**: [조회수 4,545회] Yannic Kilcher 채널의 주요 테크 분석 영상으로, 'Traditional X-Mas Stream' 관련 핵심 기술 변화와 시사점을 다룹니다.
+- **[CARD 04 | Fireship]** [The last real programmers are dying out...](https://www.youtube.com/watch?v=zv6B6PQOuHE) `2일 전`
+  - 💡 **핵심 요약**: [조회수 1,338,072회] Fireship 채널의 최신 테크 브리핑 영상입니다. Get real-time search data from a single API. Fireship viewers get 1,000 free searches: Yes the very foundations of the internet are currently crumblin...
   - 🏷️ **키워드**: #테크유튜브 #AI트렌드 #인사이트
-- **[CARD 05 | 연합뉴스TV]** [AI 반도체 우리 기술로…"2030년 미국과 대등하게" / 연합뉴스TV (YonhapnewsTV)](https://www.youtube.com/watch?v=O-Fd38rpLDg) `3년 전`
-  - 💡 **핵심 요약**: [조회수 968회] 연합뉴스TV 채널의 최신 테크 브리핑 영상입니다. 정부가 구원투수로 주목받는 인공지능, AI반도체 육성에 나서기로 했습니다. 서형석 기자입니다. [기자] 거리 위 많은 사람과 차량의 ...
-  - 🏷️ **키워드**: #테크유튜브 #AI트렌드 #인사이트
+- **[CARD 05 | 에피 - 바이브 코딩]** [LLM부터 AI Agent 개념 한 방에 정리해 드립니다.](https://www.youtube.com/watch?v=CUB1JuH1UX8) `1년 전`
+  - 💡 **핵심 요약**: [조회수 49,007회] 에피 - 바이브 코딩 채널의 최신 테크 브리핑 영상입니다. ChatGPT 같은 LLM 부터 그 다음 단계인 AI Workflow 마지막 단계인 AI Agent 까지 설명합니다 비전공자를 위한 바이브 코딩 감 잡아 ...
+  - 🏷️ **키워드**: #프론티어LLM #AI아키텍처 #테크유튜브
+- **[CARD 06 | 빌더 조쉬 Builder Josh]** ["AI는 배포한 날부터 시작입니다" 1~2주 걸리던 에이전트 수정을 하루로 줄인 방법 (제네시스랩 유대훈 CTO님)](https://www.youtube.com/watch?v=b6phhtUi0hs) `4일 전`
+  - 💡 **핵심 요약**: [조회수 23,071회] 빌더 조쉬 Builder Josh 채널의 최신 테크 브리핑 영상입니다. 제네시스랩 · 유대훈 CTO님 글로 쓰는 온톨로지 슬립박스(Slipbox)를 담은 기업용 에이전트 빌더, 에이전트리아(Agentria)를 만듭니다 ...
+  - 🏷️ **키워드**: #AI아키텍처 #테크유튜브 #AI트렌드
+
+### 🛠️ 5. 주목할 만한 AI/ML 신규 툴 & 핵심 기법 (New AI Tools & Techniques)
+- **[CARD 01 | Ollama / Georgi Gerganov]** [Ollama & llama.cpp - 로컬 GGUF 양자화 모델 고성능 런타임](https://github.com/ollama/ollama) `오늘`
+  - 💡 **핵심 요약**: 순수 C/C++ 기반의 llama.cpp 엔진을 백엔드로 삼아, macOS의 Metal 및 일반 GPU 환경에서 외부 클라우드 통신 없이 오픈소스 LLM을 원클릭으로 패키징하고 로컬 서빙하는 도구입니다.
+  - 🏷️ **키워드**: #AI툴 #ML기법 #LLM엔지니어링
+- **[CARD 02 | NVIDIA]** [TensorRT-LLM & FP8 Quantization - 엔비디아 GPU 전용 추론 컴파일러](https://github.com/NVIDIA/TensorRT-LLM) `오늘`
+  - 💡 **핵심 요약**: 엔비디아 텐서 코어(Tensor Cores) 하드웨어에 최적화된 최신 FP8 양자화, In-flight Batching, 커스텀 FlashAttention 커널을 결합하여 데이터센터급 최대 연산 처리량을 제공하는 추론 가속 라이브러리입니다.
+  - 🏷️ **키워드**: #엔비디아 #프론티어LLM #AI툴
+- **[CARD 03 | Anthropic / Open Source]** [MCP (Model Context Protocol) - 에이전트 도구 표준 연동 규격](https://github.com/modelcontextprotocol) `오늘`
+  - 💡 **핵심 요약**: LLM 애플리케이션과 로컬/원격 데이터 소스 및 도구(Tools)를 안전하고 표준화된 방식으로 연결하는 오픈 프로토콜입니다. 에이전트가 로컬 파일, DB, 웹 API를 일관된 인터페이스로 탐색하고 호출할 수 있도록 지원합니다.
+  - 🏷️ **키워드**: #AI아키텍처 #AI툴 #ML기법
+- **[CARD 04 | DeepSeek Research]** [GRPO (Group Relative Policy Optimization) - 추론 강화학습 기법](https://arxiv.org/abs/2402.03300) `오늘`
+  - 💡 **핵심 요약**: 별도의 거대한 가치(Critic) 신경망 없이, 동일 프롬프트에 대한 여러 출력 그룹의 상대적 보상만으로 모델을 강화학습시키는 혁신적 기법입니다. DeepSeek-R1의 핵심 추론 능력 도약의 기반이 되었습니다.
+  - 🏷️ **키워드**: #AI툴 #ML기법 #LLM엔지니어링
+- **[CARD 05 | vLLM Project / UC Berkeley]** [vLLM & PagedAttention - 메모리 단편화 제로 고속 서빙 엔진](https://github.com/vllm-project/vllm) `오늘`
+  - 💡 **핵심 요약**: OS의 가상 메모리 페이징 기법에서 착안한 PagedAttention 알고리즘을 도입하여, LLM 서빙 시 KV 캐시 메모리 낭비를 제로화하고 처리량을 최대 24배 끌어올린 오픈소스 서빙 엔진입니다.
+  - 🏷️ **키워드**: #프론티어LLM #AI툴 #ML기법
+- **[CARD 06 | Microsoft Research / 학계]** [GraphRAG & Corrective RAG - 지식 그래프 결합 자율 검색 증강](https://github.com/microsoft/graphrag) `오늘`
+  - 💡 **핵심 요약**: 단순 키워드나 밀집 벡터 유사도 검색의 한계를 극복하기 위해, 비정형 텍스트에서 엔티티와 관계 그래프를 추출하고 커뮤니티 요약을 결합하여 전체 맥락을 포괄하는 고급 RAG 아키텍처입니다.
+  - 🏷️ **키워드**: #AI툴 #ML기법 #LLM엔지니어링
 
 --------------------------------------------------------------------------------
 
 ## 📄 [SECTION 2] 🌐 글로벌 경제 · 군사/안보 · 세계 정세 카드뉴스
 
 ### 📈 1. 글로벌 거시 경제 & 금융 지표 (Macro Economy & Markets)
-- **[CARD 01 | KB Think]** [[환율 전망] AI 투자 정뚝떨, 외인 떠나면 원화 시무룩](https://news.google.com/rss/articles/CBMiYEFVX3lxTE9fV1BjVXZLUDB4d1FRa2RwdVVTUkhVNnp4SVpLdjVaNFRJOThZcG9rZTNuMEtsdlVVOC1ROTROUHlZRWRSR1lsenZFU2JQTHNGZC03YlRaQmtIUUF5UUs5ZQ?oc=5) `5일 전`
-  - 💡 **핵심 요약**: KB Think 분석에 따르면 글로벌 금리·환율 및 거시경제 지표 변화에 따라 금융 시장의 변동성이 확대되고 있습니다. 통화 정책 방향성과 외국인 수급 흐름에 대한 면밀한 점검이 필요한 시점입니다.
-  - 🏷️ **키워드**: #원달러환율 #글로벌증시 #글로벌경제
-- **[CARD 02 | 경북매일]** [미국 금리 오르면 한국은 어디부터 흔들리나…대출·환율·증시 동시 압박](https://news.google.com/rss/articles/CBMiWkFVX3lxTFBiZUtzYWdsdUFXQ19FeTJCNFNtaWQwc3ZIa2c5Z0RpYm03ekpKNTZyZi12Q1dybUlfbEE2YW5nM3JiMnZqREFJRDJZN3FPLWc5VVB1V3J2Y3NFdw?oc=5) `9월 18일`
-  - 💡 **핵심 요약**: 경북매일 분석에 따르면 글로벌 금리·환율 및 거시경제 지표 변화에 따라 금융 시장의 변동성이 확대되고 있습니다. 통화 정책 방향성과 외국인 수급 흐름에 대한 면밀한 점검이 필요한 시점입니다.
-  - 🏷️ **키워드**: #기준금리 #원달러환율 #글로벌증시
-- **[CARD 03 | 데일리머니]** [연준發 매파 공습에 4% 족쇄 채워진 시장 -> 개미들 패닉 셀링 멈춰라 => "인플레 잡힐 때까지 자비란 없다" > 미 연준 추가 인상 강행의 내막 >> 한미 금리 역전폭 비상 = 한국은행, 환율 방어와 가계부채 외통수 직면](https://news.google.com/rss/articles/CBMickFVX3lxTFBEbXc5WlJHRmhTNVhGQU5TblFKaF8zX0N6YTZHamllejhYOXc1UmJBRDZTU3JaaExnRVFEZkhwREwweEVTd2FjUFdnNzRCeGVrRXpFVVlIVHV3VklwUHczVW03czI4ZUE4OFdESFZnS0VUQQ?oc=5) `9월 26일`
-  - 💡 **핵심 요약**: 데일리머니 분석에 따르면 글로벌 금리·환율 및 거시경제 지표 변화에 따라 금융 시장의 변동성이 확대되고 있습니다. 통화 정책 방향성과 외국인 수급 흐름에 대한 면밀한 점검이 필요한 시점입니다.
-  - 🏷️ **키워드**: #기준금리 #원달러환율 #매크로경제
-- **[CARD 04 | KB Think]** [8월 글로벌 경제 및 금융시장 전망 : 글로벌 중앙은행 긴축 조짐, 더욱 커질 시장 변동성](https://news.google.com/rss/articles/CBMiZkFVX3lxTFA2Q0U1QVFTY2RGakZ5dVVCRnJ3aWxUb3piallfdkJYaDFYOUtfX09KTnR0V0UxZm41N0NXYVhDd0hCanlfZnlsdk5qVGpXaGRRYWkwdjRya3dvbmxOdDZsVGZXc1J0QQ?oc=5) `7월 31일`
-  - 💡 **핵심 요약**: KB Think 분석에 따르면 글로벌 금리·환율 및 거시경제 지표 변화에 따라 금융 시장의 변동성이 확대되고 있습니다. 통화 정책 방향성과 외국인 수급 흐름에 대한 면밀한 점검이 필요한 시점입니다.
+- **[CARD 01 | 한국경제]** ["외국인 놀이터 된 코스피, 못버텨"…개미 떠나자 50조 증발 [분석+]](https://news.google.com/rss/articles/CBMiWkFVX3lxTE41VzdNX3A4a2lDak9Ub3A0elgxSjdLN3I5SUxCM28tZkd5T2VaSGhUZUxrR2N1SUZBR1lzTjRTNklxa2RRdE16VHY3NUd4dS1DNUxoMVI1WnU5QQ?oc=5) `44분 전`
+  - 💡 **핵심 요약**: 한국경제 분석에 따르면 글로벌 금리·환율 및 거시경제 지표 변화에 따라 금융 시장의 변동성이 확대되고 있습니다. 통화 정책 방향성과 외국인 수급 흐름에 대한 면밀한 점검이 필요한 시점입니다.
+  - 🏷️ **키워드**: #글로벌증시 #글로벌경제 #금리환율
+- **[CARD 02 | 아이뉴스24]** [선거 다급한 트럼프, 캐나다 50% 관세 일부 철회](https://news.google.com/rss/articles/CBMiS0FVX3lxTE5BTlN6QTJfQjRaNnVLQko2ZjdKMGFEMzg4MXRXMnZaclo4bHZQOXpUdVNSMDlXQl95bTVvdk9ISHd2bi1BTWctUDVSaw?oc=5) `50분 전`
+  - 💡 **핵심 요약**: 아이뉴스24 분석에 따르면 글로벌 금리·환율 및 거시경제 지표 변화에 따라 금융 시장의 변동성이 확대되고 있습니다. 통화 정책 방향성과 외국인 수급 흐름에 대한 면밀한 점검이 필요한 시점입니다.
+  - 🏷️ **키워드**: #글로벌경제 #금리환율 #금융시장
+- **[CARD 03 | 전자신문]** [“수출·재정 확대가 수요 측 물가 압력 키워…건전성 관리 유의해야”](https://news.google.com/rss/articles/CBMiTkFVX3lxTFBKV0hXYUdCT0pOeV9VQnNiWWVfdE4xMXJveHBnRlVPQXZYb1ZpNG55T3luTk1ieWFMX01VcmFSUWRJdHNIUk12R0JkUEVDUQ?oc=5) `1시간 전`
+  - 💡 **핵심 요약**: 전자신문 분석에 따르면 글로벌 금리·환율 및 거시경제 지표 변화에 따라 금융 시장의 변동성이 확대되고 있습니다. 통화 정책 방향성과 외국인 수급 흐름에 대한 면밀한 점검이 필요한 시점입니다.
   - 🏷️ **키워드**: #매크로경제 #글로벌경제 #금리환율
-- **[CARD 05 | 이데일리TV]** [외환시장 24시간 개방과 '원·엔 동조화'가 바꾼 하반기 투자 문법[어쨌든 경제]](https://news.google.com/rss/articles/CBMie0FVX3lxTE9qNndkbzJuaXRld0ZROFh3cUVyNGhRTGtZYlpWY2NOV2lsV0ZPYzYzbkwzdl9XdVFKZzV3X0NkMVNoam9WSVNoTERFM3lLdVBEM0oyOEJqSnpmUFB6VlVDUEd0anZydjVWVzA1V3M2dFU5a1ZBRjNmNm93cw?oc=5) `7월 13일`
-  - 💡 **핵심 요약**: 이데일리TV 분석에 따르면 글로벌 금리·환율 및 거시경제 지표 변화에 따라 금융 시장의 변동성이 확대되고 있습니다. 통화 정책 방향성과 외국인 수급 흐름에 대한 면밀한 점검이 필요한 시점입니다.
-  - 🏷️ **키워드**: #원달러환율 #글로벌증시 #글로벌경제
-- **[CARD 06 | 서울경제]** [[트럼프 스톡커] 美금리까지 올리면 1600원 넘는 ‘원·달러 재앙’](https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tejk3UTM3M09KLU0zSlNuZGs1V3N0ck9FOGt4RWFVRl9tR3h0b3RWcDJQajU1UUt5ZHNPSzFOaHQ1bm1KWHAzVkJJY0pfMUlKLWfSAVNBVV95cUxONHRmQVB5OWc0TUc5QjJUZl9CMThOcWVDVVZLSS1HN0xDMmx4YnlZcmRjbEdwdHRjdEt1SU8wWjhVZGxmdjZhT2lyTzdHbmtoLXBhWQ?oc=5) `6월 6일`
-  - 💡 **핵심 요약**: 서울경제 분석에 따르면 글로벌 금리·환율 및 거시경제 지표 변화에 따라 금융 시장의 변동성이 확대되고 있습니다. 통화 정책 방향성과 외국인 수급 흐름에 대한 면밀한 점검이 필요한 시점입니다.
-  - 🏷️ **키워드**: #기준금리 #원달러환율 #글로벌경제
+- **[CARD 04 | Vietnam.vn]** [트럼프는 예상치 못하게 선거 전에 캐나다산 제품에 대한 관세를 철폐했습니다.](https://news.google.com/rss/articles/CBMiggFBVV95cUxNd1cyOGNWWXcyMndoeTctYkNIbF84SENJbUNRRkVULVozVGt3VWF0QmRLeV9EUlNOSGcxalozV0duNHFvaGxKYUtVMkVzX21YcFJQRllOeF91YnlDSG9Id3FjejFLSTcxYWlMbHlvek1XUzhIN081RnR0RFBMN2dBUnhB?oc=5) `1시간 전`
+  - 💡 **핵심 요약**: Vietnam.vn 분석에 따르면 글로벌 금리·환율 및 거시경제 지표 변화에 따라 금융 시장의 변동성이 확대되고 있습니다. 통화 정책 방향성과 외국인 수급 흐름에 대한 면밀한 점검이 필요한 시점입니다.
+  - 🏷️ **키워드**: #글로벌경제 #금리환율 #금융시장
+- **[CARD 05 | 파이낸셜뉴스]** ["코스피 올랐다는데 내 주식만 왜?"…개미 10명 중 8명이 폭망 한 기막힌 이유 [머니 시그널]](https://news.google.com/rss/articles/CBMiWkFVX3lxTE9uQVRRSmZVQWNpbVlqQXUwVDVJQWluOTVNNk1fTFJEUjgxd0VjZkhUb1R0QjlwMVN0bTZZbktiUDQ3QmQydlRfOGhZY0xSZUJNUWFfTkpDQVZLdw?oc=5) `3시간 전`
+  - 💡 **핵심 요약**: 파이낸셜뉴스 분석에 따르면 글로벌 금리·환율 및 거시경제 지표 변화에 따라 금융 시장의 변동성이 확대되고 있습니다. 통화 정책 방향성과 외국인 수급 흐름에 대한 면밀한 점검이 필요한 시점입니다.
+  - 🏷️ **키워드**: #글로벌증시 #글로벌경제 #금리환율
+- **[CARD 06 | YTN]** [중동 확전 우려에 유가↑·뉴욕 증시↓...우리 경제는?](https://news.google.com/rss/articles/CBMiXkFVX3lxTFAwdDB2TjRURHpEVUtSdDU2Z2VXNnNVbWRJWl94eGhFaW1mWEYwenk3dWFyLUpWdEd6Z3F3aDRHT3BrbnozQzFRLVFrVkxSM2NnenVZV3pPcHJtNERGV0E?oc=5) `4시간 전`
+  - 💡 **핵심 요약**: YTN 분석에 따르면 글로벌 금리·환율 및 거시경제 지표 변화에 따라 금융 시장의 변동성이 확대되고 있습니다. 통화 정책 방향성과 외국인 수급 흐름에 대한 면밀한 점검이 필요한 시점입니다.
+  - 🏷️ **키워드**: #글로벌증시 #지정학안보 #글로벌경제
 
 ### 🛡️ 2. 군사 · 국방 안보 & 지정학 이슈 (Military & Defense)
-- **[CARD 01 | ㈜한국탑뉴스]** [한·필리핀 국방장관, 군사교류 넓히고 방산 협력 강화키로](https://news.google.com/rss/articles/CBMiYkFVX3lxTE5WdDlQX0JacHRLS3VEZzdha1VOdVBLNzBTeDJuVWM0WF85dHV4VXZJUjhpdXdIRVZBZDJPck1xSU1TOVJjOFF4ZzZ1NHBWTlJhaDZQaXRwRUY2UklTMnhmYzdR?oc=5) `9월 9일`
-  - 💡 **핵심 요약**: ㈜한국탑뉴스 보도 기준, 국제 국방·안보 및 방산 협력 분야에서 주요 움직임이 포착되었습니다. 지역 안보 지형 변화와 방위산업 공급망 파트너십 강화가 핵심 의제로 다뤄지고 있습니다.
-  - 🏷️ **키워드**: #글로벌방산 #국방안보 #지정학
-- **[CARD 02 | 디펜스투데이]** [[글로벌 방산] 도미니카공화국 독립회복일: 한국전쟁 시기 27만 5,200달러…중남미 3위 규모의 지원국 도미니카](https://news.google.com/rss/articles/CBMibkFVX3lxTE5qUEdGWVV6YXI4eUxIaERnR3RiX0Z0Zzhpb0x2NjJnVXBjbEtISGZYVVlJMnY5YVlERHFHU3QyaVM5bHFwYlN3YVZqWVJMa091R2MyTnhNeUEtN2ZobV9hUDMtNXlHOUQ2dmYtc1NB?oc=5) `8월 16일`
-  - 💡 **핵심 요약**: 디펜스투데이 보도 기준, 국제 국방·안보 및 방산 협력 분야에서 주요 움직임이 포착되었습니다. 지역 안보 지형 변화와 방위산업 공급망 파트너십 강화가 핵심 의제로 다뤄지고 있습니다.
-  - 🏷️ **키워드**: #글로벌방산 #지정학안보 #국방안보
-- **[CARD 03 | 브런치]** [19화 100화. 아이젠하워의 경고: ‘군산복합체를 조심하라’](https://news.google.com/rss/articles/CBMiR0FVX3lxTE01VUpBcWd5UnNfSGVsWHBmdkNhMXUyN2p3bHZwcGFSWUJSZHZIM0ZkVFFEYjBtbjZGMXZELWtmaTdENFNEZmRj?oc=5) `9월 10일`
-  - 💡 **핵심 요약**: 브런치 보도 기준, 국제 국방·안보 및 방산 협력 분야에서 주요 움직임이 포착되었습니다. 지역 안보 지형 변화와 방위산업 공급망 파트너십 강화가 핵심 의제로 다뤄지고 있습니다.
+- **[CARD 01 | https://www.climatepol.com/]** [[DRONE WAR WEEKLY] 드론 1,000대가 러시아로 날아갔다…이제는 ‘드론 공장’과 ‘산업생태계’의 전쟁](https://news.google.com/rss/articles/CBMibEFVX3lxTE1faW9JR251MU10WkZ4dU9waDVqZUV4RkVNVnVha1FsNFZUaDgxT2NuY2tpdXppWUVWOVNRQmIyeGxiYXJUYjBDcENEdV9laTQyMHZxUEplUU9RUDRYZ0VhZGZJV0NXTzNjX1VFRg?oc=5) `2시간 전`
+  - 💡 **핵심 요약**: https://www.climatepol.com/ 보도 기준, 국제 국방·안보 및 방산 협력 분야에서 주요 움직임이 포착되었습니다. 지역 안보 지형 변화와 방위산업 공급망 파트너십 강화가 핵심 의제로 다뤄지고 있습니다.
+  - 🏷️ **키워드**: #지정학안보 #국방안보 #글로벌방산
+- **[CARD 02 | 뉴시스]** [우크라군 "스타실드 속도 정상 복구…400km/h 이상"](https://news.google.com/rss/articles/CBMieEFVX3lxTE83aExqWllxeTVBMmR2QXlLSEJ0UFNoQ3F2YlBPRzR2Wkp4bFZnVzhyT3ZTbG9TUnhHaUtBdS0tSHZxaldlRXQ1a2FuTEs5N0hfUzdYTjdtRzdwSFEzSDNMbGJ1TlpLSDhSdmliVktycHhhZ2lNWGRJONIBeEFVX3lxTE83aExqWllxeTVBMmR2QXlLSEJ0UFNoQ3F2YlBPRzR2Wkp4bFZnVzhyT3ZTbG9TUnhHaUtBdS0tSHZxaldlRXQ1a2FuTEs5N0hfUzdYTjdtRzdwSFEzSDNMbGJ1TlpLSDhSdmliVktycHhhZ2lNWGRJOA?oc=5) `4시간 전`
+  - 💡 **핵심 요약**: 뉴시스 보도 기준, 국제 국방·안보 및 방산 협력 분야에서 주요 움직임이 포착되었습니다. 지역 안보 지형 변화와 방위산업 공급망 파트너십 강화가 핵심 의제로 다뤄지고 있습니다.
   - 🏷️ **키워드**: #국방안보 #글로벌방산 #지정학
-- **[CARD 04 | 아주경제]** [[전문가 기고] 韓-EU 협력, 방산을 넘어 안보 전략으로](https://news.google.com/rss/articles/CBMiWkFVX3lxTE1pTU9VNUtWZXpIOXZKenpMdG9ZU2lvRzZCTmhuMVlGbS1kcTl3MWstWWhfelJMVElxUXdsYk94WlUtcFhXUDdEV2dtMFh4U3RtY3JhMkxHVzFCUdIBWEFVX3lxTFBMaEJ3c2ZBUlZFSnJGWmZxRFhxbVVTUEFLNHQ5S1kxY0NkeU1zbGNKejFjWjk4R2dpTk1FLWZfcXdLeS1nTVUta0llLVhxRWp0QkQzakVwMVg?oc=5) `7월 3일`
-  - 💡 **핵심 요약**: 아주경제 보도 기준, 국제 국방·안보 및 방산 협력 분야에서 주요 움직임이 포착되었습니다. 지역 안보 지형 변화와 방위산업 공급망 파트너십 강화가 핵심 의제로 다뤄지고 있습니다.
-  - 🏷️ **키워드**: #글로벌방산 #지정학안보 #정상외교
-- **[CARD 05 | 뉴스핌]** [이두희 국방차관, 스웨덴과 '우주·방산' 협력 확대…북·러 군사협력도 경고](https://news.google.com/rss/articles/CBMiXEFVX3lxTE5xa08yaktsVDVFb2pLU2ZnSmRuS3c0bkd5SjFuSU1aTjZ3NE5yQlFSU1lpQV9YNWs5ZmdNWk9PSFdSSlg2QTM5QUx5SUFjdExHSENBeFdKMERHWnds?oc=5) `5월 28일`
-  - 💡 **핵심 요약**: 뉴스핌 보도 기준, 국제 국방·안보 및 방산 협력 분야에서 주요 움직임이 포착되었습니다. 지역 안보 지형 변화와 방위산업 공급망 파트너십 강화가 핵심 의제로 다뤄지고 있습니다.
+- **[CARD 03 | Vietnam.vn]** [오데사 항구 폐쇄로 인해 우크라이나가 입은 피해에 대한 세부 사항이 공개되었습니다.](https://news.google.com/rss/articles/CBMipgFBVV95cUxPN24tbVNEUTYxTlJaSnFaNHZQbURaQnVjNUFUVUFrUTF4MHpzUFlQbkFLWEhCYXhJVF9qN0hHUW5kd04ySWNidzJuSjhuc0ViTWNzV0g2Sld0UENXaVBkWTBUcDE2MnozcWFNLUtGaUVQM1BHVVJNR2hFbEJKMkF0bnFJUC12bUd1OVFScHlGSUw3SGRTUVBBOVZqalp6dDdfUVhZSFdn?oc=5) `4시간 전`
+  - 💡 **핵심 요약**: Vietnam.vn 보도 기준, 국제 국방·안보 및 방산 협력 분야에서 주요 움직임이 포착되었습니다. 지역 안보 지형 변화와 방위산업 공급망 파트너십 강화가 핵심 의제로 다뤄지고 있습니다.
+  - 🏷️ **키워드**: #지정학안보 #국방안보 #글로벌방산
+- **[CARD 04 | Investing.com 한국어]** [우크라이나, 10일간의 중단 후 군용 스타링크 서비스 복구](https://news.google.com/rss/articles/CBMiakFVX3lxTFAzRXJLd0o3eVQzNTRleWZGZkU5R1A0d2V4RUFnclEwaF96Y01XU0dseFB1Zjdfd1padmlaWWtKLWh6MFhpaC0tTXBBc1c0ZDRBYUZOUVNjNHpibFJpVDV5aVBTTVotT0NRdnc?oc=5) `4시간 전`
+  - 💡 **핵심 요약**: Investing.com 한국어 보도 기준, 국제 국방·안보 및 방산 협력 분야에서 주요 움직임이 포착되었습니다. 지역 안보 지형 변화와 방위산업 공급망 파트너십 강화가 핵심 의제로 다뤄지고 있습니다.
+  - 🏷️ **키워드**: #지정학안보 #국방안보 #글로벌방산
+- **[CARD 05 | 세상을 바꾸는 시민언론 민들레]** [암살설 돌던 김정은, 갑자기 당일치기 중국 방문](https://news.google.com/rss/articles/CBMibEFVX3lxTE5STXhkSVB1aW1EQzdKbzFDTDBHTTVYMkwtaG55TmNlRTV4LUpVMkFQY1BHcW15a055MVBWZmk0U0FvUFdkeGtCWGZjWDUzM3NGaGQ3TXFILVhrYXVBYlpwNDR6cTNoZGh2Y2p4Zg?oc=5) `4시간 전`
+  - 💡 **핵심 요약**: 세상을 바꾸는 시민언론 민들레 보도 기준, 국제 국방·안보 및 방산 협력 분야에서 주요 움직임이 포착되었습니다. 지역 안보 지형 변화와 방위산업 공급망 파트너십 강화가 핵심 의제로 다뤄지고 있습니다.
+  - 🏷️ **키워드**: #국방안보 #글로벌방산 #지정학
+- **[CARD 06 | Vietnam.vn]** [일본은 인공지능과 사이버보안 개발을 우선시하며 국방 연구를 개혁하고 있다.](https://news.google.com/rss/articles/CBMitgFBVV95cUxPMzcwSFc4OGd0SXQzWmt4T25kTF9aZlFEWHM1VFp0ZEZuYlAtdEZkd0RwcUx5T1FIMXVpbENYVkxYQ3VlbExJbFcwQWp0LXNoZWg0UUk3Y3JpTnZBZ1YyeGdXa0QwajIzTEd0ZDZ4S20yWkZOZzBLNUxEOEl0Q05nLVhTY0pPUnNZd2FTRndWcWVyY0NNNnFSZTBJZ1ljMFZSanVfdnpteGsxdk5WOExIS0lmV3ludw?oc=5) `4시간 전`
+  - 💡 **핵심 요약**: Vietnam.vn 보도 기준, 국제 국방·안보 및 방산 협력 분야에서 주요 움직임이 포착되었습니다. 지역 안보 지형 변화와 방위산업 공급망 파트너십 강화가 핵심 의제로 다뤄지고 있습니다.
   - 🏷️ **키워드**: #글로벌방산 #국방안보 #지정학
 
 ### 🌍 3. 국제 외교 & 글로벌 정세 (World Diplomacy)
-- **[CARD 01 | 연합뉴스]** [대만, 미중 정상회담에 촉각…"미국과 긴밀히 소통"(종합)](https://news.google.com/rss/articles/CBMiW0FVX3lxTFB4RmlhZVhBN3VFSllCa3QtbWxrRVJNSFI4ZE9vZ1BRTzdRV0d0NXJjZWwzUnhRQ1NBSGNVVjl2ZlZLQWx4RVpzT3JfYlpUc185dndvWDMzX0ZJaUnSAWBBVV95cUxNTFVlc0FPc3l6SGI0eWVQd2Z6WS1JcjhLQ25FY0h2LXBodnNGNC1JQV9weGNLYjY1R2w1Z0NLUk9ROWhSYmRHd3U4RTV0cmxqTGdrV09EN1liMjVNbHFDdGo?oc=5) `9월 24일`
+- **[CARD 01 | 연합뉴스]** [김정은 방중에 中역할 주목…북미회담 중재? 대북 영향력 강화?](https://news.google.com/rss/articles/CBMiYEFVX3lxTE53SHVzVWtuTjVYMzZpZWN3WHlON3dGczlYbnh2QlRMamQzM3F0aGZmSGZQTmp3dE9JS1FLS3lLbE02RFZOdEZFRHMtLTdFQVFLNkt3Y2xKUWdPMENfX0JuONIBYEFVX3lxTE53SHVzVWtuTjVYMzZpZWN3WHlON3dGczlYbnh2QlRMamQzM3F0aGZmSGZQTmp3dE9JS1FLS3lLbE02RFZOdEZFRHMtLTdFQVFLNkt3Y2xKUWdPMENfX0JuOA?oc=5) `3시간 전`
   - 💡 **핵심 요약**: 연합뉴스에서 보도한 글로벌 외교·국제 정세 핵심 뉴스입니다. 주요국 간 정상 외교와 전략적 소통이 이어지며 향후 국제 질서와 통상 환경에 주요 변수로 작용할 전망입니다.
-  - 🏷️ **키워드**: #지정학안보 #정상외교 #국제외교
-- **[CARD 02 | sisaworld.kr]** [미중 정상외교, 다음 승부처는 11월·12월… ‘빅딜’보다 긴장 관리가 핵심 과제](https://news.google.com/rss/articles/CBMiakFVX3lxTE1KSklTbUZJNDdFcjJaQXUyQlZZanp6QnF4QU5JQTBMbENiVnVzcUhKaEZpVGFzWTNlZjBmLTZKLU9oZllXcWZyRFg1VmZXWF9pb09LaDM3b1B1NnRHb0pmbzk0Z3FMTkV0MlE?oc=5) `9월 27일`
-  - 💡 **핵심 요약**: sisaworld.kr에서 보도한 글로벌 외교·국제 정세 핵심 뉴스입니다. 주요국 간 정상 외교와 전략적 소통이 이어지며 향후 국제 질서와 통상 환경에 주요 변수로 작용할 전망입니다.
+  - 🏷️ **키워드**: #국제외교 #글로벌정세 #정상회담
+- **[CARD 02 | 연합뉴스]** [[일지] 김정은, 집권 후 6번 방중…이번엔 시진핑과 정상회담 없을 듯](https://news.google.com/rss/articles/CBMiYEFVX3lxTE5YdEhnZy1nd3lwOUp4d3N1eUdROVNFN1dRQkpjVXRZM0dvTGpoSlFhZlpoYmtfR2VBSGZpalNiaUp4bm9HY2lUOXpPZTlOY0pndVZ3bGpIYk9LTHBsdWtBZtIBYEFVX3lxTE5YdEhnZy1nd3lwOUp4d3N1eUdROVNFN1dRQkpjVXRZM0dvTGpoSlFhZlpoYmtfR2VBSGZpalNiaUp4bm9HY2lUOXpPZTlOY0pndVZ3bGpIYk9LTHBsdWtBZg?oc=5) `3시간 전`
+  - 💡 **핵심 요약**: 연합뉴스에서 보도한 글로벌 외교·국제 정세 핵심 뉴스입니다. 주요국 간 정상 외교와 전략적 소통이 이어지며 향후 국제 질서와 통상 환경에 주요 변수로 작용할 전망입니다.
   - 🏷️ **키워드**: #정상외교 #국제외교 #글로벌정세
-- **[CARD 03 | 뉴닉]** [유엔총회부터 트럼프·시진핑 미중 정상회담까지: 이번 주 국제 정세 가를 '외교 슈퍼위크' 핵심 정리 🌎✅](https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xVExWdUJVcTJPVmpGRS02aXVrWlJQeHVSd3p0WHdKMThsQlZZWUdOcXNKSllrcHlCNFdESlFsM1RQNmd0WW54VDFIZDV4VzNtZlNj?oc=5) `9월 20일`
-  - 💡 **핵심 요약**: 뉴닉에서 보도한 글로벌 외교·국제 정세 핵심 뉴스입니다. 주요국 간 정상 외교와 전략적 소통이 이어지며 향후 국제 질서와 통상 환경에 주요 변수로 작용할 전망입니다.
+- **[CARD 03 | 매일경제]** [[속보] 김정은, ‘중국 경제총괄’ 리창 총리와 회동…북미정상회담 논의 여부도 관심](https://news.google.com/rss/articles/CBMiVkFVX3lxTE1VM3g5azl4cUxud0lKbVZOVHdBZVVKQ0g5WXMyVUdLN3FWSlBnRm5GX0ZtZWhFNDJyY3AtZDJ1ZHZRNXNvaV93aFgxcUNGUzZfd1F3d2t3?oc=5) `4시간 전`
+  - 💡 **핵심 요약**: 매일경제에서 보도한 글로벌 외교·국제 정세 핵심 뉴스입니다. 주요국 간 정상 외교와 전략적 소통이 이어지며 향후 국제 질서와 통상 환경에 주요 변수로 작용할 전망입니다.
   - 🏷️ **키워드**: #정상외교 #국제외교 #글로벌정세
-- **[CARD 04 | 전국매일신문]** [유엔총회 이어 미중 정상회담…글로벌 외교전 ‘분수령’](https://news.google.com/rss/articles/CBMibkFVX3lxTE03TmdYSnFqc3JJejBxeEhtdXc3TjdTcHdGWXR2UVozVmJIRm5RcmFTUFBMaFFzU3RjR1RZUk1IREhGSHdHMG8xVlFPQUJDYUpvNUZZNlJOUzU0NDVmd3hiZThoMDItTHE5N01sUVpR?oc=5) `9월 20일`
-  - 💡 **핵심 요약**: 전국매일신문에서 보도한 글로벌 외교·국제 정세 핵심 뉴스입니다. 주요국 간 정상 외교와 전략적 소통이 이어지며 향후 국제 질서와 통상 환경에 주요 변수로 작용할 전망입니다.
-  - 🏷️ **키워드**: #정상외교 #국제외교 #글로벌정세
-- **[CARD 05 | 아시아경제]** [중국·이란 외교장관, 미중 정상회담 앞두고 베이징 회동](https://news.google.com/rss/articles/CBMiYEFVX3lxTE0wcnUxUEdaZWNVSDRWTjRPWTFaVWlQVnZtZkRPTnRwZ1JBbzE3SWJVNk9TRHV6d1VGTmoyc0h3UkJKMm1tSUFBTjdfVFJCOW5CT3NWQkwwXzQwOVBWNEZnNw?oc=5) `9월 16일`
-  - 💡 **핵심 요약**: 아시아경제에서 보도한 글로벌 외교·국제 정세 핵심 뉴스입니다. 주요국 간 정상 외교와 전략적 소통이 이어지며 향후 국제 질서와 통상 환경에 주요 변수로 작용할 전망입니다.
-  - 🏷️ **키워드**: #지정학안보 #정상외교 #국제외교
+- **[CARD 04 | 동아일보]** [김정은, ‘항미원조’ 기념일 전날 방중…‘北-美 회담’ 사전포석?](https://news.google.com/rss/articles/CBMic0FVX3lxTFBrNG1jbkdFMmVtOG9xNG1PZm9Xa3Y2T2tSeFl5TFBRQzg2emo2TG1rM3BmT2xsZFFnbmw0R1JfODlnWGhHOVJZUldXUzFEdVo2Z3ZVeTQzeUZMOWJ6bXNnVEpGSGhXWmdaeldjTk13anU0elHSAWZBVV95cUxOa3dnNElia041bUpEd2FOLW9UZEVZNV9kSmV4LTc5TmJiejY1Ni15R2d1aG5xNWJPcUhyc05BM2t1NEFGSEdobi15RExtVGNoNlR1M3lGajhxUXFoSFRyZjc3LTZQTHc?oc=5) `4시간 전`
+  - 💡 **핵심 요약**: 동아일보에서 보도한 글로벌 외교·국제 정세 핵심 뉴스입니다. 주요국 간 정상 외교와 전략적 소통이 이어지며 향후 국제 질서와 통상 환경에 주요 변수로 작용할 전망입니다.
+  - 🏷️ **키워드**: #국제외교 #글로벌정세 #정상회담
+- **[CARD 05 | 세상을 바꾸는 시민언론 민들레]** [암살설 돌던 김정은, 갑자기 당일치기 중국 방문](https://news.google.com/rss/articles/CBMibEFVX3lxTE5STXhkSVB1aW1EQzdKbzFDTDBHTTVYMkwtaG55TmNlRTV4LUpVMkFQY1BHcW15a055MVBWZmk0U0FvUFdkeGtCWGZjWDUzM3NGaGQ3TXFILVhrYXVBYlpwNDR6cTNoZGh2Y2p4Zg?oc=5) `4시간 전`
+  - 💡 **핵심 요약**: 세상을 바꾸는 시민언론 민들레에서 보도한 글로벌 외교·국제 정세 핵심 뉴스입니다. 주요국 간 정상 외교와 전략적 소통이 이어지며 향후 국제 질서와 통상 환경에 주요 변수로 작용할 전망입니다.
+  - 🏷️ **키워드**: #국제외교 #글로벌정세 #정상회담
+- **[CARD 06 | 매일일보]** [北 김정은 전격 방중…오늘 신압록대교 통해 단둥 도착](https://news.google.com/rss/articles/CBMiZEFVX3lxTE1Oa3BHb2lGWVRFWEdselVYcVdyUnpHTE1jWDlkeVhyWXRMazQ4b2duZ1lxUkx4ZDRvTTBzVnVwc2R2U1VMckh5c0l4c2lNMFhOZmhhNmthOXlCVl9vS0RDQVVBanE?oc=5) `5시간 전`
+  - 💡 **핵심 요약**: 매일일보에서 보도한 글로벌 외교·국제 정세 핵심 뉴스입니다. 주요국 간 정상 외교와 전략적 소통이 이어지며 향후 국제 질서와 통상 환경에 주요 변수로 작용할 전망입니다.
+  - 🏷️ **키워드**: #국제외교 #글로벌정세 #정상회담
 
 --------------------------------------------------------------------------------
 
 ## 📄 [SECTION 3] 💡 오늘의 1분 브리핑 & 핵심 시사점
 
 ### ⚡ 오늘 아침 꼭 알아야 할 3대 헤드라인 카드
-1. **AI/기술**: AI·머신러닝의 판을 바꾸는 16가지 오픈소스 프로젝트
-2. **경제/금융**: [환율 전망] AI 투자 정뚝떨, 외인 떠나면 원화 시무룩
-3. **안보/세계**: 한·필리핀 국방장관, 군사교류 넓히고 방산 협력 강화키로
+1. **AI/기술**: 충주시, 피지컬 AI 로봇 생산거점 유치
+2. **경제/금융**: "외국인 놀이터 된 코스피, 못버텨"…개미 떠나자 50조 증발 [분석+]
+3. **안보/세계**: [DRONE WAR WEEKLY] 드론 1,000대가 러시아로 날아갔다…이제는 ‘드론 공장’과 ‘산업생태계’의 전쟁
 
 ### 🎯 오늘 하루 관전 포인트 (Today's Watchpoints)
 - **엔지니어링/AI**: 신규 AI 모델 성능 공개 여부 및 반도체 공급망 현황 지속 모니터링

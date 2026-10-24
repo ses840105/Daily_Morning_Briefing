@@ -74,6 +74,8 @@ PUBLISHER_DOMAINS: Dict[str, str] = {
     "Two Minute Papers": "www.youtube.com",
     "Yannic Kilcher": "www.youtube.com",
     "ArXiv": "arxiv.org",
+    "GitHub": "github.com",
+    "Hugging Face": "huggingface.co",
 }
 
 CATEGORY_META: Dict[str, Dict[str, Any]] = {
@@ -146,6 +148,16 @@ CATEGORY_META: Dict[str, Dict[str, Any]] = {
         "surface": "#e8f0fe",
         "default_tags": ["#국제외교", "#글로벌정세", "#정상회담"],
         "watchpoint": "주요국 외교 회담 결과와 국제 통상·안보 연대 움직임에 따른 글로벌 정책 변수를 파악하세요."
+    },
+    "tools": {
+        "id": "tools",
+        "name": "AI 툴 · ML 기법",
+        "en_label": "AI TOOLS & METHODS",
+        "icon": "🛠️",
+        "color": "#7627bb",
+        "surface": "#f3e8fd",
+        "default_tags": ["#AI툴", "#ML기법", "#LLM엔지니어링"],
+        "watchpoint": "최신 오픈소스 AI 툴과 학습·추론 최적화 기법을 실무 파이프라인에 적용해 생산성을 극대화하세요."
     },
 }
 
@@ -408,6 +420,20 @@ def generate_card_news_content(item: Dict[str, Any], category_id: str, idx: int 
             f"🔍 안보 맥락: {', '.join(keywords)} 중심의 국가 간 국방 협력 및 지정학적 리스크 관리",
             f"🎯 전략 관전 포인트: {cat_info['watchpoint']}"
         ]
+    elif category_id == "tools":
+        custom_bullets = item.get("bullet_points")
+        if custom_bullets and len(custom_bullets) >= 3:
+            bullets = custom_bullets[:3]
+        else:
+            bullets = [
+                f"🛠️ 도구/기법 개요: {title}",
+                f"⚙️ 핵심 원리: {raw_summary[:200] if raw_summary else (', '.join(keywords) + ' 기반의 최신 AI/ML 엔지니어링 최적화 기법')}",
+                f"🚀 실무 활용 포인트: {cat_info['watchpoint']}"
+            ]
+        summary_text = raw_summary if (raw_summary and len(raw_summary) > 25) else (
+            f"{source}에서 주목받는 최신 AI/ML 도구 및 기법입니다. "
+            f"모델 서빙, 프롬프트 엔지니어링, 파인튜닝 및 자율 에이전트 구축 등 실무 파이프라인의 효율성을 획기적으로 개선합니다."
+        )
     else:  # world
         summary_text = (
             f"{source}에서 보도한 글로벌 외교·국제 정세 핵심 뉴스입니다. "

@@ -76,7 +76,7 @@ class VoiceScriptBuilder:
         # 1. 오프닝
         lines.append(f"안녕하십니까. {korean_date}, 데일리 모닝 인텔리전스 브리핑입니다.")
         lines.append("오늘 하루를 여시는 여러분을 위해, 밤사이 글로벌 시장과 기술 생태계에서 일어난 핵심 소식을 알기 쉽게 정리해 드립니다.")
-        lines.append("오늘 브리핑은 인공지능과 반도체 기술 동향, 학계 최신 연구 논문과 유튜브 테크 트렌드, 그리고 글로벌 거시 경제와 안보 이슈 순서로 전해드리겠습니다.")
+        lines.append("오늘 브리핑은 인공지능과 반도체 기술 동향, 학계 최신 연구 논문과 유튜브 테크 트렌드, 주목할 최신 AI 툴과 기법, 그리고 글로벌 거시 경제와 안보 이슈 순서로 전해드리겠습니다.")
         lines.append("")
 
         # 2. 1부: AI 및 IT 테크 동향 + 논문
@@ -129,6 +129,19 @@ class VoiceScriptBuilder:
                     lines.append(f"또한 {channel} 채널에서는 {clean_yt}에 주목하며 실무진과 개발자들이 눈여겨볼 핵심 시사점을 전했습니다.")
         
         lines.append("")
+
+        tools_items = tech_data.get("ai_tools", [])
+        if tools_items:
+            lines.append("이어서 실무 개발자와 연구진이 주목해야 할 최신 AI/ML 툴과 기법 소개해 드립니다.")
+            for i, item in enumerate(tools_items[:2]):
+                clean_tool_title = _clean_headline_for_speech(item["title"])
+                raw_tool_summary = item.get("summary", "")
+                clean_tool_desc = _clean_headline_for_speech(raw_tool_summary[:120])
+                if i == 0:
+                    lines.append(f"먼저 주목할 도구로는, {clean_tool_title}입니다. {clean_tool_desc}")
+                else:
+                    lines.append(f"또한 핵심 기법으로는, {clean_tool_title}에 주목할 만합니다. {clean_tool_desc}")
+            lines.append("")
 
         # 3. 2부: 글로벌 경제 및 군사 안보
         lines.append("계속해서 두 번째 섹션, 글로벌 거시 경제와 금융 시장, 그리고 안보 외교 동향입니다.")

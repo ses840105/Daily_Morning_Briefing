@@ -19,15 +19,17 @@ class PaperBuilder:
     def build_markdown(self, tech_data: Dict[str, Any], econ_data: Dict[str, Any], affirmation: str, date_str: str) -> str:
         ai_cards = enrich_section_items(tech_data.get("ai_headlines", [])[:6], "ai")
         tech_cards = enrich_section_items(tech_data.get("tech_headlines", [])[:6], "tech")
-        paper_cards = enrich_section_items(tech_data.get("arxiv_papers", [])[:5], "paper")
-        yt_cards = enrich_section_items(tech_data.get("youtube_picks", [])[:5], "youtube")
+        paper_cards = enrich_section_items(tech_data.get("arxiv_papers", [])[:6], "paper")
+        yt_cards = enrich_section_items(tech_data.get("youtube_picks", [])[:6], "youtube")
+        tools_cards = enrich_section_items(tech_data.get("ai_tools", [])[:6], "tools")
         econ_cards = enrich_section_items(econ_data.get("economy_headlines", [])[:6], "econ")
-        mil_cards = enrich_section_items(econ_data.get("military_headlines", [])[:5], "military")
-        world_cards = enrich_section_items(econ_data.get("world_headlines", [])[:5], "world")
+        mil_cards = enrich_section_items(econ_data.get("military_headlines", [])[:6], "military")
+        world_cards = enrich_section_items(econ_data.get("world_headlines", [])[:6], "world")
 
+        total_cards_count = len(ai_cards) + len(tech_cards) + len(paper_cards) + len(yt_cards) + len(tools_cards) + len(econ_cards) + len(mil_cards) + len(world_cards)
         md = []
         md.append("# 📰 GOOGLE NEWS BRIEFING | 데일리 모닝 카드뉴스 인텔리전스")
-        md.append(f"> **발행 일시**: {date_str} 09:00 KST | **에디션**: Google News Style Card Edition | **총 {len(ai_cards)+len(tech_cards)+len(paper_cards)+len(yt_cards)+len(econ_cards)+len(mil_cards)+len(world_cards)}개 카드뉴스**\n")
+        md.append(f"> **발행 일시**: {date_str} 09:00 KST | **에디션**: Google News Style Card Edition | **총 {total_cards_count}개 카드뉴스**\n")
         md.append("=" * 80)
 
         def append_md_cards(section_title: str, cards: List[Dict[str, Any]]):
@@ -39,11 +41,12 @@ class PaperBuilder:
                 if tags_str:
                     md.append(f"  - 🏷️ **키워드**: {tags_str}")
 
-        md.append("\n## 📄 [SECTION 1] 🤖 최신 ML · AI · IT 테크 & 논문/유튜브 카드뉴스")
+        md.append("\n## 📄 [SECTION 1] 🤖 최신 ML · AI · IT 테크 & 논문/유튜브/신규 툴 카드뉴스")
         append_md_cards("🧠 1. 인공지능 & 머신러닝 (AI & Frontier LLM)", ai_cards)
         append_md_cards("💻 2. 빅테크 · 반도체 & 엔지니어링 동향", tech_cards)
         append_md_cards("📚 3. 최신 AI/ML 연구 논문 (ArXiv Papers)", paper_cards)
         append_md_cards("📺 4. 유튜브 추천 테크 영상 (YouTube Tech Picks)", yt_cards)
+        append_md_cards("🛠️ 5. 주목할 만한 AI/ML 신규 툴 & 핵심 기법 (New AI Tools & Techniques)", tools_cards)
 
         md.append("\n" + "-" * 80)
         md.append("\n## 📄 [SECTION 2] 🌐 글로벌 경제 · 군사/안보 · 세계 정세 카드뉴스")
@@ -82,6 +85,7 @@ class PaperBuilder:
         tech_cards = enrich_section_items(tech_data.get("tech_headlines", [])[:6], "tech")
         paper_cards = enrich_section_items(tech_data.get("arxiv_papers", [])[:6], "paper")
         yt_cards = enrich_section_items(tech_data.get("youtube_picks", [])[:6], "youtube")
+        tools_cards = enrich_section_items(tech_data.get("ai_tools", [])[:6], "tools")
         econ_cards = enrich_section_items(econ_data.get("economy_headlines", [])[:6], "econ")
         mil_cards = enrich_section_items(econ_data.get("military_headlines", [])[:6], "military")
         world_cards = enrich_section_items(econ_data.get("world_headlines", [])[:6], "world")
@@ -126,6 +130,16 @@ class PaperBuilder:
                 "badge_bg": "#fce8e6",
                 "cards": yt_cards,
                 "cta": "유튜브 시청"
+            },
+            {
+                "id": "tools",
+                "title": "AI/ML 신기술 툴 & 기법",
+                "subtitle": "New AI Tools & Techniques · 오픈소스 프레임워크 · 최신 학습/추론 최적화 기법",
+                "icon": "🛠️",
+                "color": "#7627bb",
+                "badge_bg": "#f3e8fd",
+                "cards": tools_cards,
+                "cta": "도구/기술 살펴보기"
             },
             {
                 "id": "econ",
@@ -2243,6 +2257,7 @@ class PaperBuilder:
             <button type="button" class="gn-nav-tab" data-cat="tech" onclick="selectCategory('tech', this)">💻 빅테크 · 반도체</button>
             <button type="button" class="gn-nav-tab" data-cat="paper" onclick="selectCategory('paper', this)">📚 ArXiv 논문</button>
             <button type="button" class="gn-nav-tab" data-cat="youtube" onclick="selectCategory('youtube', this)">📺 테크 유튜브</button>
+            <button type="button" class="gn-nav-tab" data-cat="tools" onclick="selectCategory('tools', this)">🛠️ AI 툴 · 기법</button>
             <button type="button" class="gn-nav-tab" data-cat="econ" onclick="selectCategory('econ', this)">📈 글로벌 경제</button>
             <button type="button" class="gn-nav-tab" data-cat="military" onclick="selectCategory('military', this)">🛡️ 군사 · 안보</button>
             <button type="button" class="gn-nav-tab" data-cat="world" onclick="selectCategory('world', this)">🌍 세계 · 외교</button>

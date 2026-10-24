@@ -1,26 +1,30 @@
 hello.This is the Daily Morning Intelligence Briefing, October 24, 2026.
 For those of you who are starting your day today, we summarize the key news that occurred overnight in the global market and technology ecosystem in an easy-to-understand manner.
-Today's briefing will be delivered in the following order: artificial intelligence and semiconductor technology trends, the latest research papers from academia and YouTube tech trends, and global macroeconomic and security issues.
+Today's briefing will be delivered in the following order: artificial intelligence and semiconductor technology trends, the latest research papers from academia and YouTube tech trends, the latest AI tools and techniques to note, and global macroeconomic and security issues.
 
 First, the first section is about artificial intelligence, big tech semiconductors, and academic research trends.
-This is the most noteworthy technology news today.News of 16 open source projects that are changing the game of AI and machine learning is drawing great attention from the global tech industry.
-In addition, as next-generation models and infrastructure trends, Broadcom, OpenAI, and Jalapeño, their own AI inference chip, are being released, and the competition for leadership in the ecosystem appears to be intensifying.
-In addition, in the semiconductor and cloud supply chain, the attention of market participants is focused on the analysis of Nota, which ranked 3rd in the ICML 2026 Efficient Qwen Competition and proved its open source AI optimization technology.
+This is the most noteworthy technology news today.Chungju City is attracting great attention from the global tech industry with news of hosting a physical AI robot production base.
+In addition, as a next-generation model and infrastructure trend, the Seosan Office of Education continues to use generative AI to reduce the burden of school administrative work, and the competition for leadership in the ecosystem appears to be heating up further.
+In addition, in the semiconductor and cloud supply chain, AI is arbitrarily accessing customer accounts, and analysis of the U.S. banking emergency has been raised, drawing the attention of market participants.
 
 The following is the archive's latest artificial intelligence research news that is attracting attention in academia.
-The main paper published today is Sensorimotor Alignment: A Platonic Proxy Study for Concrete Policy Success, which is highly regarded in terms of inference efficiency and autonomous agent advancement.
+As a major paper published today, research on an integrated framework for image-3D part generation through variable granularity is being highly evaluated in terms of inference efficiency and autonomous agent advancement.
 
 Next, let’s look at popular tech videos on YouTube.
-First, Two Minute Papers focused on Gemini 4 Argon is not what I expected and pointed out the changes that technological innovation will bring.
-Additionally, the Two Minute Papers channel focused on OpenAI's new AI doing things we barely understand, and delivered key implications for practitioners and developers to pay attention to.
+First, AI Explained highlights the changes that technological innovation will bring, focusing on the fact that AI research labs' competition for warnings has made breaches inevitable.
+Additionally, the AI ​​Explained channel paid attention to OpenAI Security: Model Control is Now Hell and delivered key implications for practitioners and developers to pay attention to.
+
+Next, we will introduce the latest AI/ML tools and techniques that practical developers and researchers should pay attention to.
+The first tools of note are Ollama & llama.cpp - local GGUF quantization model high-performance runtime.It is a tool that uses the pure C/C++-based llama.cpp engine as a backend to package and locally serve open source LLM with one click in macOS Metal and general GPU environments without external cloud communication.
+Also worth noting are the key techniques: TensorRT-LLM & FP8 Quantization - an inference compiler dedicated to NVIDIA GPUs.Chu provides data center-class maximum computational throughput by combining the latest FP8 quantization, in-flight batching, and a custom FlashAttention kernel optimized for NVIDIA Tensor Core hardware.
 
 We continue with the second section, global macroeconomic and financial markets, and security diplomacy trends.
-First of all, this is the most noteworthy news in the financial market.Investors' attention was drawn to the news that AI investment was falling flat and the Korean won would become sullen if foreigners left.
-Next, looking at foreign exchange and macro indicators, where will Korea start to sway if the US interest rate rises? Simultaneous pressures on loans, exchange rates, and the stock market are detected, which is expected to act as a major variable in asset prices and liquidity in the future.
-In addition, across industries and the stock market, there is a diagnosis that the market is shackled by 4% due to the Federal Reserve's hawkish offensive, and differentiation by sector continues.
+First of all, this is the most noteworthy news in the financial market.KOSPI, which has become a playground for foreigners, can't hold on, let the ants leave. Investors' attention was focused on the news that 50 trillion won was evaporated.
+Looking at foreign exchange and macro indicators, Trump's election crisis and partial withdrawal of Canada's 50% tariff are detected, which is expected to act as a major variable in asset prices and liquidity in the future.
+In addition, in the industry and the stock market as a whole, exports and financial expansion are increasing price pressure on the demand side, leading to a diagnosis regarding the need to pay attention to soundness management, and differentiation by sector continues.
 
-In the field of international security and defense, the news that the defense ministers of Korea and the Philippines agreed to expand military exchanges and strengthen cooperation in the defense industry was highlighted as a major agenda item.
-In addition, on the stage of global defense industry and diplomatic cooperation, geopolitical risk management is being emphasized as the trend of Dominican Republic's recovery of independence: $275,200 during the Korean War and the 3rd largest donor country in Latin America is confirmed.
+In the field of international security and defense, [DRONE WAR WEEKLY] 1,000 drones flew to Russia, and now the news of war between drone factories and the industrial ecosystem has emerged as a major agenda.
+In addition, on the global defense industry and diplomatic cooperation stage, the Ukrainian Star Shield speed has been restored to normal, trends above 400 km/h have been confirmed, and geopolitical risk management is being emphasized.
 
 The third section is the three key observation points that you must pay attention to today.
 First, please pay attention to the development of next-generation artificial intelligence agent technology and the reorganization of customized semiconductor supply chains such as HBM Four.
@@ -28,6 +32,6 @@ Second, you should closely examine the direction of the U.S. Federal Reserve's m
 Third, we recommend that you prepare for market volatility by keeping an eye on the expansion of global defense orders and the schedules of trade and diplomatic negotiations between major countries.
 
 Lastly, here are some positive morning affirmations that will energize your day.
-Please take a comfortable breath and repeat this sentence in your mind together.
-I love myself as I am and believe strongly in my infinite potential.
+Please take a deep breath and repeat this sentence in your mind.
+I love myself just as I am, and I strongly believe in my infinite potential.
 I hope that today is a meaningful day for you to fully demonstrate your potential.This concludes the daily morning intelligence briefing.Thank you for listening.
