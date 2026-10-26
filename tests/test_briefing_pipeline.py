@@ -17,6 +17,8 @@ from src.voice.tts_engine import TTSEngine
 from src.generators.voice_script_builder import VoiceScriptBuilder, _clean_headline_for_speech
 from src.generators.affirmations import get_daily_affirmation
 from src.generators.card_news_enricher import enrich_section_items
+from src.collectors.stock_heatmap_collector import StockHeatmapCollector
+from src.generators.paper_builder import PaperBuilder
 
 
 class TestTTSNormalization(unittest.TestCase):
@@ -85,6 +87,48 @@ class TestArtifactIntegrity(unittest.TestCase):
             m4a_file = os.path.join(outputs_dir, "audio", f"briefing_{date_str}_{lang}.m4a")
             mp3_file = os.path.join(outputs_dir, "audio", f"briefing_{date_str}_{lang}.mp3")
             self.assertTrue(os.path.exists(m4a_file) or os.path.exists(mp3_file), f"Audio for {lang} must exist")
+
+
+class TestStockHeatmap(unittest.TestCase):
+    def test_stock_heatmap_collector(self):
+        collector = StockHeatmapCollector()
+        data = collector.collect_all()
+        self.assertIn("us", data)
+        self.assertIn("kr", data)
+        self.assertGreaterEqual(len(data["us"]["stocks"]), 20)
+        self.assertGreaterEqual(len(data["kr"]["stocks"]), 20)
+        self.assertGreaterEqual(len(data["us"]["indices"]), 4)
+        self.assertGreaterEqual(len(data["kr"]["indices"]), 3)
+        self.assertIn("top_gainer", data["us"]["summary"])
+        self.assertIn("top_loser", data["kr"]["summary"])
+
+    def test_heatmap_cards_rendered_in_html(self):
+        outputs_dir = os.path.join(BASE_DIR, "outputs")
+        builder = PaperBuilder(outputs_dir)
+        tech_data = {
+            "ai_headlines": [{"title": "AI Breakthrough", "link": "http://example.com/ai", "source": "Tech"}]
+        }
+        econ_data = {
+            "economy_headlines": [{"title": "Econ Headline", "link": "http://example.com/econ", "source": "Finance"}]
+        }
+        scripts = {"ko": "한국어", "en": "English", "zh": "Chinese"}
+        html = builder.build_html(tech_data, econ_data, scripts, "긍정 확언", "2026-10-26")
+
+        self.assertIn('id="section-econ"', html)
+        self.assertIn('gn-heatmap-card-grid', html)
+        self.assertIn('card-2026-10-26-econ-heatmap-us', html)
+        self.assertIn('card-2026-10-26-econ-heatmap-kr', html)
+        self.assertIn('미국 S&P 500 · NASDAQ 빅테크 섹터 히트맵', html)
+        self.assertIn('한국 KOSPI · KOSDAQ 시가총액 히트맵', html)
+        self.assertIn('openHeatmapZoomModal', html)
+        self.assertIn('toggleHeatmapColorMode', html)
+        self.assertIn('heatmapZoomModal', html)
+
+        # Markdown test
+        md = builder.build_markdown(tech_data, econ_data, "긍정 확언", "2026-10-26")
+        self.assertIn('### 📊 글로벌 증시 히트맵 & 주요 지표', md)
+        self.assertIn('미국 S&P 500 / NASDAQ', md)
+        self.assertIn('한국 KOSPI / KOSDAQ', md)
 
 
 if __name__ == "__main__":

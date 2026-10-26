@@ -50,6 +50,33 @@ class PaperBuilder:
 
         md.append("\n" + "-" * 80)
         md.append("\n## 📄 [SECTION 2] 🌐 글로벌 경제 · 군사/안보 · 세계 정세 카드뉴스")
+
+        stock_heatmaps = econ_data.get("stock_heatmaps")
+        if not stock_heatmaps:
+            try:
+                from src.collectors.stock_heatmap_collector import StockHeatmapCollector
+                stock_heatmaps = StockHeatmapCollector(self.output_dir).collect_all()
+            except Exception:
+                stock_heatmaps = {}
+        if stock_heatmaps:
+            md.append("\n### 📊 글로벌 증시 히트맵 & 주요 지표 (US & KR Stock Heatmaps)")
+            us_map = stock_heatmaps.get("us", {})
+            if us_map:
+                us_indices_str = " | ".join([f"**{idx['name']}**: {idx['price']:,.2f} ({'+' if idx['change_pct']>0 else ''}{idx['change_pct']:.2f}%)" for idx in us_map.get("indices", [])])
+                us_sum = us_map.get("summary", {})
+                tg = us_sum.get("top_gainer", {})
+                tl = us_sum.get("top_loser", {})
+                md.append(f"- **🇺🇸 미국 S&P 500 / NASDAQ**: {us_indices_str}")
+                md.append(f"  - 📈 시장 등락: 상승 {us_sum.get('advancers', 0)} / 하락 {us_sum.get('decliners', 0)} | 🔥 최고: {tg.get('name', '')} ({'+' if tg.get('change_pct',0)>0 else ''}{tg.get('change_pct',0):.2f}%) | 💧 최저: {tl.get('name', '')} ({tl.get('change_pct',0):.2f}%)")
+            kr_map = stock_heatmaps.get("kr", {})
+            if kr_map:
+                kr_indices_str = " | ".join([f"**{idx['name']}**: {idx['price']:,.2f} ({'+' if idx['change_pct']>0 else ''}{idx['change_pct']:.2f}%)" for idx in kr_map.get("indices", [])])
+                kr_sum = kr_map.get("summary", {})
+                tg = kr_sum.get("top_gainer", {})
+                tl = kr_sum.get("top_loser", {})
+                md.append(f"- **🇰🇷 한국 KOSPI / KOSDAQ**: {kr_indices_str}")
+                md.append(f"  - 📈 시장 등락: 상승 {kr_sum.get('advancers', 0)} / 하락 {kr_sum.get('decliners', 0)} | 🔥 최고: {tg.get('name', '')} ({'+' if tg.get('change_pct',0)>0 else ''}{tg.get('change_pct',0):.2f}%) | 💧 최저: {tl.get('name', '')} ({tl.get('change_pct',0):.2f}%)")
+
         append_md_cards("📈 1. 글로벌 거시 경제 & 금융 지표 (Macro Economy & Markets)", econ_cards)
         append_md_cards("🛡️ 2. 군사 · 국방 안보 & 지정학 이슈 (Military & Defense)", mil_cards)
         append_md_cards("🌍 3. 국제 외교 & 글로벌 정세 (World Diplomacy)", world_cards)
@@ -78,8 +105,207 @@ class PaperBuilder:
 
         return "\n".join(md)
 
+    @staticmethod
+    def _get_heat_class(pct: float) -> str:
+        if pct >= 3.0:
+            return "heat-p3"
+        elif pct >= 1.5:
+            return "heat-p2"
+        elif pct >= 0.2:
+            return "heat-p1"
+        elif pct <= -3.0:
+            return "heat-m3"
+        elif pct <= -1.5:
+            return "heat-m2"
+        elif pct <= -0.2:
+            return "heat-m1"
+        else:
+            return "heat-zero"
+
+    def _render_heatmap_card(self, market_key: str, market_data: Dict[str, Any], card_meta: Dict[str, Any], date_str: str) -> str:
+        c_uid = card_meta["card_uid"]
+        g_idx = card_meta["global_idx"]
+        c_title = card_meta["title"]
+        c_source = card_meta["source"]
+        c_favicon = card_meta["favicon"]
+        c_time = card_meta["time_ago"]
+        c_highlight = card_meta["highlight_badge"]
+        c_summary = card_meta["summary"]
+        c_link = card_meta["link"]
+        c_cta = card_meta["cta_text"]
+
+        search_blob = html_lib.escape(
+            f"{c_title} {c_source} {c_summary} {' '.join(card_meta.get('keywords', []))} 히트맵 s&p nasdaq kospi 코스피 증시".lower()
+        )
+
+        index_pills = []
+        for idx in market_data.get("indices", []):
+            pct = idx.get("change_pct", 0.0)
+            cls = "pos" if pct > 0 else ("neg" if pct < 0 else "zero")
+            sign = "+" if pct > 0 else ""
+            p_val = idx.get("price", 0.0)
+            p_str = f"{p_val:,.2f}" if p_val >= 100 else f"{p_val:.2f}"
+            index_pills.append(
+                f'<a href="{idx.get("url", "#")}" target="_blank" rel="noopener noreferrer" class="gn-index-pill" title="{html_lib.escape(idx["name"])}">'
+                f'<span class="gn-idx-name">{html_lib.escape(idx["name"])}</span>'
+                f'<span class="gn-idx-val">{p_str}</span>'
+                f'<span class="gn-idx-chg {cls}">{sign}{pct:.2f}%</span>'
+                f'</a>'
+            )
+        index_strip_html = f'<div class="gn-heatmap-index-strip">{"".join(index_pills)}</div>'
+
+        sector_blocks = []
+        for sec_name, sec_stocks in market_data.get("sectors", {}).items():
+            tiles_html = []
+            for st in sec_stocks:
+                pct = st.get("change_pct", 0.0)
+                h_cls = self._get_heat_class(pct)
+                sign = "+" if pct > 0 else ""
+                p_val = st.get("price", 0.0)
+                if market_key == "kr" and p_val >= 1000:
+                    p_str = f"{p_val:,.0f}원"
+                elif market_key == "us":
+                    p_str = f"${p_val:,.2f}"
+                else:
+                    p_str = f"{p_val:,.2f}"
+
+                sym_code = st.get("code") or st["symbol"].replace(".KS", "").replace(".KQ", "")
+                tier = st.get("size_tier", "sm")
+                tooltip = f"{st['name']} ({st['symbol']}) · 현재가 {p_str} ({sign}{pct:.2f}%)"
+
+                tiles_html.append(
+                    f'<a href="{st.get("url", "#")}" target="_blank" rel="noopener noreferrer" '
+                    f'class="gn-stock-tile tier-{tier} {h_cls}" data-pct="{pct:.2f}" title="{html_lib.escape(tooltip)}">'
+                    f'<span class="tile-sym">{html_lib.escape(sym_code)}</span>'
+                    f'<span class="tile-name">{html_lib.escape(st["name"])}</span>'
+                    f'<span class="tile-pct">{sign}{pct:.2f}%</span>'
+                    f'</a>'
+                )
+            sector_blocks.append(
+                f'<div class="gn-heatmap-sector">'
+                f'<div class="gn-sector-header"><span>{html_lib.escape(sec_name)}</span><span>{len(sec_stocks)}종목</span></div>'
+                f'<div class="gn-sector-tiles">{"".join(tiles_html)}</div>'
+                f'</div>'
+            )
+        treemap_html = f'<div class="gn-heatmap-treemap-wrap">{"".join(sector_blocks)}</div>'
+
+        sum_info = market_data.get("summary", {})
+        adv = sum_info.get("advancers", 0)
+        dec = sum_info.get("decliners", 0)
+        tot = adv + dec if (adv + dec) > 0 else 1
+        adv_pct = round((adv / tot) * 100.0, 1)
+        tg = sum_info.get("top_gainer", {})
+        tl = sum_info.get("top_loser", {})
+        tg_sign = "+" if tg.get("change_pct", 0) > 0 else ""
+        tl_sign = "+" if tl.get("change_pct", 0) > 0 else ""
+
+        breadth_html = f"""
+        <div class="gn-heatmap-breadth">
+            <div class="breadth-stats">
+                <span class="breadth-adv" style="color:var(--gn-green);">▲ 상승 {adv}</span>
+                <div class="breadth-ratio-bar" title="상승 {adv_pct}% / 하락 {100-adv_pct:.1f}%">
+                    <div class="adv-fill" style="width: {adv_pct}%;"></div>
+                </div>
+                <span class="breadth-dec" style="color:var(--gn-red);">하락 {dec} ▼</span>
+            </div>
+            <div class="breadth-movers">
+                <span class="mover-gainer">🔥 최고 상승: <strong>{html_lib.escape(tg.get("name",""))}</strong> ({tg_sign}{tg.get("change_pct",0):.2f}%)</span>
+                <span class="mover-loser">💧 최대 하락: <strong>{html_lib.escape(tl.get("name",""))}</strong> ({tl_sign}{tl.get("change_pct",0):.2f}%)</span>
+            </div>
+        </div>
+        """
+
+        legend_html = """
+        <div class="gn-heatmap-legend">
+            <span>-3% 이하</span>
+            <div class="legend-bar">
+                <span class="legend-chip heat-m3" title="-3% 이하"></span>
+                <span class="legend-chip heat-m2" title="-1.5% ~ -3%"></span>
+                <span class="legend-chip heat-m1" title="-0.2% ~ -1.5%"></span>
+                <span class="legend-chip heat-zero" title="보합 ±0.2%"></span>
+                <span class="legend-chip heat-p1" title="+0.2% ~ +1.5%"></span>
+                <span class="legend-chip heat-p2" title="+1.5% ~ +3%"></span>
+                <span class="legend-chip heat-p3" title="+3% 이상"></span>
+            </div>
+            <span>+3% 이상</span>
+        </div>
+        """
+
+        tags_chips_html = "".join(
+            f'<button type="button" class="gn-tag-chip" onclick="filterByKeyword(\'{html_lib.escape(k)}\')">{html_lib.escape(k)}</button>'
+            for k in card_meta.get("keywords", [])
+        )
+
+        badge_txt = "HEATMAP US" if market_key == "us" else "HEATMAP KR"
+        market_label = "🇺🇸 미국 S&P 500 · NASDAQ" if market_key == "us" else "🇰🇷 한국 KOSPI · KOSDAQ"
+
+        card_html = f"""
+        <article class="gn-news-card gn-heatmap-card" id="card-{c_uid}" data-category="econ" data-card-uid="{c_uid}" data-global-idx="{g_idx}" data-search="{search_blob}">
+            <div class="gn-card-banner" style="--card-accent: #188038; --card-surface: #e6f4ea;">
+                <div class="gn-banner-top">
+                    <span class="gn-card-num-badge">{badge_txt}</span>
+                    <span class="gn-banner-cat">📊 {market_label}</span>
+                </div>
+                <div class="gn-banner-quote">
+                    <span class="gn-quote-mark">“</span>
+                    <span class="gn-quote-text">{html_lib.escape(c_highlight)}</span>
+                    <span class="gn-quote-mark">”</span>
+                </div>
+            </div>
+            {index_strip_html}
+            <div class="gn-card-body" style="padding-bottom: 0;">
+                <div class="gn-card-pub-row">
+                    <img src="{c_favicon}" alt="" class="gn-pub-favicon" loading="lazy" onerror="this.style.display=\'none\'">
+                    <span class="gn-pub-name">{html_lib.escape(c_source)}</span>
+                    <span class="gn-pub-dot">&middot;</span>
+                    <span class="gn-pub-time">{html_lib.escape(c_time)}</span>
+                </div>
+                <h3 class="gn-card-title">
+                    <a href="{c_link}" target="_blank" rel="noopener noreferrer">{html_lib.escape(c_title)}</a>
+                </h3>
+                <p class="gn-card-summary">{html_lib.escape(c_summary)}</p>
+                {treemap_html}
+                {breadth_html}
+                {legend_html}
+                <div class="gn-card-tags" style="margin-top: 8px;">
+                    {tags_chips_html}
+                </div>
+            </div>
+            <div class="gn-card-footer">
+                <button type="button" class="gn-btn-slide-view" onclick="openCardModal({g_idx})" title="3단 카드뉴스 슬라이드로 보기">
+                    <span>🃏 카드뉴스 보기</span>
+                </button>
+                <div class="gn-card-footer-right">
+                    <button type="button" class="gn-section-deck-btn" onclick="openHeatmapZoomModal(\'{market_key}\')" title="히트맵 전체화면으로 크게 보기" style="padding: 5px 10px; font-size: 0.78rem;">
+                        🔍 크게 보기
+                    </button>
+                    <button type="button" class="gn-section-deck-btn btn-color-toggle" onclick="toggleHeatmapColorMode()" title="글로벌/한국식 색상 전환" style="padding: 5px 10px; font-size: 0.78rem;">
+                        🎨 색상전환
+                    </button>
+                    <button type="button" class="gn-btn-bookmark" data-uid="{c_uid}" onclick="toggleBookmark(\'{c_uid}\', this)" title="북마크에 저장" aria-label="북마크 저장">
+                        🔖
+                    </button>
+                    <a href="{c_link}" target="_blank" rel="noopener noreferrer" class="gn-btn-fullcoverage" title="외부 증시맵 열기">
+                        <span>{html_lib.escape(c_cta)}</span>
+                        <span aria-hidden="true">&nearr;</span>
+                    </a>
+                </div>
+            </div>
+        </article>
+        """
+        return card_html
+
     def build_html(self, tech_data: Dict[str, Any], econ_data: Dict[str, Any], scripts: Dict[str, str], affirmation: str, date_str: str) -> str:
         cache_ts = int(datetime.now().timestamp())
+        # 0. 주식 히트맵 데이터 로드
+        stock_heatmaps = econ_data.get("stock_heatmaps")
+        if not stock_heatmaps:
+            try:
+                from src.collectors.stock_heatmap_collector import StockHeatmapCollector
+                stock_heatmaps = StockHeatmapCollector(self.output_dir).collect_all()
+            except Exception:
+                stock_heatmaps = {}
+
         # 1. 섹션별 카드뉴스 데이터 생성
         ai_cards = enrich_section_items(tech_data.get("ai_headlines", [])[:6], "ai")
         tech_cards = enrich_section_items(tech_data.get("tech_headlines", [])[:6], "tech")
@@ -89,6 +315,75 @@ class PaperBuilder:
         econ_cards = enrich_section_items(econ_data.get("economy_headlines", [])[:6], "econ")
         mil_cards = enrich_section_items(econ_data.get("military_headlines", [])[:6], "military")
         world_cards = enrich_section_items(econ_data.get("world_headlines", [])[:6], "world")
+
+        # 1-1. 주식 히트맵 카드 생성 (US & KR)
+        heatmap_cards: List[Dict[str, Any]] = []
+        if stock_heatmaps and "us" in stock_heatmaps and "kr" in stock_heatmaps:
+            us_data = stock_heatmaps["us"]
+            kr_data = stock_heatmaps["kr"]
+            us_sum = us_data.get("summary", {})
+            kr_sum = kr_data.get("summary", {})
+
+            us_tg = us_sum.get("top_gainer", {})
+            us_tl = us_sum.get("top_loser", {})
+            kr_tg = kr_sum.get("top_gainer", {})
+            kr_tl = kr_sum.get("top_loser", {})
+
+            us_tg_sign = "+" if us_tg.get("change_pct", 0) > 0 else ""
+            us_tl_sign = "+" if us_tl.get("change_pct", 0) > 0 else ""
+            kr_tg_sign = "+" if kr_tg.get("change_pct", 0) > 0 else ""
+            kr_tl_sign = "+" if kr_tl.get("change_pct", 0) > 0 else ""
+
+            us_hc = {
+                "card_index": 1,
+                "card_uid": f"{date_str}-econ-heatmap-us",
+                "category_id": "econ",
+                "category_name": "글로벌 거시 경제 & 금융 시장",
+                "category_en": "MACRO & MARKETS",
+                "category_icon": "📈",
+                "category_color": "#188038",
+                "title": "미국 S&P 500 · NASDAQ 빅테크 섹터 히트맵",
+                "source": "Yahoo Finance · S&P 500",
+                "favicon": "https://www.google.com/s2/favicons?domain=finance.yahoo.com&sz=64",
+                "time_ago": "오늘 실시간",
+                "highlight_badge": "빅테크·AI 주도 강세 속 섹터별 랠리",
+                "summary": f"미국 S&P 500, NASDAQ, 다우존스 및 필라델피아 반도체 지수 동향과 빅테크 6대 기업(NVDA, AAPL 등) 및 주요 섹터의 실시간 등락률 히트맵입니다. (상승 {us_sum.get('advancers', 0)} / 하락 {us_sum.get('decliners', 0)})",
+                "bullet_points": [
+                    "📌 미국 지수 동향: S&P 500 및 나스닥 주요 지수 중심의 기술주 모멘텀 지속",
+                    f"🔍 주도 종목 진단: 최고 상승 {us_tg.get('name', '')} ({us_tg_sign}{us_tg.get('change_pct', 0):.2f}%), 최대 하락 {us_tl.get('name', '')} ({us_tl_sign}{us_tl.get('change_pct', 0):.2f}%)",
+                    "🎯 글로벌 투자 관점: 미 연준 통화정책과 빅테크 실적 발표에 따른 포트폴리오 영향 점검"
+                ],
+                "keywords": ["#미국증시히트맵", "#S&P500", "#빅테크", "#AI반도체"],
+                "link": "https://finviz.com/map.ashx",
+                "cta_text": "Finviz 히트맵 보기",
+                "related_articles": []
+            }
+
+            kr_hc = {
+                "card_index": 2,
+                "card_uid": f"{date_str}-econ-heatmap-kr",
+                "category_id": "econ",
+                "category_name": "글로벌 거시 경제 & 금융 시장",
+                "category_en": "MACRO & MARKETS",
+                "category_icon": "📈",
+                "category_color": "#188038",
+                "title": "한국 KOSPI · KOSDAQ 시가총액 히트맵",
+                "source": "Naver Finance · KRX",
+                "favicon": "https://www.google.com/s2/favicons?domain=finance.naver.com&sz=64",
+                "time_ago": "오늘 실시간",
+                "highlight_badge": "코스피 2,600선 공방 및 반도체·방산 차별화",
+                "summary": f"코스피, 코스닥 지수 및 원/달러 환율 흐름과 반도체(삼성전자, SK하이닉스), 2차전지, 바이오, 방산 등 시총 상위 종목의 등락률 분포 히트맵입니다. (상승 {kr_sum.get('advancers', 0)} / 하락 {kr_sum.get('decliners', 0)})",
+                "bullet_points": [
+                    "📌 국내 지수 진단: 코스피, 코스닥 지수 및 원/달러 환율 연동 수급 진단",
+                    f"🔍 주도 종목 진단: 최고 상승 {kr_tg.get('name', '')} ({kr_tg_sign}{kr_tg.get('change_pct', 0):.2f}%), 최대 하락 {kr_tl.get('name', '')} ({kr_tl_sign}{kr_tl.get('change_pct', 0):.2f}%)",
+                    "🎯 국내 투자 관점: 외국인·기관 수급 편중 및 수출 주도 섹터 실적 모멘텀 주시"
+                ],
+                "keywords": ["#한국증시히트맵", "#코스피", "#K반도체", "#원달러환율"],
+                "link": "https://finance.naver.com/",
+                "cta_text": "네이버 증시맵 보기",
+                "related_articles": []
+            }
+            heatmap_cards = [us_hc, kr_hc]
 
         sections_config = [
             {
@@ -176,6 +471,10 @@ class PaperBuilder:
         # 전체 카드 리스트 및 글로벌 인덱스 부여 (모달 슬라이드 뷰어 연동용)
         all_cards: List[Dict[str, Any]] = []
         for sec in sections_config:
+            if sec["id"] == "econ" and heatmap_cards:
+                for hc in heatmap_cards:
+                    hc["global_idx"] = len(all_cards)
+                    all_cards.append(hc)
             for c in sec["cards"]:
                 c["global_idx"] = len(all_cards)
                 c["card_uid"] = f"{date_str}-{sec['id']}-{c['card_index']}"
@@ -360,10 +659,10 @@ class PaperBuilder:
         for sec in sections_config:
             sec_id = sec["id"]
             cards = sec["cards"]
-            if not cards:
+            if not cards and not (sec_id == "econ" and heatmap_cards):
                 continue
 
-            first_global_idx = cards[0]["global_idx"]
+            first_global_idx = heatmap_cards[0]["global_idx"] if (sec_id == "econ" and heatmap_cards) else (cards[0]["global_idx"] if cards else 0)
             cards_grid_html = ""
 
             for c in cards:
@@ -474,6 +773,18 @@ class PaperBuilder:
                 </article>
                 """
 
+            heatmap_grid_html = ""
+            if sec_id == "econ" and heatmap_cards and len(heatmap_cards) >= 2:
+                us_card_html = self._render_heatmap_card("us", stock_heatmaps.get("us", {}), heatmap_cards[0], date_str)
+                kr_card_html = self._render_heatmap_card("kr", stock_heatmaps.get("kr", {}), heatmap_cards[1], date_str)
+                heatmap_grid_html = f"""
+                <div class="gn-heatmap-card-grid">
+                    {us_card_html}
+                    {kr_card_html}
+                </div>
+                """
+
+            sec_card_count = len(cards) + (len(heatmap_cards) if sec_id == 'econ' else 0)
             sections_html += f"""
             <section class="gn-category-section" id="section-{sec_id}" data-section="{sec_id}">
                 <div class="gn-section-header">
@@ -485,12 +796,13 @@ class PaperBuilder:
                         </div>
                     </div>
                     <div class="gn-section-actions">
-                        <span class="gn-section-count">{len(cards)}개 카드</span>
+                        <span class="gn-section-count">{sec_card_count}개 카드</span>
                         <button type="button" class="gn-section-deck-btn" onclick="openCardModal({first_global_idx})">
                             📱 슬라이드 연속보기 &rsaquo;
                         </button>
                     </div>
                 </div>
+                {heatmap_grid_html}
                 <div class="gn-card-grid">
                     {cards_grid_html}
                 </div>
@@ -2148,6 +2460,322 @@ class PaperBuilder:
             font-size: 0.85rem;
         }}
 
+        /* ======================================================================
+           Stock Heatmap Cards & Treemap Styling
+           ====================================================================== */
+        .gn-heatmap-card-grid {{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 24px;
+        }}
+
+        @media (max-width: 980px) {{
+            .gn-heatmap-card-grid {{
+                grid-template-columns: 1fr;
+            }}
+        }}
+
+        .gn-heatmap-card {{
+            background: var(--gn-surface);
+            border: 1px solid var(--gn-border-subtle);
+            border-radius: var(--gn-radius-card);
+            box-shadow: var(--gn-shadow-sm);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }}
+
+        .gn-heatmap-card:hover {{
+            transform: translateY(-2px);
+            box-shadow: var(--gn-shadow-md);
+            border-color: var(--gn-border);
+        }}
+
+        .gn-heatmap-index-strip {{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 10px 18px;
+            background: rgba(0, 0, 0, 0.025);
+            border-top: 1px solid var(--gn-border-subtle);
+            border-bottom: 1px solid var(--gn-border-subtle);
+        }}
+
+        [data-theme="dark"] .gn-heatmap-index-strip {{
+            background: rgba(255, 255, 255, 0.035);
+        }}
+
+        .gn-index-pill {{
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--gn-surface);
+            border: 1px solid var(--gn-border);
+            padding: 4px 10px;
+            border-radius: var(--gn-radius-pill);
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--gn-text-primary);
+            transition: all 0.15s ease;
+        }}
+
+        .gn-index-pill:hover {{
+            border-color: var(--gn-blue);
+            transform: translateY(-1px);
+        }}
+
+        .gn-idx-val {{
+            font-weight: 700;
+            color: var(--gn-text-primary);
+        }}
+
+        .gn-idx-chg {{
+            padding: 1px 6px;
+            border-radius: 4px;
+            font-size: 0.74rem;
+            font-weight: 700;
+        }}
+
+        .gn-idx-chg.pos {{
+            background: #e6f4ea;
+            color: #137333;
+        }}
+
+        .gn-idx-chg.neg {{
+            background: #fce8e6;
+            color: #c5221f;
+        }}
+
+        .gn-idx-chg.zero {{
+            background: var(--gn-surface-variant);
+            color: var(--gn-text-muted);
+        }}
+
+        body.heatmap-kr-colors .gn-idx-chg.pos {{
+            background: #fce8e6;
+            color: #c5221f;
+        }}
+
+        body.heatmap-kr-colors .gn-idx-chg.neg {{
+            background: #e8f0fe;
+            color: #1a73e8;
+        }}
+
+        .gn-heatmap-treemap-wrap {{
+            padding: 14px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }}
+
+        .gn-heatmap-sector {{
+            border: 1px solid var(--gn-border-subtle);
+            border-radius: 12px;
+            padding: 10px;
+            background: var(--gn-bg);
+        }}
+
+        .gn-sector-header {{
+            font-size: 0.74rem;
+            font-weight: 800;
+            color: var(--gn-text-muted);
+            letter-spacing: 0.3px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }}
+
+        .gn-sector-tiles {{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(78px, 1fr));
+            gap: 6px;
+        }}
+
+        .gn-stock-tile {{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 6px 4px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #ffffff !important;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.15s ease, filter 0.15s ease, box-shadow 0.15s ease;
+            overflow: hidden;
+            min-height: 48px;
+        }}
+
+        .gn-stock-tile:hover {{
+            transform: scale(1.04);
+            filter: brightness(1.12);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            z-index: 2;
+        }}
+
+        .gn-stock-tile.tier-xl {{
+            grid-column: span 2;
+            min-height: 56px;
+            padding: 8px 6px;
+        }}
+
+        .gn-stock-tile.tier-lg {{
+            min-height: 52px;
+        }}
+
+        .tile-sym {{
+            font-size: 0.82rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.2px;
+        }}
+
+        .tile-name {{
+            font-size: 0.67rem;
+            opacity: 0.92;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 90%;
+            line-height: 1.1;
+            margin-top: 1px;
+        }}
+
+        .tile-pct {{
+            font-size: 0.75rem;
+            font-weight: 800;
+            margin-top: 2px;
+            line-height: 1.1;
+        }}
+
+        /* 7-Step Heatmap Gradient: Global Mode (Default: Green=Up, Red=Down) */
+        .heat-p3 {{ background: #0d652d; }}
+        .heat-p2 {{ background: #188038; }}
+        .heat-p1 {{ background: #34a853; }}
+        .heat-zero {{ background: #70757a; }}
+        .heat-m1 {{ background: #ea4335; }}
+        .heat-m2 {{ background: #d93025; }}
+        .heat-m3 {{ background: #a50e0e; }}
+
+        /* 7-Step Heatmap Gradient: Korean Mode (Red=Up, Blue=Down) */
+        body.heatmap-kr-colors .heat-p3 {{ background: #a50e0e; }}
+        body.heatmap-kr-colors .heat-p2 {{ background: #d93025; }}
+        body.heatmap-kr-colors .heat-p1 {{ background: #ea4335; }}
+        body.heatmap-kr-colors .heat-zero {{ background: #70757a; }}
+        body.heatmap-kr-colors .heat-m1 {{ background: #4285f4; }}
+        body.heatmap-kr-colors .heat-m2 {{ background: #1a73e8; }}
+        body.heatmap-kr-colors .heat-m3 {{ background: #174ea6; }}
+
+        /* Market Breadth Bar */
+        .gn-heatmap-breadth {{
+            padding: 10px 18px 12px 18px;
+            border-top: 1px solid var(--gn-border-subtle);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 0.78rem;
+        }}
+
+        .breadth-stats {{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            font-weight: 700;
+        }}
+
+        .breadth-ratio-bar {{
+            flex: 1;
+            height: 6px;
+            background: #d93025;
+            border-radius: 999px;
+            overflow: hidden;
+            display: flex;
+        }}
+
+        body.heatmap-kr-colors .breadth-ratio-bar {{
+            background: #1a73e8;
+        }}
+
+        .adv-fill {{
+            height: 100%;
+            background: #188038;
+            transition: width 0.3s ease;
+        }}
+
+        body.heatmap-kr-colors .adv-fill {{
+            background: #d93025;
+        }}
+
+        .breadth-movers {{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            font-size: 0.74rem;
+            color: var(--gn-text-secondary);
+        }}
+
+        /* Scale Legend */
+        .gn-heatmap-legend {{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 8px 18px;
+            font-size: 0.7rem;
+            color: var(--gn-text-muted);
+            border-top: 1px dashed var(--gn-border-subtle);
+        }}
+
+        .legend-bar {{
+            display: flex;
+            border-radius: 4px;
+            overflow: hidden;
+        }}
+
+        .legend-chip {{
+            width: 22px;
+            height: 12px;
+        }}
+
+        /* Fullscreen Heatmap Zoom Modal */
+        .gn-heatmap-modal .gn-heatmap-modal-card {{
+            max-width: 1120px;
+            width: 95vw;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+        }}
+
+        .gn-heatmap-treemap-wrap.zoomed .gn-sector-tiles {{
+            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+            gap: 8px;
+        }}
+
+        .gn-heatmap-treemap-wrap.zoomed .gn-stock-tile {{
+            min-height: 64px;
+            padding: 10px 8px;
+        }}
+
+        .gn-heatmap-treemap-wrap.zoomed .tile-sym {{
+            font-size: 0.95rem;
+        }}
+
+        .gn-heatmap-treemap-wrap.zoomed .tile-name {{
+            font-size: 0.76rem;
+        }}
+
+        .gn-heatmap-treemap-wrap.zoomed .tile-pct {{
+            font-size: 0.85rem;
+        }}
+
         /* Responsive Breakpoints */
         @media (max-width: 1120px) {{
             .gn-hero-grid {{
@@ -2445,6 +3073,30 @@ class PaperBuilder:
         </div>
     </div>
 
+    <!-- ==========================================================================
+         Interactive Fullscreen Stock Heatmap Zoom Modal
+         ========================================================================== -->
+    <div id="heatmapZoomModal" class="gn-modal-backdrop gn-heatmap-modal" role="dialog" aria-modal="true" aria-labelledby="heatmapModalTitle" onclick="handleHeatmapBackdropClick(event)">
+        <div class="gn-modal-card gn-heatmap-modal-card">
+            <div class="modal-top-bar">
+                <div class="modal-header-row">
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <span id="heatmapModalCatBadge" class="modal-cat-badge">📊 주식 시장 히트맵</span>
+                        <h3 id="heatmapModalTitle" style="margin:0; font-size:1.15rem; font-weight:800; color:var(--gn-text-primary);">히트맵 상세</h3>
+                    </div>
+                    <div style="display:flex; align-items:center; gap:8px;">
+                        <button type="button" class="gn-section-deck-btn btn-color-toggle" onclick="toggleHeatmapColorMode()" title="글로벌/한국식 색상 전환">🎨 색상전환</button>
+                        <button type="button" class="modal-close-btn" onclick="closeHeatmapZoomModal()" aria-label="모달 닫기">✕</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="heatmap-modal-body" id="heatmapModalBody" style="padding: 16px; overflow-y: auto; max-height: calc(85vh - 70px);">
+                <!-- Populated dynamically via JS -->
+            </div>
+        </div>
+    </div>
+
     <footer class="gn-footer">
         <div>&copy; {datetime.now().year} <strong>Google News Style Daily Morning Briefing</strong> &middot; Automated Card News Intelligence System</div>
         <div>매일 아침 09:00 KST 자동 발행 &middot; <a href="ARCHIVE_LINK_PATH" style="color:var(--gn-blue-text); text-decoration:none; font-weight:600;">지난 브리핑 아카이브 열람 &rarr;</a></div>
@@ -2452,6 +3104,7 @@ class PaperBuilder:
 
     <script>
         const ALL_CARDS = {modal_cards_json};
+        const CURRENT_DATE = "{date_str}";
         const TOTAL_HERO_SLIDES = {total_hero_slides};
         const STORAGE_KEY_SAVED = 'gn_briefing_saved_cards_v1';
         const STORAGE_KEY_THEME = 'gn_briefing_theme_v1';
@@ -2485,6 +3138,7 @@ class PaperBuilder:
                 if (rawSaved) {{
                     JSON.parse(rawSaved).forEach(id => savedCards.add(id));
                 }}
+                initHeatmapPreferences();
             }} catch (e) {{
                 console.warn('LocalStorage unavailable:', e);
             }}
@@ -2991,12 +3645,85 @@ class PaperBuilder:
             window.speechSynthesis.speak(utter);
         }}
 
+        /* ======================================================================
+           8. Stock Heatmap Color Mode & Fullscreen Zoom Modal
+           ====================================================================== */
+        function initHeatmapPreferences() {{
+            try {{
+                const savedKr = localStorage.getItem('gn_heatmap_kr_colors');
+                if (savedKr === '1') {{
+                    document.body.classList.add('heatmap-kr-colors');
+                    updateColorModeButtons(true);
+                }}
+            }} catch (e) {{}}
+        }}
+
+        function toggleHeatmapColorMode() {{
+            document.body.classList.toggle('heatmap-kr-colors');
+            const isKr = document.body.classList.contains('heatmap-kr-colors');
+            try {{
+                localStorage.setItem('gn_heatmap_kr_colors', isKr ? '1' : '0');
+            }} catch (e) {{}}
+            updateColorModeButtons(isKr);
+        }}
+
+        function updateColorModeButtons(isKr) {{
+            document.querySelectorAll('.btn-color-toggle').forEach(btn => {{
+                btn.textContent = isKr ? '🎨 한국식(🔴/🔵)' : '🎨 글로벌(🟢/🔴)';
+            }});
+        }}
+
+        function openHeatmapZoomModal(market) {{
+            const modal = document.getElementById('heatmapZoomModal');
+            const titleEl = document.getElementById('heatmapModalTitle');
+            const bodyEl = document.getElementById('heatmapModalBody');
+            const cardId = market === 'us' ? 'card-' + CURRENT_DATE + '-econ-heatmap-us' : 'card-' + CURRENT_DATE + '-econ-heatmap-kr';
+            const sourceCard = document.getElementById(cardId);
+            if (!modal || !sourceCard) return;
+
+            titleEl.textContent = market === 'us' ? '🇺🇸 미국 S&P 500 · NASDAQ 섹터 히트맵 (전체화면)' : '🇰🇷 한국 KOSPI · KOSDAQ 시가총액 히트맵 (전체화면)';
+
+            bodyEl.innerHTML = '';
+            const strip = sourceCard.querySelector('.gn-heatmap-index-strip');
+            const treemap = sourceCard.querySelector('.gn-heatmap-treemap-wrap');
+            const breadth = sourceCard.querySelector('.gn-heatmap-breadth');
+            const legend = sourceCard.querySelector('.gn-heatmap-legend');
+
+            if (strip) bodyEl.appendChild(strip.cloneNode(true));
+            if (treemap) {{
+                const treemapClone = treemap.cloneNode(true);
+                treemapClone.classList.add('zoomed');
+                bodyEl.appendChild(treemapClone);
+            }}
+            if (breadth) bodyEl.appendChild(breadth.cloneNode(true));
+            if (legend) bodyEl.appendChild(legend.cloneNode(true));
+
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }}
+
+        function closeHeatmapZoomModal() {{
+            const modal = document.getElementById('heatmapZoomModal');
+            if (modal) modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }}
+
+        function handleHeatmapBackdropClick(e) {{
+            if (e.target && e.target.id === 'heatmapZoomModal') {{
+                closeHeatmapZoomModal();
+            }}
+        }}
+
         document.addEventListener('keydown', (e) => {{
             const modal = document.getElementById('cardNewsModal');
             if (modal && modal.classList.contains('open')) {{
                 if (e.key === 'Escape') closeCardModal();
                 else if (e.key === 'ArrowRight') nextModalStep();
                 else if (e.key === 'ArrowLeft') prevModalCard();
+            }}
+            const hmModal = document.getElementById('heatmapZoomModal');
+            if (hmModal && hmModal.classList.contains('active')) {{
+                if (e.key === 'Escape') closeHeatmapZoomModal();
             }}
         }});
 

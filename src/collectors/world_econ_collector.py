@@ -16,6 +16,7 @@ from typing import Dict, List, Any, Optional
 from datetime import datetime, timezone
 
 from src.collectors.history_filter import HistoryFilter, normalize_title
+from src.collectors.stock_heatmap_collector import StockHeatmapCollector
 
 
 class WorldEconCollector:
@@ -217,10 +218,12 @@ class WorldEconCollector:
             f_econ = ex.submit(fetch_multi_subqueries, econ_queries)
             f_mil = ex.submit(fetch_multi_subqueries, mil_queries)
             f_world = ex.submit(fetch_multi_subqueries, world_queries)
+            f_stocks = ex.submit(StockHeatmapCollector(self.outputs_dir).collect_all)
 
             econ_raw = f_econ.result()
             mil_raw = f_mil.result()
             world_raw = f_world.result()
+            stock_heatmaps = f_stocks.result()
 
         econ_news = self._filter_and_cap_items(econ_raw, target_count=6, max_per_source=2)
         military_news = self._filter_and_cap_items(mil_raw, target_count=6, max_per_source=2)
@@ -230,5 +233,6 @@ class WorldEconCollector:
             "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M"),
             "economy_headlines": econ_news[:6],
             "military_headlines": military_news[:6],
-            "world_headlines": world_news[:6]
+            "world_headlines": world_news[:6],
+            "stock_heatmaps": stock_heatmaps
         }

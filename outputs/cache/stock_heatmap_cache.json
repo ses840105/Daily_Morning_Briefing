@@ -1,0 +1,1079 @@
+{
+  "timestamp": "2026-10-26 20:14 KST",
+  "us": {
+    "market_name": "미국 S&P 500 · NASDAQ 빅테크 히트맵",
+    "indices": [
+      {
+        "name": "S&P 500",
+        "symbol": "^GSPC",
+        "price": 7623.68,
+        "change": -39.75,
+        "change_pct": -0.52,
+        "url": "https://finance.yahoo.com/quote/^GSPC"
+      },
+      {
+        "name": "NASDAQ",
+        "symbol": "^IXIC",
+        "price": 25955.34,
+        "change": -53.52,
+        "change_pct": -0.21,
+        "url": "https://finance.yahoo.com/quote/^IXIC"
+      },
+      {
+        "name": "Dow Jones",
+        "symbol": "^DJI",
+        "price": 52215.16,
+        "change": -652.82,
+        "change_pct": -1.23,
+        "url": "https://finance.yahoo.com/quote/^DJI"
+      },
+      {
+        "name": "SOX 반도체",
+        "symbol": "^SOX",
+        "price": 10779.46,
+        "change": 47.48,
+        "change_pct": 0.44,
+        "url": "https://finance.yahoo.com/quote/^SOX"
+      }
+    ],
+    "sectors": {
+      "Big Tech · AI": [
+        {
+          "symbol": "NVDA",
+          "name": "NVIDIA",
+          "sector": "Big Tech · AI",
+          "size_tier": "xl",
+          "weight": 4.0,
+          "price": 210.96,
+          "change": -1.25,
+          "change_pct": -0.59,
+          "url": "https://finance.yahoo.com/quote/NVDA"
+        },
+        {
+          "symbol": "AAPL",
+          "name": "Apple",
+          "sector": "Big Tech · AI",
+          "size_tier": "xl",
+          "weight": 3.8,
+          "price": 347.73,
+          "change": -0.49,
+          "change_pct": -0.14,
+          "url": "https://finance.yahoo.com/quote/AAPL"
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Microsoft",
+          "sector": "Big Tech · AI",
+          "size_tier": "xl",
+          "weight": 3.6,
+          "price": 524.51,
+          "change": 3.43,
+          "change_pct": 0.66,
+          "url": "https://finance.yahoo.com/quote/MSFT"
+        },
+        {
+          "symbol": "AMZN",
+          "name": "Amazon",
+          "sector": "Big Tech · AI",
+          "size_tier": "lg",
+          "weight": 2.5,
+          "price": 248.0,
+          "change": -2.38,
+          "change_pct": -0.95,
+          "url": "https://finance.yahoo.com/quote/AMZN"
+        },
+        {
+          "symbol": "GOOGL",
+          "name": "Alphabet",
+          "sector": "Big Tech · AI",
+          "size_tier": "lg",
+          "weight": 2.2,
+          "price": 320.21,
+          "change": -4.01,
+          "change_pct": -1.24,
+          "url": "https://finance.yahoo.com/quote/GOOGL"
+        },
+        {
+          "symbol": "META",
+          "name": "Meta",
+          "sector": "Big Tech · AI",
+          "size_tier": "lg",
+          "weight": 2.2,
+          "price": 642.62,
+          "change": -6.23,
+          "change_pct": -0.96,
+          "url": "https://finance.yahoo.com/quote/META"
+        }
+      ],
+      "Semiconductors": [
+        {
+          "symbol": "AVGO",
+          "name": "Broadcom",
+          "sector": "Semiconductors",
+          "size_tier": "lg",
+          "weight": 2.0,
+          "price": 321.68,
+          "change": -1.56,
+          "change_pct": -0.48,
+          "url": "https://finance.yahoo.com/quote/AVGO"
+        },
+        {
+          "symbol": "TSM",
+          "name": "TSMC",
+          "sector": "Semiconductors",
+          "size_tier": "md",
+          "weight": 1.8,
+          "price": 418.51,
+          "change": 6.16,
+          "change_pct": 1.49,
+          "url": "https://finance.yahoo.com/quote/TSM"
+        },
+        {
+          "symbol": "AMD",
+          "name": "AMD",
+          "sector": "Semiconductors",
+          "size_tier": "md",
+          "weight": 1.5,
+          "price": 516.79,
+          "change": 8.86,
+          "change_pct": 1.74,
+          "url": "https://finance.yahoo.com/quote/AMD"
+        },
+        {
+          "symbol": "MU",
+          "name": "Micron",
+          "sector": "Semiconductors",
+          "size_tier": "sm",
+          "weight": 1.0,
+          "price": 877.55,
+          "change": 21.06,
+          "change_pct": 2.46,
+          "url": "https://finance.yahoo.com/quote/MU"
+        },
+        {
+          "symbol": "QCOM",
+          "name": "Qualcomm",
+          "sector": "Semiconductors",
+          "size_tier": "sm",
+          "weight": 1.0,
+          "price": 175.91,
+          "change": 3.08,
+          "change_pct": 1.78,
+          "url": "https://finance.yahoo.com/quote/QCOM"
+        }
+      ],
+      "Consumer · EV": [
+        {
+          "symbol": "TSLA",
+          "name": "Tesla",
+          "sector": "Consumer · EV",
+          "size_tier": "lg",
+          "weight": 2.2,
+          "price": 372.22,
+          "change": -2.36,
+          "change_pct": -0.63,
+          "url": "https://finance.yahoo.com/quote/TSLA"
+        },
+        {
+          "symbol": "WMT",
+          "name": "Walmart",
+          "sector": "Consumer · EV",
+          "size_tier": "md",
+          "weight": 1.2,
+          "price": 119.89,
+          "change": -1.23,
+          "change_pct": -1.02,
+          "url": "https://finance.yahoo.com/quote/WMT"
+        },
+        {
+          "symbol": "COST",
+          "name": "Costco",
+          "sector": "Consumer · EV",
+          "size_tier": "sm",
+          "weight": 1.0,
+          "price": 1003.32,
+          "change": -14.89,
+          "change_pct": -1.46,
+          "url": "https://finance.yahoo.com/quote/COST"
+        }
+      ],
+      "Finance": [
+        {
+          "symbol": "BRK-B",
+          "name": "Berkshire",
+          "sector": "Finance",
+          "size_tier": "md",
+          "weight": 1.5,
+          "price": 542.19,
+          "change": -4.78,
+          "change_pct": -0.87,
+          "url": "https://finance.yahoo.com/quote/BRK-B"
+        },
+        {
+          "symbol": "JPM",
+          "name": "JPMorgan",
+          "sector": "Finance",
+          "size_tier": "md",
+          "weight": 1.4,
+          "price": 331.58,
+          "change": -4.96,
+          "change_pct": -1.47,
+          "url": "https://finance.yahoo.com/quote/JPM"
+        },
+        {
+          "symbol": "V",
+          "name": "Visa",
+          "sector": "Finance",
+          "size_tier": "sm",
+          "weight": 1.0,
+          "price": 407.92,
+          "change": -6.42,
+          "change_pct": -1.55,
+          "url": "https://finance.yahoo.com/quote/V"
+        }
+      ],
+      "Health · Energy": [
+        {
+          "symbol": "LLY",
+          "name": "Eli Lilly",
+          "sector": "Health · Energy",
+          "size_tier": "md",
+          "weight": 1.5,
+          "price": 1273.46,
+          "change": -33.23,
+          "change_pct": -2.54,
+          "url": "https://finance.yahoo.com/quote/LLY"
+        },
+        {
+          "symbol": "UNH",
+          "name": "UnitedHealth",
+          "sector": "Health · Energy",
+          "size_tier": "sm",
+          "weight": 1.0,
+          "price": 418.09,
+          "change": -6.89,
+          "change_pct": -1.62,
+          "url": "https://finance.yahoo.com/quote/UNH"
+        },
+        {
+          "symbol": "XOM",
+          "name": "ExxonMobil",
+          "sector": "Health · Energy",
+          "size_tier": "sm",
+          "weight": 1.0,
+          "price": 183.21,
+          "change": 4.98,
+          "change_pct": 2.79,
+          "url": "https://finance.yahoo.com/quote/XOM"
+        }
+      ]
+    },
+    "stocks": [
+      {
+        "symbol": "NVDA",
+        "name": "NVIDIA",
+        "sector": "Big Tech · AI",
+        "size_tier": "xl",
+        "weight": 4.0,
+        "price": 210.96,
+        "change": -1.25,
+        "change_pct": -0.59,
+        "url": "https://finance.yahoo.com/quote/NVDA"
+      },
+      {
+        "symbol": "AAPL",
+        "name": "Apple",
+        "sector": "Big Tech · AI",
+        "size_tier": "xl",
+        "weight": 3.8,
+        "price": 347.73,
+        "change": -0.49,
+        "change_pct": -0.14,
+        "url": "https://finance.yahoo.com/quote/AAPL"
+      },
+      {
+        "symbol": "MSFT",
+        "name": "Microsoft",
+        "sector": "Big Tech · AI",
+        "size_tier": "xl",
+        "weight": 3.6,
+        "price": 524.51,
+        "change": 3.43,
+        "change_pct": 0.66,
+        "url": "https://finance.yahoo.com/quote/MSFT"
+      },
+      {
+        "symbol": "AMZN",
+        "name": "Amazon",
+        "sector": "Big Tech · AI",
+        "size_tier": "lg",
+        "weight": 2.5,
+        "price": 248.0,
+        "change": -2.38,
+        "change_pct": -0.95,
+        "url": "https://finance.yahoo.com/quote/AMZN"
+      },
+      {
+        "symbol": "GOOGL",
+        "name": "Alphabet",
+        "sector": "Big Tech · AI",
+        "size_tier": "lg",
+        "weight": 2.2,
+        "price": 320.21,
+        "change": -4.01,
+        "change_pct": -1.24,
+        "url": "https://finance.yahoo.com/quote/GOOGL"
+      },
+      {
+        "symbol": "META",
+        "name": "Meta",
+        "sector": "Big Tech · AI",
+        "size_tier": "lg",
+        "weight": 2.2,
+        "price": 642.62,
+        "change": -6.23,
+        "change_pct": -0.96,
+        "url": "https://finance.yahoo.com/quote/META"
+      },
+      {
+        "symbol": "AVGO",
+        "name": "Broadcom",
+        "sector": "Semiconductors",
+        "size_tier": "lg",
+        "weight": 2.0,
+        "price": 321.68,
+        "change": -1.56,
+        "change_pct": -0.48,
+        "url": "https://finance.yahoo.com/quote/AVGO"
+      },
+      {
+        "symbol": "TSM",
+        "name": "TSMC",
+        "sector": "Semiconductors",
+        "size_tier": "md",
+        "weight": 1.8,
+        "price": 418.51,
+        "change": 6.16,
+        "change_pct": 1.49,
+        "url": "https://finance.yahoo.com/quote/TSM"
+      },
+      {
+        "symbol": "AMD",
+        "name": "AMD",
+        "sector": "Semiconductors",
+        "size_tier": "md",
+        "weight": 1.5,
+        "price": 516.79,
+        "change": 8.86,
+        "change_pct": 1.74,
+        "url": "https://finance.yahoo.com/quote/AMD"
+      },
+      {
+        "symbol": "MU",
+        "name": "Micron",
+        "sector": "Semiconductors",
+        "size_tier": "sm",
+        "weight": 1.0,
+        "price": 877.55,
+        "change": 21.06,
+        "change_pct": 2.46,
+        "url": "https://finance.yahoo.com/quote/MU"
+      },
+      {
+        "symbol": "QCOM",
+        "name": "Qualcomm",
+        "sector": "Semiconductors",
+        "size_tier": "sm",
+        "weight": 1.0,
+        "price": 175.91,
+        "change": 3.08,
+        "change_pct": 1.78,
+        "url": "https://finance.yahoo.com/quote/QCOM"
+      },
+      {
+        "symbol": "TSLA",
+        "name": "Tesla",
+        "sector": "Consumer · EV",
+        "size_tier": "lg",
+        "weight": 2.2,
+        "price": 372.22,
+        "change": -2.36,
+        "change_pct": -0.63,
+        "url": "https://finance.yahoo.com/quote/TSLA"
+      },
+      {
+        "symbol": "WMT",
+        "name": "Walmart",
+        "sector": "Consumer · EV",
+        "size_tier": "md",
+        "weight": 1.2,
+        "price": 119.89,
+        "change": -1.23,
+        "change_pct": -1.02,
+        "url": "https://finance.yahoo.com/quote/WMT"
+      },
+      {
+        "symbol": "COST",
+        "name": "Costco",
+        "sector": "Consumer · EV",
+        "size_tier": "sm",
+        "weight": 1.0,
+        "price": 1003.32,
+        "change": -14.89,
+        "change_pct": -1.46,
+        "url": "https://finance.yahoo.com/quote/COST"
+      },
+      {
+        "symbol": "BRK-B",
+        "name": "Berkshire",
+        "sector": "Finance",
+        "size_tier": "md",
+        "weight": 1.5,
+        "price": 542.19,
+        "change": -4.78,
+        "change_pct": -0.87,
+        "url": "https://finance.yahoo.com/quote/BRK-B"
+      },
+      {
+        "symbol": "JPM",
+        "name": "JPMorgan",
+        "sector": "Finance",
+        "size_tier": "md",
+        "weight": 1.4,
+        "price": 331.58,
+        "change": -4.96,
+        "change_pct": -1.47,
+        "url": "https://finance.yahoo.com/quote/JPM"
+      },
+      {
+        "symbol": "V",
+        "name": "Visa",
+        "sector": "Finance",
+        "size_tier": "sm",
+        "weight": 1.0,
+        "price": 407.92,
+        "change": -6.42,
+        "change_pct": -1.55,
+        "url": "https://finance.yahoo.com/quote/V"
+      },
+      {
+        "symbol": "LLY",
+        "name": "Eli Lilly",
+        "sector": "Health · Energy",
+        "size_tier": "md",
+        "weight": 1.5,
+        "price": 1273.46,
+        "change": -33.23,
+        "change_pct": -2.54,
+        "url": "https://finance.yahoo.com/quote/LLY"
+      },
+      {
+        "symbol": "UNH",
+        "name": "UnitedHealth",
+        "sector": "Health · Energy",
+        "size_tier": "sm",
+        "weight": 1.0,
+        "price": 418.09,
+        "change": -6.89,
+        "change_pct": -1.62,
+        "url": "https://finance.yahoo.com/quote/UNH"
+      },
+      {
+        "symbol": "XOM",
+        "name": "ExxonMobil",
+        "sector": "Health · Energy",
+        "size_tier": "sm",
+        "weight": 1.0,
+        "price": 183.21,
+        "change": 4.98,
+        "change_pct": 2.79,
+        "url": "https://finance.yahoo.com/quote/XOM"
+      }
+    ],
+    "summary": {
+      "advancers": 6,
+      "decliners": 14,
+      "unchanged": 0,
+      "total": 20,
+      "top_gainer": {
+        "symbol": "XOM",
+        "name": "ExxonMobil",
+        "sector": "Health · Energy",
+        "size_tier": "sm",
+        "weight": 1.0,
+        "price": 183.21,
+        "change": 4.98,
+        "change_pct": 2.79,
+        "url": "https://finance.yahoo.com/quote/XOM"
+      },
+      "top_loser": {
+        "symbol": "LLY",
+        "name": "Eli Lilly",
+        "sector": "Health · Energy",
+        "size_tier": "md",
+        "weight": 1.5,
+        "price": 1273.46,
+        "change": -33.23,
+        "change_pct": -2.54,
+        "url": "https://finance.yahoo.com/quote/LLY"
+      },
+      "updated_at": "2026-10-26 20:14 KST"
+    }
+  },
+  "kr": {
+    "market_name": "한국 KOSPI · KOSDAQ 시가총액 히트맵",
+    "indices": [
+      {
+        "name": "KOSPI",
+        "symbol": "^KS11",
+        "price": 5469.47,
+        "change": -80.83,
+        "change_pct": -1.46,
+        "url": "https://finance.naver.com/sise/sise_index.naver?code=KS11"
+      },
+      {
+        "name": "KOSDAQ",
+        "symbol": "^KQ11",
+        "price": 727.21,
+        "change": -24.48,
+        "change_pct": -3.26,
+        "url": "https://finance.naver.com/sise/sise_index.naver?code=KQ11"
+      },
+      {
+        "name": "USD/KRW",
+        "symbol": "KRW=X",
+        "price": 1324.98,
+        "change": -1.01,
+        "change_pct": -0.08,
+        "url": "https://finance.naver.com/marketindex/"
+      }
+    ],
+    "sectors": {
+      "반도체 · AI": [
+        {
+          "symbol": "005930.KS",
+          "code": "005930",
+          "name": "삼성전자",
+          "sector": "반도체 · AI",
+          "size_tier": "xl",
+          "weight": 4.0,
+          "price": 213000.0,
+          "change": -2500.0,
+          "change_pct": -1.16,
+          "url": "https://finance.naver.com/item/main.naver?code=005930"
+        },
+        {
+          "symbol": "000660.KS",
+          "code": "000660",
+          "name": "SK하이닉스",
+          "sector": "반도체 · AI",
+          "size_tier": "xl",
+          "weight": 3.5,
+          "price": 1275000.0,
+          "change": -2000.0,
+          "change_pct": -0.16,
+          "url": "https://finance.naver.com/item/main.naver?code=000660"
+        },
+        {
+          "symbol": "042700.KS",
+          "code": "042700",
+          "name": "한미반도체",
+          "sector": "반도체 · AI",
+          "size_tier": "sm",
+          "weight": 1.0,
+          "price": 184000.0,
+          "change": -7000.0,
+          "change_pct": -3.66,
+          "url": "https://finance.naver.com/item/main.naver?code=042700"
+        }
+      ],
+      "2차전지 · 소재": [
+        {
+          "symbol": "373220.KS",
+          "code": "373220",
+          "name": "LG에너지솔루션",
+          "sector": "2차전지 · 소재",
+          "size_tier": "lg",
+          "weight": 2.2,
+          "price": 375000.0,
+          "change": -8000.0,
+          "change_pct": -2.09,
+          "url": "https://finance.naver.com/item/main.naver?code=373220"
+        },
+        {
+          "symbol": "006400.KS",
+          "code": "006400",
+          "name": "삼성SDI",
+          "sector": "2차전지 · 소재",
+          "size_tier": "md",
+          "weight": 1.5,
+          "price": 483500.0,
+          "change": -7000.0,
+          "change_pct": -1.43,
+          "url": "https://finance.naver.com/item/main.naver?code=006400"
+        },
+        {
+          "symbol": "005490.KS",
+          "code": "005490",
+          "name": "POSCO홀딩스",
+          "sector": "2차전지 · 소재",
+          "size_tier": "md",
+          "weight": 1.5,
+          "price": 269500.0,
+          "change": -6000.0,
+          "change_pct": -2.18,
+          "url": "https://finance.naver.com/item/main.naver?code=005490"
+        },
+        {
+          "symbol": "247540.KQ",
+          "code": "247540",
+          "name": "에코프로비엠",
+          "sector": "2차전지 · 소재",
+          "size_tier": "sm",
+          "weight": 1.0,
+          "price": 89600.0,
+          "change": -3200.0,
+          "change_pct": -3.45,
+          "url": "https://finance.naver.com/item/main.naver?code=247540"
+        }
+      ],
+      "바이오 · 헬스": [
+        {
+          "symbol": "207940.KS",
+          "code": "207940",
+          "name": "삼성바이오로직스",
+          "sector": "바이오 · 헬스",
+          "size_tier": "lg",
+          "weight": 2.2,
+          "price": 1452000.0,
+          "change": -14000.0,
+          "change_pct": -0.95,
+          "url": "https://finance.naver.com/item/main.naver?code=207940"
+        },
+        {
+          "symbol": "068270.KS",
+          "code": "068270",
+          "name": "셀트리온",
+          "sector": "바이오 · 헬스",
+          "size_tier": "md",
+          "weight": 1.5,
+          "price": 190000.0,
+          "change": -4400.0,
+          "change_pct": -2.26,
+          "url": "https://finance.naver.com/item/main.naver?code=068270"
+        },
+        {
+          "symbol": "196170.KQ",
+          "code": "196170",
+          "name": "알테오젠",
+          "sector": "바이오 · 헬스",
+          "size_tier": "sm",
+          "weight": 1.2,
+          "price": 218500.0,
+          "change": -6000.0,
+          "change_pct": -2.67,
+          "url": "https://finance.naver.com/item/main.naver?code=196170"
+        }
+      ],
+      "자동차 · 모빌리티": [
+        {
+          "symbol": "005380.KS",
+          "code": "005380",
+          "name": "현대차",
+          "sector": "자동차 · 모빌리티",
+          "size_tier": "lg",
+          "weight": 2.0,
+          "price": 288000.0,
+          "change": -7500.0,
+          "change_pct": -2.54,
+          "url": "https://finance.naver.com/item/main.naver?code=005380"
+        },
+        {
+          "symbol": "000270.KS",
+          "code": "000270",
+          "name": "기아",
+          "sector": "자동차 · 모빌리티",
+          "size_tier": "md",
+          "weight": 1.4,
+          "price": 105100.0,
+          "change": -1800.0,
+          "change_pct": -1.68,
+          "url": "https://finance.naver.com/item/main.naver?code=000270"
+        },
+        {
+          "symbol": "012330.KS",
+          "code": "012330",
+          "name": "현대모비스",
+          "sector": "자동차 · 모빌리티",
+          "size_tier": "sm",
+          "weight": 1.0,
+          "price": 326000.0,
+          "change": -2500.0,
+          "change_pct": -0.76,
+          "url": "https://finance.naver.com/item/main.naver?code=012330"
+        }
+      ],
+      "금융 · 밸류업": [
+        {
+          "symbol": "105560.KS",
+          "code": "105560",
+          "name": "KB금융",
+          "sector": "금융 · 밸류업",
+          "size_tier": "md",
+          "weight": 1.5,
+          "price": 147200.0,
+          "change": -5800.0,
+          "change_pct": -3.79,
+          "url": "https://finance.naver.com/item/main.naver?code=105560"
+        },
+        {
+          "symbol": "055550.KS",
+          "code": "055550",
+          "name": "신한지주",
+          "sector": "금융 · 밸류업",
+          "size_tier": "sm",
+          "weight": 1.0,
+          "price": 85500.0,
+          "change": -2600.0,
+          "change_pct": -2.95,
+          "url": "https://finance.naver.com/item/main.naver?code=055550"
+        },
+        {
+          "symbol": "086790.KS",
+          "code": "086790",
+          "name": "하나금융지주",
+          "sector": "금융 · 밸류업",
+          "size_tier": "sm",
+          "weight": 1.0,
+          "price": 112400.0,
+          "change": -3900.0,
+          "change_pct": -3.35,
+          "url": "https://finance.naver.com/item/main.naver?code=086790"
+        }
+      ],
+      "방산 · 조선 · IT": [
+        {
+          "symbol": "012450.KS",
+          "code": "012450",
+          "name": "한화에어로스페이스",
+          "sector": "방산 · 조선 · IT",
+          "size_tier": "md",
+          "weight": 1.6,
+          "price": 760000.0,
+          "change": -32000.0,
+          "change_pct": -4.04,
+          "url": "https://finance.naver.com/item/main.naver?code=012450"
+        },
+        {
+          "symbol": "329180.KS",
+          "code": "329180",
+          "name": "HD현대중공업",
+          "sector": "방산 · 조선 · IT",
+          "size_tier": "sm",
+          "weight": 1.0,
+          "price": 289500.0,
+          "change": -15500.0,
+          "change_pct": -5.08,
+          "url": "https://finance.naver.com/item/main.naver?code=329180"
+        },
+        {
+          "symbol": "035420.KS",
+          "code": "035420",
+          "name": "NAVER",
+          "sector": "방산 · 조선 · IT",
+          "size_tier": "md",
+          "weight": 1.4,
+          "price": 174200.0,
+          "change": 600.0,
+          "change_pct": 0.35,
+          "url": "https://finance.naver.com/item/main.naver?code=035420"
+        },
+        {
+          "symbol": "035720.KS",
+          "code": "035720",
+          "name": "카카오",
+          "sector": "방산 · 조선 · IT",
+          "size_tier": "sm",
+          "weight": 0.8,
+          "price": 29550.0,
+          "change": -400.0,
+          "change_pct": -1.34,
+          "url": "https://finance.naver.com/item/main.naver?code=035720"
+        }
+      ]
+    },
+    "stocks": [
+      {
+        "symbol": "005930.KS",
+        "code": "005930",
+        "name": "삼성전자",
+        "sector": "반도체 · AI",
+        "size_tier": "xl",
+        "weight": 4.0,
+        "price": 213000.0,
+        "change": -2500.0,
+        "change_pct": -1.16,
+        "url": "https://finance.naver.com/item/main.naver?code=005930"
+      },
+      {
+        "symbol": "000660.KS",
+        "code": "000660",
+        "name": "SK하이닉스",
+        "sector": "반도체 · AI",
+        "size_tier": "xl",
+        "weight": 3.5,
+        "price": 1275000.0,
+        "change": -2000.0,
+        "change_pct": -0.16,
+        "url": "https://finance.naver.com/item/main.naver?code=000660"
+      },
+      {
+        "symbol": "042700.KS",
+        "code": "042700",
+        "name": "한미반도체",
+        "sector": "반도체 · AI",
+        "size_tier": "sm",
+        "weight": 1.0,
+        "price": 184000.0,
+        "change": -7000.0,
+        "change_pct": -3.66,
+        "url": "https://finance.naver.com/item/main.naver?code=042700"
+      },
+      {
+        "symbol": "373220.KS",
+        "code": "373220",
+        "name": "LG에너지솔루션",
+        "sector": "2차전지 · 소재",
+        "size_tier": "lg",
+        "weight": 2.2,
+        "price": 375000.0,
+        "change": -8000.0,
+        "change_pct": -2.09,
+        "url": "https://finance.naver.com/item/main.naver?code=373220"
+      },
+      {
+        "symbol": "006400.KS",
+        "code": "006400",
+        "name": "삼성SDI",
+        "sector": "2차전지 · 소재",
+        "size_tier": "md",
+        "weight": 1.5,
+        "price": 483500.0,
+        "change": -7000.0,
+        "change_pct": -1.43,
+        "url": "https://finance.naver.com/item/main.naver?code=006400"
+      },
+      {
+        "symbol": "005490.KS",
+        "code": "005490",
+        "name": "POSCO홀딩스",
+        "sector": "2차전지 · 소재",
+        "size_tier": "md",
+        "weight": 1.5,
+        "price": 269500.0,
+        "change": -6000.0,
+        "change_pct": -2.18,
+        "url": "https://finance.naver.com/item/main.naver?code=005490"
+      },
+      {
+        "symbol": "247540.KQ",
+        "code": "247540",
+        "name": "에코프로비엠",
+        "sector": "2차전지 · 소재",
+        "size_tier": "sm",
+        "weight": 1.0,
+        "price": 89600.0,
+        "change": -3200.0,
+        "change_pct": -3.45,
+        "url": "https://finance.naver.com/item/main.naver?code=247540"
+      },
+      {
+        "symbol": "207940.KS",
+        "code": "207940",
+        "name": "삼성바이오로직스",
+        "sector": "바이오 · 헬스",
+        "size_tier": "lg",
+        "weight": 2.2,
+        "price": 1452000.0,
+        "change": -14000.0,
+        "change_pct": -0.95,
+        "url": "https://finance.naver.com/item/main.naver?code=207940"
+      },
+      {
+        "symbol": "068270.KS",
+        "code": "068270",
+        "name": "셀트리온",
+        "sector": "바이오 · 헬스",
+        "size_tier": "md",
+        "weight": 1.5,
+        "price": 190000.0,
+        "change": -4400.0,
+        "change_pct": -2.26,
+        "url": "https://finance.naver.com/item/main.naver?code=068270"
+      },
+      {
+        "symbol": "196170.KQ",
+        "code": "196170",
+        "name": "알테오젠",
+        "sector": "바이오 · 헬스",
+        "size_tier": "sm",
+        "weight": 1.2,
+        "price": 218500.0,
+        "change": -6000.0,
+        "change_pct": -2.67,
+        "url": "https://finance.naver.com/item/main.naver?code=196170"
+      },
+      {
+        "symbol": "005380.KS",
+        "code": "005380",
+        "name": "현대차",
+        "sector": "자동차 · 모빌리티",
+        "size_tier": "lg",
+        "weight": 2.0,
+        "price": 288000.0,
+        "change": -7500.0,
+        "change_pct": -2.54,
+        "url": "https://finance.naver.com/item/main.naver?code=005380"
+      },
+      {
+        "symbol": "000270.KS",
+        "code": "000270",
+        "name": "기아",
+        "sector": "자동차 · 모빌리티",
+        "size_tier": "md",
+        "weight": 1.4,
+        "price": 105100.0,
+        "change": -1800.0,
+        "change_pct": -1.68,
+        "url": "https://finance.naver.com/item/main.naver?code=000270"
+      },
+      {
+        "symbol": "012330.KS",
+        "code": "012330",
+        "name": "현대모비스",
+        "sector": "자동차 · 모빌리티",
+        "size_tier": "sm",
+        "weight": 1.0,
+        "price": 326000.0,
+        "change": -2500.0,
+        "change_pct": -0.76,
+        "url": "https://finance.naver.com/item/main.naver?code=012330"
+      },
+      {
+        "symbol": "105560.KS",
+        "code": "105560",
+        "name": "KB금융",
+        "sector": "금융 · 밸류업",
+        "size_tier": "md",
+        "weight": 1.5,
+        "price": 147200.0,
+        "change": -5800.0,
+        "change_pct": -3.79,
+        "url": "https://finance.naver.com/item/main.naver?code=105560"
+      },
+      {
+        "symbol": "055550.KS",
+        "code": "055550",
+        "name": "신한지주",
+        "sector": "금융 · 밸류업",
+        "size_tier": "sm",
+        "weight": 1.0,
+        "price": 85500.0,
+        "change": -2600.0,
+        "change_pct": -2.95,
+        "url": "https://finance.naver.com/item/main.naver?code=055550"
+      },
+      {
+        "symbol": "086790.KS",
+        "code": "086790",
+        "name": "하나금융지주",
+        "sector": "금융 · 밸류업",
+        "size_tier": "sm",
+        "weight": 1.0,
+        "price": 112400.0,
+        "change": -3900.0,
+        "change_pct": -3.35,
+        "url": "https://finance.naver.com/item/main.naver?code=086790"
+      },
+      {
+        "symbol": "012450.KS",
+        "code": "012450",
+        "name": "한화에어로스페이스",
+        "sector": "방산 · 조선 · IT",
+        "size_tier": "md",
+        "weight": 1.6,
+        "price": 760000.0,
+        "change": -32000.0,
+        "change_pct": -4.04,
+        "url": "https://finance.naver.com/item/main.naver?code=012450"
+      },
+      {
+        "symbol": "329180.KS",
+        "code": "329180",
+        "name": "HD현대중공업",
+        "sector": "방산 · 조선 · IT",
+        "size_tier": "sm",
+        "weight": 1.0,
+        "price": 289500.0,
+        "change": -15500.0,
+        "change_pct": -5.08,
+        "url": "https://finance.naver.com/item/main.naver?code=329180"
+      },
+      {
+        "symbol": "035420.KS",
+        "code": "035420",
+        "name": "NAVER",
+        "sector": "방산 · 조선 · IT",
+        "size_tier": "md",
+        "weight": 1.4,
+        "price": 174200.0,
+        "change": 600.0,
+        "change_pct": 0.35,
+        "url": "https://finance.naver.com/item/main.naver?code=035420"
+      },
+      {
+        "symbol": "035720.KS",
+        "code": "035720",
+        "name": "카카오",
+        "sector": "방산 · 조선 · IT",
+        "size_tier": "sm",
+        "weight": 0.8,
+        "price": 29550.0,
+        "change": -400.0,
+        "change_pct": -1.34,
+        "url": "https://finance.naver.com/item/main.naver?code=035720"
+      }
+    ],
+    "summary": {
+      "advancers": 1,
+      "decliners": 19,
+      "unchanged": 0,
+      "total": 20,
+      "top_gainer": {
+        "symbol": "035420.KS",
+        "code": "035420",
+        "name": "NAVER",
+        "sector": "방산 · 조선 · IT",
+        "size_tier": "md",
+        "weight": 1.4,
+        "price": 174200.0,
+        "change": 600.0,
+        "change_pct": 0.35,
+        "url": "https://finance.naver.com/item/main.naver?code=035420"
+      },
+      "top_loser": {
+        "symbol": "329180.KS",
+        "code": "329180",
+        "name": "HD현대중공업",
+        "sector": "방산 · 조선 · IT",
+        "size_tier": "sm",
+        "weight": 1.0,
+        "price": 289500.0,
+        "change": -15500.0,
+        "change_pct": -5.08,
+        "url": "https://finance.naver.com/item/main.naver?code=329180"
+      },
+      "updated_at": "2026-10-26 20:14 KST"
+    }
+  }
+}
