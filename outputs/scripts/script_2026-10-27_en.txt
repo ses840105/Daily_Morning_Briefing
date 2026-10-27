@@ -1,0 +1,37 @@
+hello.This is the Daily Morning Intelligence Briefing, October 27, 2026.
+For those of you who are starting your day today, we summarize the key news that occurred overnight in the global market and technology ecosystem in an easy-to-understand manner.
+Today's briefing will be delivered in the following order: artificial intelligence and semiconductor technology trends, the latest research papers from academia and YouTube tech trends, the latest AI tools and techniques to note, and global macroeconomic and security issues.
+
+First, the first section is about artificial intelligence, big tech semiconductors, and academic research trends.
+This is the most noteworthy technology news today.With the news of the robot company Wonik Robotics investing 100 billion won and creating a physical AI robot base, it is attracting great attention from the global tech industry.
+In addition, as a next-generation model and infrastructure trend, Ovigo and the expansion of the physical AI business based on vehicle security technology continue, and the competition for leadership in the ecosystem is intensifying.
+In addition, in the semiconductor and cloud supply chain, the attention of market participants is focused on Antropic, the launch of a non-profit AI tool, and analysis of what the difference is.
+
+The following is the archive's latest artificial intelligence research news that is attracting attention in academia.
+The main paper published today is Instructional Language: Genre and Generative AI Research, which is receiving high praise in terms of inference efficiency and autonomous agent advancement.
+
+Next, let’s look at popular tech videos on YouTube.
+First, Fireship highlighted the changes that technological innovation will bring, focusing on “China has just given up on its new frontier model, and no one can explain how.”
+In addition, the Epi-Vive Coding Channel focused on “We will summarize the concept of AI Agent from LLM in one place” and delivered key implications for working-level staff and developers to pay attention to.
+
+Next, we will introduce the latest AI/ML tools and techniques that practical developers and researchers should pay attention to.
+The first tools to note are Unsloth & QLoRA - an ultra-lightweight LLM finetuning framework that is 2x faster.It is a lightweight tool that accelerates fine tuning speed by 2x compared to Hugging Face and reduces memory usage by up to 80% by applying a mathematically accurate, manually derived custom backpropagation GPU kernel.
+Also noteworthy are the key techniques: LangGraph & Swarm - state graph-based multi-agent control.A state machine-based agent framework that goes beyond the limitations of one-way DAG pipelines and provides complete control over circulation, branching, human-in-the-loop, and distributed checkpointing.
+
+We continue with the second section, global macroeconomic and financial markets, and security diplomacy trends.
+First of all, this is the most noteworthy news in the financial market.Semiconductor stocks took off in anticipation of Antropic's IPO, and investors' attention was drawn to the news that the KOSPI surged by 4%.
+Looking at foreign exchange and macro indicators, the U.S. and Canada are currently negotiating steel and automobile tariff relief, and there is a possibility of an agreement before the election, which is expected to act as a major variable in asset prices and liquidity in the future.
+In addition, across industries and stock markets, the Moody's Grass Bond market is diagnosing the need for additional interest rate increases instead of the role of the Federal Reserve, and differentiation by sector continues.
+
+In the field of international security and defense, the European Union is mobilizing about 5 billion euros to support Ukraine, while President Zelenskyy is expressing frustration with waiting for arms support from the United States.The news became a major topic of discussion.
+In addition, on the global defense industry and diplomatic cooperation stage, Hanwha Ocean, Hyundai Rotem, and K-Defense Industry, which are improving export competitiveness, are taking a step toward vertical integration, and geopolitical risk management is being emphasized.
+
+The third section is the three key observation points that you must pay attention to today.
+First, please pay attention to the development of next-generation artificial intelligence agent technology and the reorganization of customized semiconductor supply chains such as HBM Four.
+Second, you should closely examine the direction of the U.S. Federal Reserve's monetary policy, the won-dollar exchange rate trend, and the performance guidance of major big tech companies.
+Third, we recommend that you prepare for market volatility by keeping an eye on the expansion of global defense orders and the schedules of trade and diplomatic negotiations between major countries.
+
+Lastly, here are some positive morning affirmations that will energize your day.
+Please take a comfortable breath and repeat this sentence in your mind together.
+I greet the miracles that this day brings with a grateful heart at every moment.
+I hope today is a meaningful day where you can fully demonstrate your potential.This concludes the daily morning intelligence briefing.Thank you for listening.
