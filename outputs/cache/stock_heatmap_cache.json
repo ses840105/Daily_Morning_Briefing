@@ -1,38 +1,38 @@
 {
-  "timestamp": "2026-10-27 08:47 KST",
+  "timestamp": "2026-11-04 11:38 KST",
   "us": {
     "market_name": "미국 S&P 500 · NASDAQ 빅테크 히트맵",
     "indices": [
       {
         "name": "S&P 500",
         "symbol": "^GSPC",
-        "price": 7676.77,
-        "change": 53.09,
-        "change_pct": 0.7,
+        "price": 7568.92,
+        "change": 27.52,
+        "change_pct": 0.36,
         "url": "https://finance.yahoo.com/quote/^GSPC"
       },
       {
         "name": "NASDAQ",
         "symbol": "^IXIC",
-        "price": 26169.38,
-        "change": 214.04,
-        "change_pct": 0.82,
+        "price": 25372.01,
+        "change": 207.7,
+        "change_pct": 0.83,
         "url": "https://finance.yahoo.com/quote/^IXIC"
       },
       {
         "name": "Dow Jones",
         "symbol": "^DJI",
-        "price": 52361.58,
-        "change": 146.42,
-        "change_pct": 0.28,
+        "price": 51786.7,
+        "change": -197.28,
+        "change_pct": -0.38,
         "url": "https://finance.yahoo.com/quote/^DJI"
       },
       {
         "name": "SOX 반도체",
         "symbol": "^SOX",
-        "price": 11083.47,
-        "change": 304.01,
-        "change_pct": 2.82,
+        "price": 10600.4,
+        "change": 272.07,
+        "change_pct": 2.63,
         "url": "https://finance.yahoo.com/quote/^SOX"
       }
     ],
@@ -44,9 +44,9 @@
           "sector": "Big Tech · AI",
           "size_tier": "xl",
           "weight": 4.0,
-          "price": 210.96,
-          "change": -1.25,
-          "change_pct": -0.59,
+          "price": 206.69,
+          "change": 4.63,
+          "change_pct": 2.29,
           "url": "https://finance.yahoo.com/quote/NVDA"
         },
         {
@@ -55,9 +55,9 @@
           "sector": "Big Tech · AI",
           "size_tier": "xl",
           "weight": 3.8,
-          "price": 347.73,
-          "change": -0.49,
-          "change_pct": -0.14,
+          "price": 331.9,
+          "change": -6.42,
+          "change_pct": -1.9,
           "url": "https://finance.yahoo.com/quote/AAPL"
         },
         {
@@ -66,9 +66,9 @@
           "sector": "Big Tech · AI",
           "size_tier": "xl",
           "weight": 3.6,
-          "price": 524.51,
-          "change": 3.43,
-          "change_pct": 0.66,
+          "price": 520.99,
+          "change": 13.87,
+          "change_pct": 2.74,
           "url": "https://finance.yahoo.com/quote/MSFT"
         },
         {
@@ -77,9 +77,9 @@
           "sector": "Big Tech · AI",
           "size_tier": "lg",
           "weight": 2.5,
-          "price": 248.0,
-          "change": -2.38,
-          "change_pct": -0.95,
+          "price": 250.69,
+          "change": 5.06,
+          "change_pct": 2.06,
           "url": "https://finance.yahoo.com/quote/AMZN"
         },
         {
@@ -88,9 +88,9 @@
           "sector": "Big Tech · AI",
           "size_tier": "lg",
           "weight": 2.2,
-          "price": 320.21,
-          "change": -4.01,
-          "change_pct": -1.24,
+          "price": 280.03,
+          "change": 1.04,
+          "change_pct": 0.37,
           "url": "https://finance.yahoo.com/quote/GOOGL"
         },
         {
@@ -99,9 +99,9 @@
           "sector": "Big Tech · AI",
           "size_tier": "lg",
           "weight": 2.2,
-          "price": 642.62,
-          "change": -6.23,
-          "change_pct": -0.96,
+          "price": 621.03,
+          "change": 14.3,
+          "change_pct": 2.36,
           "url": "https://finance.yahoo.com/quote/META"
         }
       ],
@@ -112,9 +112,9 @@
           "sector": "Semiconductors",
           "size_tier": "lg",
           "weight": 2.0,
-          "price": 321.68,
-          "change": -1.56,
-          "change_pct": -0.48,
+          "price": 332.13,
+          "change": 9.9,
+          "change_pct": 3.07,
           "url": "https://finance.yahoo.com/quote/AVGO"
         },
         {
@@ -123,9 +123,9 @@
           "sector": "Semiconductors",
           "size_tier": "md",
           "weight": 1.8,
-          "price": 418.51,
-          "change": 6.16,
-          "change_pct": 1.49,
+          "price": 404.8,
+          "change": 6.17,
+          "change_pct": 1.55,
           "url": "https://finance.yahoo.com/quote/TSM"
         },
         {
@@ -134,9 +134,9 @@
           "sector": "Semiconductors",
           "size_tier": "md",
           "weight": 1.5,
-          "price": 516.79,
-          "change": 8.86,
-          "change_pct": 1.74,
+          "price": 483.9,
+          "change": 17.06,
+          "change_pct": 3.65,
           "url": "https://finance.yahoo.com/quote/AMD"
         },
         {
@@ -145,9 +145,9 @@
           "sector": "Semiconductors",
           "size_tier": "sm",
           "weight": 1.0,
-          "price": 877.55,
-          "change": 21.06,
-          "change_pct": 2.46,
+          "price": 855.1,
+          "change": 21.51,
+          "change_pct": 2.58,
           "url": "https://finance.yahoo.com/quote/MU"
         },
         {
@@ -156,9 +156,9 @@
           "sector": "Semiconductors",
           "size_tier": "sm",
           "weight": 1.0,
-          "price": 175.91,
-          "change": 3.08,
-          "change_pct": 1.78,
+          "price": 164.43,
+          "change": 2.35,
+          "change_pct": 1.45,
           "url": "https://finance.yahoo.com/quote/QCOM"
         }
       ],
@@ -169,9 +169,9 @@
           "sector": "Consumer · EV",
           "size_tier": "lg",
           "weight": 2.2,
-          "price": 372.22,
-          "change": -2.36,
-          "change_pct": -0.63,
+          "price": 398.5,
+          "change": -5.32,
+          "change_pct": -1.32,
           "url": "https://finance.yahoo.com/quote/TSLA"
         },
         {
@@ -180,9 +180,9 @@
           "sector": "Consumer · EV",
           "size_tier": "md",
           "weight": 1.2,
-          "price": 119.89,
-          "change": -1.23,
-          "change_pct": -1.02,
+          "price": 124.86,
+          "change": -2.83,
+          "change_pct": -2.22,
           "url": "https://finance.yahoo.com/quote/WMT"
         },
         {
@@ -191,9 +191,9 @@
           "sector": "Consumer · EV",
           "size_tier": "sm",
           "weight": 1.0,
-          "price": 1003.32,
-          "change": -14.89,
-          "change_pct": -1.46,
+          "price": 1019.26,
+          "change": -21.29,
+          "change_pct": -2.05,
           "url": "https://finance.yahoo.com/quote/COST"
         }
       ],
@@ -204,9 +204,9 @@
           "sector": "Finance",
           "size_tier": "md",
           "weight": 1.5,
-          "price": 542.19,
-          "change": -4.78,
-          "change_pct": -0.87,
+          "price": 557.07,
+          "change": 0.96,
+          "change_pct": 0.17,
           "url": "https://finance.yahoo.com/quote/BRK-B"
         },
         {
@@ -215,9 +215,9 @@
           "sector": "Finance",
           "size_tier": "md",
           "weight": 1.4,
-          "price": 331.58,
-          "change": -4.96,
-          "change_pct": -1.47,
+          "price": 337.98,
+          "change": -2.6,
+          "change_pct": -0.76,
           "url": "https://finance.yahoo.com/quote/JPM"
         },
         {
@@ -226,9 +226,9 @@
           "sector": "Finance",
           "size_tier": "sm",
           "weight": 1.0,
-          "price": 407.92,
-          "change": -6.42,
-          "change_pct": -1.55,
+          "price": 420.42,
+          "change": -5.09,
+          "change_pct": -1.2,
           "url": "https://finance.yahoo.com/quote/V"
         }
       ],
@@ -239,9 +239,9 @@
           "sector": "Health · Energy",
           "size_tier": "md",
           "weight": 1.5,
-          "price": 1273.46,
-          "change": -33.23,
-          "change_pct": -2.54,
+          "price": 1409.38,
+          "change": -1.61,
+          "change_pct": -0.11,
           "url": "https://finance.yahoo.com/quote/LLY"
         },
         {
@@ -250,9 +250,9 @@
           "sector": "Health · Energy",
           "size_tier": "sm",
           "weight": 1.0,
-          "price": 418.09,
-          "change": -6.89,
-          "change_pct": -1.62,
+          "price": 404.44,
+          "change": 4.0,
+          "change_pct": 1.0,
           "url": "https://finance.yahoo.com/quote/UNH"
         },
         {
@@ -261,9 +261,9 @@
           "sector": "Health · Energy",
           "size_tier": "sm",
           "weight": 1.0,
-          "price": 183.21,
-          "change": 4.98,
-          "change_pct": 2.79,
+          "price": 177.46,
+          "change": -2.21,
+          "change_pct": -1.23,
           "url": "https://finance.yahoo.com/quote/XOM"
         }
       ]
@@ -275,9 +275,9 @@
         "sector": "Big Tech · AI",
         "size_tier": "xl",
         "weight": 4.0,
-        "price": 210.96,
-        "change": -1.25,
-        "change_pct": -0.59,
+        "price": 206.69,
+        "change": 4.63,
+        "change_pct": 2.29,
         "url": "https://finance.yahoo.com/quote/NVDA"
       },
       {
@@ -286,9 +286,9 @@
         "sector": "Big Tech · AI",
         "size_tier": "xl",
         "weight": 3.8,
-        "price": 347.73,
-        "change": -0.49,
-        "change_pct": -0.14,
+        "price": 331.9,
+        "change": -6.42,
+        "change_pct": -1.9,
         "url": "https://finance.yahoo.com/quote/AAPL"
       },
       {
@@ -297,9 +297,9 @@
         "sector": "Big Tech · AI",
         "size_tier": "xl",
         "weight": 3.6,
-        "price": 524.51,
-        "change": 3.43,
-        "change_pct": 0.66,
+        "price": 520.99,
+        "change": 13.87,
+        "change_pct": 2.74,
         "url": "https://finance.yahoo.com/quote/MSFT"
       },
       {
@@ -308,9 +308,9 @@
         "sector": "Big Tech · AI",
         "size_tier": "lg",
         "weight": 2.5,
-        "price": 248.0,
-        "change": -2.38,
-        "change_pct": -0.95,
+        "price": 250.69,
+        "change": 5.06,
+        "change_pct": 2.06,
         "url": "https://finance.yahoo.com/quote/AMZN"
       },
       {
@@ -319,9 +319,9 @@
         "sector": "Big Tech · AI",
         "size_tier": "lg",
         "weight": 2.2,
-        "price": 320.21,
-        "change": -4.01,
-        "change_pct": -1.24,
+        "price": 280.03,
+        "change": 1.04,
+        "change_pct": 0.37,
         "url": "https://finance.yahoo.com/quote/GOOGL"
       },
       {
@@ -330,9 +330,9 @@
         "sector": "Big Tech · AI",
         "size_tier": "lg",
         "weight": 2.2,
-        "price": 642.62,
-        "change": -6.23,
-        "change_pct": -0.96,
+        "price": 621.03,
+        "change": 14.3,
+        "change_pct": 2.36,
         "url": "https://finance.yahoo.com/quote/META"
       },
       {
@@ -341,9 +341,9 @@
         "sector": "Semiconductors",
         "size_tier": "lg",
         "weight": 2.0,
-        "price": 321.68,
-        "change": -1.56,
-        "change_pct": -0.48,
+        "price": 332.13,
+        "change": 9.9,
+        "change_pct": 3.07,
         "url": "https://finance.yahoo.com/quote/AVGO"
       },
       {
@@ -352,9 +352,9 @@
         "sector": "Semiconductors",
         "size_tier": "md",
         "weight": 1.8,
-        "price": 418.51,
-        "change": 6.16,
-        "change_pct": 1.49,
+        "price": 404.8,
+        "change": 6.17,
+        "change_pct": 1.55,
         "url": "https://finance.yahoo.com/quote/TSM"
       },
       {
@@ -363,9 +363,9 @@
         "sector": "Semiconductors",
         "size_tier": "md",
         "weight": 1.5,
-        "price": 516.79,
-        "change": 8.86,
-        "change_pct": 1.74,
+        "price": 483.9,
+        "change": 17.06,
+        "change_pct": 3.65,
         "url": "https://finance.yahoo.com/quote/AMD"
       },
       {
@@ -374,9 +374,9 @@
         "sector": "Semiconductors",
         "size_tier": "sm",
         "weight": 1.0,
-        "price": 877.55,
-        "change": 21.06,
-        "change_pct": 2.46,
+        "price": 855.1,
+        "change": 21.51,
+        "change_pct": 2.58,
         "url": "https://finance.yahoo.com/quote/MU"
       },
       {
@@ -385,9 +385,9 @@
         "sector": "Semiconductors",
         "size_tier": "sm",
         "weight": 1.0,
-        "price": 175.91,
-        "change": 3.08,
-        "change_pct": 1.78,
+        "price": 164.43,
+        "change": 2.35,
+        "change_pct": 1.45,
         "url": "https://finance.yahoo.com/quote/QCOM"
       },
       {
@@ -396,9 +396,9 @@
         "sector": "Consumer · EV",
         "size_tier": "lg",
         "weight": 2.2,
-        "price": 372.22,
-        "change": -2.36,
-        "change_pct": -0.63,
+        "price": 398.5,
+        "change": -5.32,
+        "change_pct": -1.32,
         "url": "https://finance.yahoo.com/quote/TSLA"
       },
       {
@@ -407,9 +407,9 @@
         "sector": "Consumer · EV",
         "size_tier": "md",
         "weight": 1.2,
-        "price": 119.89,
-        "change": -1.23,
-        "change_pct": -1.02,
+        "price": 124.86,
+        "change": -2.83,
+        "change_pct": -2.22,
         "url": "https://finance.yahoo.com/quote/WMT"
       },
       {
@@ -418,9 +418,9 @@
         "sector": "Consumer · EV",
         "size_tier": "sm",
         "weight": 1.0,
-        "price": 1003.32,
-        "change": -14.89,
-        "change_pct": -1.46,
+        "price": 1019.26,
+        "change": -21.29,
+        "change_pct": -2.05,
         "url": "https://finance.yahoo.com/quote/COST"
       },
       {
@@ -429,9 +429,9 @@
         "sector": "Finance",
         "size_tier": "md",
         "weight": 1.5,
-        "price": 542.19,
-        "change": -4.78,
-        "change_pct": -0.87,
+        "price": 557.07,
+        "change": 0.96,
+        "change_pct": 0.17,
         "url": "https://finance.yahoo.com/quote/BRK-B"
       },
       {
@@ -440,9 +440,9 @@
         "sector": "Finance",
         "size_tier": "md",
         "weight": 1.4,
-        "price": 331.58,
-        "change": -4.96,
-        "change_pct": -1.47,
+        "price": 337.98,
+        "change": -2.6,
+        "change_pct": -0.76,
         "url": "https://finance.yahoo.com/quote/JPM"
       },
       {
@@ -451,9 +451,9 @@
         "sector": "Finance",
         "size_tier": "sm",
         "weight": 1.0,
-        "price": 407.92,
-        "change": -6.42,
-        "change_pct": -1.55,
+        "price": 420.42,
+        "change": -5.09,
+        "change_pct": -1.2,
         "url": "https://finance.yahoo.com/quote/V"
       },
       {
@@ -462,9 +462,9 @@
         "sector": "Health · Energy",
         "size_tier": "md",
         "weight": 1.5,
-        "price": 1273.46,
-        "change": -33.23,
-        "change_pct": -2.54,
+        "price": 1409.38,
+        "change": -1.61,
+        "change_pct": -0.11,
         "url": "https://finance.yahoo.com/quote/LLY"
       },
       {
@@ -473,9 +473,9 @@
         "sector": "Health · Energy",
         "size_tier": "sm",
         "weight": 1.0,
-        "price": 418.09,
-        "change": -6.89,
-        "change_pct": -1.62,
+        "price": 404.44,
+        "change": 4.0,
+        "change_pct": 1.0,
         "url": "https://finance.yahoo.com/quote/UNH"
       },
       {
@@ -484,40 +484,40 @@
         "sector": "Health · Energy",
         "size_tier": "sm",
         "weight": 1.0,
-        "price": 183.21,
-        "change": 4.98,
-        "change_pct": 2.79,
+        "price": 177.46,
+        "change": -2.21,
+        "change_pct": -1.23,
         "url": "https://finance.yahoo.com/quote/XOM"
       }
     ],
     "summary": {
-      "advancers": 6,
-      "decliners": 14,
+      "advancers": 12,
+      "decliners": 8,
       "unchanged": 0,
       "total": 20,
       "top_gainer": {
-        "symbol": "XOM",
-        "name": "ExxonMobil",
-        "sector": "Health · Energy",
-        "size_tier": "sm",
-        "weight": 1.0,
-        "price": 183.21,
-        "change": 4.98,
-        "change_pct": 2.79,
-        "url": "https://finance.yahoo.com/quote/XOM"
-      },
-      "top_loser": {
-        "symbol": "LLY",
-        "name": "Eli Lilly",
-        "sector": "Health · Energy",
+        "symbol": "AMD",
+        "name": "AMD",
+        "sector": "Semiconductors",
         "size_tier": "md",
         "weight": 1.5,
-        "price": 1273.46,
-        "change": -33.23,
-        "change_pct": -2.54,
-        "url": "https://finance.yahoo.com/quote/LLY"
+        "price": 483.9,
+        "change": 17.06,
+        "change_pct": 3.65,
+        "url": "https://finance.yahoo.com/quote/AMD"
       },
-      "updated_at": "2026-10-27 08:47 KST"
+      "top_loser": {
+        "symbol": "WMT",
+        "name": "Walmart",
+        "sector": "Consumer · EV",
+        "size_tier": "md",
+        "weight": 1.2,
+        "price": 124.86,
+        "change": -2.83,
+        "change_pct": -2.22,
+        "url": "https://finance.yahoo.com/quote/WMT"
+      },
+      "updated_at": "2026-11-04 11:38 KST"
     }
   },
   "kr": {
@@ -526,25 +526,25 @@
       {
         "name": "KOSPI",
         "symbol": "^KS11",
-        "price": 5694.78,
-        "change": 144.48,
-        "change_pct": 2.6,
+        "price": 5460.04,
+        "change": -188.75,
+        "change_pct": -3.34,
         "url": "https://finance.naver.com/sise/sise_index.naver?code=KS11"
       },
       {
         "name": "KOSDAQ",
         "symbol": "^KQ11",
-        "price": 750.06,
-        "change": -1.63,
-        "change_pct": -0.22,
+        "price": 689.44,
+        "change": -14.95,
+        "change_pct": -2.12,
         "url": "https://finance.naver.com/sise/sise_index.naver?code=KQ11"
       },
       {
         "name": "USD/KRW",
         "symbol": "KRW=X",
-        "price": 1325.08,
-        "change": 3.32,
-        "change_pct": 0.25,
+        "price": 1337.68,
+        "change": -7.13,
+        "change_pct": -0.53,
         "url": "https://finance.naver.com/marketindex/"
       }
     ],
@@ -557,9 +557,9 @@
           "sector": "반도체 · AI",
           "size_tier": "xl",
           "weight": 4.0,
-          "price": 225000.0,
-          "change": 12000.0,
-          "change_pct": 5.63,
+          "price": 210000.0,
+          "change": -9500.0,
+          "change_pct": -4.33,
           "url": "https://finance.naver.com/item/main.naver?code=005930"
         },
         {
@@ -569,9 +569,9 @@
           "sector": "반도체 · AI",
           "size_tier": "xl",
           "weight": 3.5,
-          "price": 1365000.0,
-          "change": 90000.0,
-          "change_pct": 7.06,
+          "price": 1314000.0,
+          "change": -84000.0,
+          "change_pct": -6.01,
           "url": "https://finance.naver.com/item/main.naver?code=000660"
         },
         {
@@ -581,9 +581,9 @@
           "sector": "반도체 · AI",
           "size_tier": "sm",
           "weight": 1.0,
-          "price": 194900.0,
-          "change": 10900.0,
-          "change_pct": 5.92,
+          "price": 178700.0,
+          "change": -1300.0,
+          "change_pct": -0.72,
           "url": "https://finance.naver.com/item/main.naver?code=042700"
         }
       ],
@@ -595,9 +595,9 @@
           "sector": "2차전지 · 소재",
           "size_tier": "lg",
           "weight": 2.2,
-          "price": 380500.0,
-          "change": 5500.0,
-          "change_pct": 1.47,
+          "price": 339500.0,
+          "change": 1500.0,
+          "change_pct": 0.44,
           "url": "https://finance.naver.com/item/main.naver?code=373220"
         },
         {
@@ -607,9 +607,9 @@
           "sector": "2차전지 · 소재",
           "size_tier": "md",
           "weight": 1.5,
-          "price": 498000.0,
-          "change": 14500.0,
-          "change_pct": 3.0,
+          "price": 508000.0,
+          "change": 19500.0,
+          "change_pct": 3.99,
           "url": "https://finance.naver.com/item/main.naver?code=006400"
         },
         {
@@ -619,9 +619,9 @@
           "sector": "2차전지 · 소재",
           "size_tier": "md",
           "weight": 1.5,
-          "price": 274000.0,
-          "change": 4500.0,
-          "change_pct": 1.67,
+          "price": 265000.0,
+          "change": -1500.0,
+          "change_pct": -0.56,
           "url": "https://finance.naver.com/item/main.naver?code=005490"
         },
         {
@@ -631,9 +631,9 @@
           "sector": "2차전지 · 소재",
           "size_tier": "sm",
           "weight": 1.0,
-          "price": 93500.0,
-          "change": 3900.0,
-          "change_pct": 4.35,
+          "price": 92300.0,
+          "change": 4700.0,
+          "change_pct": 5.37,
           "url": "https://finance.naver.com/item/main.naver?code=247540"
         }
       ],
@@ -645,9 +645,9 @@
           "sector": "바이오 · 헬스",
           "size_tier": "lg",
           "weight": 2.2,
-          "price": 1389000.0,
-          "change": -63000.0,
-          "change_pct": -4.34,
+          "price": 1419000.0,
+          "change": -33000.0,
+          "change_pct": -2.27,
           "url": "https://finance.naver.com/item/main.naver?code=207940"
         },
         {
@@ -657,9 +657,9 @@
           "sector": "바이오 · 헬스",
           "size_tier": "md",
           "weight": 1.5,
-          "price": 190200.0,
-          "change": 200.0,
-          "change_pct": 0.11,
+          "price": 193200.0,
+          "change": 3300.0,
+          "change_pct": 1.74,
           "url": "https://finance.naver.com/item/main.naver?code=068270"
         },
         {
@@ -669,9 +669,9 @@
           "sector": "바이오 · 헬스",
           "size_tier": "sm",
           "weight": 1.2,
-          "price": 224000.0,
-          "change": 5500.0,
-          "change_pct": 2.52,
+          "price": 194500.0,
+          "change": -19000.0,
+          "change_pct": -8.9,
           "url": "https://finance.naver.com/item/main.naver?code=196170"
         }
       ],
@@ -683,9 +683,9 @@
           "sector": "자동차 · 모빌리티",
           "size_tier": "lg",
           "weight": 2.0,
-          "price": 292500.0,
-          "change": 4500.0,
-          "change_pct": 1.56,
+          "price": 271500.0,
+          "change": -6000.0,
+          "change_pct": -2.16,
           "url": "https://finance.naver.com/item/main.naver?code=005380"
         },
         {
@@ -695,9 +695,9 @@
           "sector": "자동차 · 모빌리티",
           "size_tier": "md",
           "weight": 1.4,
-          "price": 106200.0,
-          "change": 1100.0,
-          "change_pct": 1.05,
+          "price": 93900.0,
+          "change": -2700.0,
+          "change_pct": -2.8,
           "url": "https://finance.naver.com/item/main.naver?code=000270"
         },
         {
@@ -707,9 +707,9 @@
           "sector": "자동차 · 모빌리티",
           "size_tier": "sm",
           "weight": 1.0,
-          "price": 333000.0,
-          "change": 7000.0,
-          "change_pct": 2.15,
+          "price": 348500.0,
+          "change": -2000.0,
+          "change_pct": -0.57,
           "url": "https://finance.naver.com/item/main.naver?code=012330"
         }
       ],
@@ -721,9 +721,9 @@
           "sector": "금융 · 밸류업",
           "size_tier": "md",
           "weight": 1.5,
-          "price": 147400.0,
-          "change": 200.0,
-          "change_pct": 0.14,
+          "price": 150400.0,
+          "change": -1000.0,
+          "change_pct": -0.66,
           "url": "https://finance.naver.com/item/main.naver?code=105560"
         },
         {
@@ -733,9 +733,9 @@
           "sector": "금융 · 밸류업",
           "size_tier": "sm",
           "weight": 1.0,
-          "price": 84600.0,
-          "change": -900.0,
-          "change_pct": -1.05,
+          "price": 85400.0,
+          "change": -200.0,
+          "change_pct": -0.23,
           "url": "https://finance.naver.com/item/main.naver?code=055550"
         },
         {
@@ -745,9 +745,9 @@
           "sector": "금융 · 밸류업",
           "size_tier": "sm",
           "weight": 1.0,
-          "price": 111900.0,
-          "change": -500.0,
-          "change_pct": -0.44,
+          "price": 115400.0,
+          "change": -700.0,
+          "change_pct": -0.6,
           "url": "https://finance.naver.com/item/main.naver?code=086790"
         }
       ],
@@ -759,9 +759,9 @@
           "sector": "방산 · 조선 · IT",
           "size_tier": "md",
           "weight": 1.6,
-          "price": 768000.0,
-          "change": 8000.0,
-          "change_pct": 1.05,
+          "price": 717000.0,
+          "change": -23000.0,
+          "change_pct": -3.11,
           "url": "https://finance.naver.com/item/main.naver?code=012450"
         },
         {
@@ -771,9 +771,9 @@
           "sector": "방산 · 조선 · IT",
           "size_tier": "sm",
           "weight": 1.0,
-          "price": 292500.0,
-          "change": 3000.0,
-          "change_pct": 1.04,
+          "price": 273000.0,
+          "change": -14500.0,
+          "change_pct": -5.04,
           "url": "https://finance.naver.com/item/main.naver?code=329180"
         },
         {
@@ -783,9 +783,9 @@
           "sector": "방산 · 조선 · IT",
           "size_tier": "md",
           "weight": 1.4,
-          "price": 175300.0,
-          "change": 1100.0,
-          "change_pct": 0.63,
+          "price": 168000.0,
+          "change": -1000.0,
+          "change_pct": -0.59,
           "url": "https://finance.naver.com/item/main.naver?code=035420"
         },
         {
@@ -795,9 +795,9 @@
           "sector": "방산 · 조선 · IT",
           "size_tier": "sm",
           "weight": 0.8,
-          "price": 29650.0,
-          "change": 100.0,
-          "change_pct": 0.34,
+          "price": 28650.0,
+          "change": -150.0,
+          "change_pct": -0.52,
           "url": "https://finance.naver.com/item/main.naver?code=035720"
         }
       ]
@@ -810,9 +810,9 @@
         "sector": "반도체 · AI",
         "size_tier": "xl",
         "weight": 4.0,
-        "price": 225000.0,
-        "change": 12000.0,
-        "change_pct": 5.63,
+        "price": 210000.0,
+        "change": -9500.0,
+        "change_pct": -4.33,
         "url": "https://finance.naver.com/item/main.naver?code=005930"
       },
       {
@@ -822,9 +822,9 @@
         "sector": "반도체 · AI",
         "size_tier": "xl",
         "weight": 3.5,
-        "price": 1365000.0,
-        "change": 90000.0,
-        "change_pct": 7.06,
+        "price": 1314000.0,
+        "change": -84000.0,
+        "change_pct": -6.01,
         "url": "https://finance.naver.com/item/main.naver?code=000660"
       },
       {
@@ -834,9 +834,9 @@
         "sector": "반도체 · AI",
         "size_tier": "sm",
         "weight": 1.0,
-        "price": 194900.0,
-        "change": 10900.0,
-        "change_pct": 5.92,
+        "price": 178700.0,
+        "change": -1300.0,
+        "change_pct": -0.72,
         "url": "https://finance.naver.com/item/main.naver?code=042700"
       },
       {
@@ -846,9 +846,9 @@
         "sector": "2차전지 · 소재",
         "size_tier": "lg",
         "weight": 2.2,
-        "price": 380500.0,
-        "change": 5500.0,
-        "change_pct": 1.47,
+        "price": 339500.0,
+        "change": 1500.0,
+        "change_pct": 0.44,
         "url": "https://finance.naver.com/item/main.naver?code=373220"
       },
       {
@@ -858,9 +858,9 @@
         "sector": "2차전지 · 소재",
         "size_tier": "md",
         "weight": 1.5,
-        "price": 498000.0,
-        "change": 14500.0,
-        "change_pct": 3.0,
+        "price": 508000.0,
+        "change": 19500.0,
+        "change_pct": 3.99,
         "url": "https://finance.naver.com/item/main.naver?code=006400"
       },
       {
@@ -870,9 +870,9 @@
         "sector": "2차전지 · 소재",
         "size_tier": "md",
         "weight": 1.5,
-        "price": 274000.0,
-        "change": 4500.0,
-        "change_pct": 1.67,
+        "price": 265000.0,
+        "change": -1500.0,
+        "change_pct": -0.56,
         "url": "https://finance.naver.com/item/main.naver?code=005490"
       },
       {
@@ -882,9 +882,9 @@
         "sector": "2차전지 · 소재",
         "size_tier": "sm",
         "weight": 1.0,
-        "price": 93500.0,
-        "change": 3900.0,
-        "change_pct": 4.35,
+        "price": 92300.0,
+        "change": 4700.0,
+        "change_pct": 5.37,
         "url": "https://finance.naver.com/item/main.naver?code=247540"
       },
       {
@@ -894,9 +894,9 @@
         "sector": "바이오 · 헬스",
         "size_tier": "lg",
         "weight": 2.2,
-        "price": 1389000.0,
-        "change": -63000.0,
-        "change_pct": -4.34,
+        "price": 1419000.0,
+        "change": -33000.0,
+        "change_pct": -2.27,
         "url": "https://finance.naver.com/item/main.naver?code=207940"
       },
       {
@@ -906,9 +906,9 @@
         "sector": "바이오 · 헬스",
         "size_tier": "md",
         "weight": 1.5,
-        "price": 190200.0,
-        "change": 200.0,
-        "change_pct": 0.11,
+        "price": 193200.0,
+        "change": 3300.0,
+        "change_pct": 1.74,
         "url": "https://finance.naver.com/item/main.naver?code=068270"
       },
       {
@@ -918,9 +918,9 @@
         "sector": "바이오 · 헬스",
         "size_tier": "sm",
         "weight": 1.2,
-        "price": 224000.0,
-        "change": 5500.0,
-        "change_pct": 2.52,
+        "price": 194500.0,
+        "change": -19000.0,
+        "change_pct": -8.9,
         "url": "https://finance.naver.com/item/main.naver?code=196170"
       },
       {
@@ -930,9 +930,9 @@
         "sector": "자동차 · 모빌리티",
         "size_tier": "lg",
         "weight": 2.0,
-        "price": 292500.0,
-        "change": 4500.0,
-        "change_pct": 1.56,
+        "price": 271500.0,
+        "change": -6000.0,
+        "change_pct": -2.16,
         "url": "https://finance.naver.com/item/main.naver?code=005380"
       },
       {
@@ -942,9 +942,9 @@
         "sector": "자동차 · 모빌리티",
         "size_tier": "md",
         "weight": 1.4,
-        "price": 106200.0,
-        "change": 1100.0,
-        "change_pct": 1.05,
+        "price": 93900.0,
+        "change": -2700.0,
+        "change_pct": -2.8,
         "url": "https://finance.naver.com/item/main.naver?code=000270"
       },
       {
@@ -954,9 +954,9 @@
         "sector": "자동차 · 모빌리티",
         "size_tier": "sm",
         "weight": 1.0,
-        "price": 333000.0,
-        "change": 7000.0,
-        "change_pct": 2.15,
+        "price": 348500.0,
+        "change": -2000.0,
+        "change_pct": -0.57,
         "url": "https://finance.naver.com/item/main.naver?code=012330"
       },
       {
@@ -966,9 +966,9 @@
         "sector": "금융 · 밸류업",
         "size_tier": "md",
         "weight": 1.5,
-        "price": 147400.0,
-        "change": 200.0,
-        "change_pct": 0.14,
+        "price": 150400.0,
+        "change": -1000.0,
+        "change_pct": -0.66,
         "url": "https://finance.naver.com/item/main.naver?code=105560"
       },
       {
@@ -978,9 +978,9 @@
         "sector": "금융 · 밸류업",
         "size_tier": "sm",
         "weight": 1.0,
-        "price": 84600.0,
-        "change": -900.0,
-        "change_pct": -1.05,
+        "price": 85400.0,
+        "change": -200.0,
+        "change_pct": -0.23,
         "url": "https://finance.naver.com/item/main.naver?code=055550"
       },
       {
@@ -990,9 +990,9 @@
         "sector": "금융 · 밸류업",
         "size_tier": "sm",
         "weight": 1.0,
-        "price": 111900.0,
-        "change": -500.0,
-        "change_pct": -0.44,
+        "price": 115400.0,
+        "change": -700.0,
+        "change_pct": -0.6,
         "url": "https://finance.naver.com/item/main.naver?code=086790"
       },
       {
@@ -1002,9 +1002,9 @@
         "sector": "방산 · 조선 · IT",
         "size_tier": "md",
         "weight": 1.6,
-        "price": 768000.0,
-        "change": 8000.0,
-        "change_pct": 1.05,
+        "price": 717000.0,
+        "change": -23000.0,
+        "change_pct": -3.11,
         "url": "https://finance.naver.com/item/main.naver?code=012450"
       },
       {
@@ -1014,9 +1014,9 @@
         "sector": "방산 · 조선 · IT",
         "size_tier": "sm",
         "weight": 1.0,
-        "price": 292500.0,
-        "change": 3000.0,
-        "change_pct": 1.04,
+        "price": 273000.0,
+        "change": -14500.0,
+        "change_pct": -5.04,
         "url": "https://finance.naver.com/item/main.naver?code=329180"
       },
       {
@@ -1026,9 +1026,9 @@
         "sector": "방산 · 조선 · IT",
         "size_tier": "md",
         "weight": 1.4,
-        "price": 175300.0,
-        "change": 1100.0,
-        "change_pct": 0.63,
+        "price": 168000.0,
+        "change": -1000.0,
+        "change_pct": -0.59,
         "url": "https://finance.naver.com/item/main.naver?code=035420"
       },
       {
@@ -1038,42 +1038,42 @@
         "sector": "방산 · 조선 · IT",
         "size_tier": "sm",
         "weight": 0.8,
-        "price": 29650.0,
-        "change": 100.0,
-        "change_pct": 0.34,
+        "price": 28650.0,
+        "change": -150.0,
+        "change_pct": -0.52,
         "url": "https://finance.naver.com/item/main.naver?code=035720"
       }
     ],
     "summary": {
-      "advancers": 17,
-      "decliners": 3,
+      "advancers": 4,
+      "decliners": 16,
       "unchanged": 0,
       "total": 20,
       "top_gainer": {
-        "symbol": "000660.KS",
-        "code": "000660",
-        "name": "SK하이닉스",
-        "sector": "반도체 · AI",
-        "size_tier": "xl",
-        "weight": 3.5,
-        "price": 1365000.0,
-        "change": 90000.0,
-        "change_pct": 7.06,
-        "url": "https://finance.naver.com/item/main.naver?code=000660"
+        "symbol": "247540.KQ",
+        "code": "247540",
+        "name": "에코프로비엠",
+        "sector": "2차전지 · 소재",
+        "size_tier": "sm",
+        "weight": 1.0,
+        "price": 92300.0,
+        "change": 4700.0,
+        "change_pct": 5.37,
+        "url": "https://finance.naver.com/item/main.naver?code=247540"
       },
       "top_loser": {
-        "symbol": "207940.KS",
-        "code": "207940",
-        "name": "삼성바이오로직스",
+        "symbol": "196170.KQ",
+        "code": "196170",
+        "name": "알테오젠",
         "sector": "바이오 · 헬스",
-        "size_tier": "lg",
-        "weight": 2.2,
-        "price": 1389000.0,
-        "change": -63000.0,
-        "change_pct": -4.34,
-        "url": "https://finance.naver.com/item/main.naver?code=207940"
+        "size_tier": "sm",
+        "weight": 1.2,
+        "price": 194500.0,
+        "change": -19000.0,
+        "change_pct": -8.9,
+        "url": "https://finance.naver.com/item/main.naver?code=196170"
       },
-      "updated_at": "2026-10-27 08:47 KST"
+      "updated_at": "2026-11-04 11:38 KST"
     }
   }
 }

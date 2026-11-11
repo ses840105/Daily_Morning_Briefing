@@ -115,7 +115,8 @@ def main():
     print("=" * 70)
 
     # macOS 시스템 알림
-    top_ai = tech_data.get("ai_headlines", [{}])[0].get("title", "")
+    ai_list = tech_data.get("ai_headlines", [])
+    top_ai = ai_list[0].get("title", "") if ai_list else ""
     notif_msg = f"오늘의 AI: {top_ai[:30]}..." if top_ai else "다국어 5분 종합 신문 발행 완료"
     script = f'display notification "{notif_msg}" with title "📰 Daily Morning Briefing" subtitle "{date_str} 09:00 신문 도착"'
     subprocess.Popen(["osascript", "-e", script], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)

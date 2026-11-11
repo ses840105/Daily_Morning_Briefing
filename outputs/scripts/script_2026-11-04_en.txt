@@ -1,0 +1,37 @@
+hello.This is the daily morning intelligence briefing for November 4, 2026.
+For those of you who are starting your day today, we summarize the key news that occurred overnight in the global market and technology ecosystem in an easy-to-understand manner.
+Today's briefing will be delivered in the following order: artificial intelligence and semiconductor technology trends, the latest research papers from academia and YouTube tech trends, the latest AI tools and techniques to note, and global macroeconomic and security issues.
+
+First, the first section is about artificial intelligence, big tech semiconductors, and academic research trends.
+This is the most noteworthy technology news today.Turn small and medium-sized manufacturing sites into a stage for physical AI innovation!- As news of the card/one cut spreads, it is attracting great attention from the global tech industry.
+In addition, as a next-generation model and infrastructure trend, Iksan City continues to promote the creation of a 503 billion won physical AI and AAR cluster, and the competition for leadership in the ecosystem appears to be intensifying.
+In addition, in the semiconductor and cloud supply chain, analysis related to the construction of agricultural physical AI robot farms in Daedong and Saemangeum has been raised, attracting the attention of market participants.
+
+The following is the archive's latest artificial intelligence research news that is attracting attention in academia.
+The main paper published today is a study on a generalized sparse fuzzy clustering framework with automated cluster cardinality estimation, which is highly regarded in terms of inference efficiency and autonomous agent advancement.
+
+Next, let’s look at popular tech videos on YouTube.
+First, Director Yang's Vibe Coding University highlighted the changes that technological innovation will bring by focusing on a lecture explaining the entire inference principle from LLM neural network learning to 15 non-developers.
+In addition, the Metacode M channel focused on AI LLM Trends 2025, You Will Regret If You Miss This VideoㅣAI Agent, RAG, VLM concepts, careers, etc., and delivered key implications for practitioners and developers to pay attention to.
+
+Next, we will introduce the latest AI/ML tools and techniques that practical developers and researchers should pay attention to.
+The first tool to note is Speculative Decoding - a lossless 3x inference acceleration technique.A small draft model speculatively generates multiple tokens at lightning speed, and the main target model verifies them in parallel with just one forward operation, reducing decoding speed by 2 to 3 times without losing accuracy.
+Also worth noting are the key techniques: DPO & SimPO - Direct Preference Sorting without Compensation Model.This is an alignment technique that directly learns the human preference dataset using only a simple cross-entropy loss function by mathematically replacing the complex reward model learning and PPO sampling loop of reinforcement learning-based RLHF.
+
+We continue with the second section, global macroeconomic and financial markets, and security diplomacy trends.
+First of all, this is the most noteworthy news in the financial market.Investors' attention was focused on the KOSPI, which started on the rise, but turned downward, and with news of the US midterm elections drawing attention.
+Looking at foreign exchange and macro indicators, K-food's entry into the global market and OU kosher certification are emerging as new export competitiveness, which is expected to act as a major variable in asset prices and liquidity in the future.
+In addition, in the overall industry and stock market, differentiation by sector continues, with the KOSPI plummeting 3% after a 3% surge, and concerns about a decline in AI investment due to the US Democratic Party's landslide victory.
+
+In the field of international security and defense, the news of the full-scale development of defense and military AI agents that are evolving with AI has emerged as a major agenda.
+In addition, on the global defense industry and diplomatic cooperation stage, the MOU for the development of space and defense industrial materials with Huvis is confirmed - the Money Today trend is confirmed, and geopolitical risk management is emphasized.
+
+The third section is the three key observation points that you must pay attention to today.
+First, please pay attention to the development of next-generation artificial intelligence agent technology and the reorganization of customized semiconductor supply chains such as HBM Four.
+Second, you should closely examine the direction of the U.S. Federal Reserve's monetary policy, the won-dollar exchange rate trend, and the performance guidance of major big tech companies.
+Third, we recommend that you prepare for market volatility by keeping an eye on the expansion of global defense orders and the schedules of trade and diplomatic negotiations between major countries.
+
+Lastly, here are some positive morning affirmations that will energize your day.
+Please take a deep breath and repeat this sentence in your mind.
+Every positive decision I make leads to great success and abundance.
+I hope that today is a meaningful day for you to fully demonstrate your potential.This concludes the daily morning intelligence briefing.Thank you for listening.
