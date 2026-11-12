@@ -1,0 +1,37 @@
+hello.This is the Daily Morning Intelligence Briefing, November 12, 2026.
+For those of you who are starting your day today, we summarize the key news that occurred overnight in the global market and technology ecosystem in an easy-to-understand manner.
+Today's briefing will be delivered in the following order: artificial intelligence and semiconductor technology trends, the latest research papers from academia and YouTube tech trends, the latest AI tools and techniques to note, and global macroeconomic and security issues.
+
+First, the first section is about artificial intelligence, big tech semiconductors, and academic research trends.
+This is the most noteworthy technology news today.To register your business with ChatGPT, news of the release of Open AI and Business Hub is attracting great attention from the global tech industry.
+Along with this, the next-generation model and infrastructure trends include open AI, chat GPT voice mode live, leaving only one voice mode, and user opposition continues to spread, making the competition for leadership in the ecosystem even more heated.
+In addition, in the semiconductor and cloud supply chain, the attention of market participants is focused on the analysis of Aton's entry into the financial sector AI agent certification market and the launch of AI agent sign.
+
+The following is the archive's latest artificial intelligence research news that is attracting attention in academia.
+The main paper published today is Medical Image Segmentation: Basic Model Adaptation and Task-Specific Training Research, which is highly regarded in terms of inference efficiency and autonomous agent advancement.
+
+Next, let’s look at popular tech videos on YouTube.
+First, Two Minute Papers focused on the question: Is software over? and pointed out the changes that technological innovation will bring.
+Additionally, the Two Minute Papers channel focused on OpenAIs Astra opening the black box of AI and delivered key implications for practitioners and developers to pay attention to.
+
+Next, we will introduce the latest AI/ML tools and techniques that practical developers and researchers should pay attention to.
+The first tools to note are SGLang & RadixAttention - KV Cache Hierarchy Tree Reuse Inference Engine.It is an ultra-fast complex inference serving system that automatically caches common prefixes such as prompt templates, few-shot examples, and system prompts into a radix tree and responds immediately without recalculation.
+Also noteworthy are the key techniques: DSPy - declarative programming and automatic optimization instead of prompted engineering.A paradigm that moves away from writing weak natural language prompts, assembling AI pipelines with Python signatures and modules, and having the compiler automatically optimize examples and prompts.
+
+We continue with the second section, global macroeconomic and financial markets, and security diplomacy trends.
+First of all, this is the most noteworthy news in the financial market.Investors' attention was focused on news of a cooperation meeting and high-level regular meeting with Busan Customs, Qingdao, China, and Jinan Customs.
+Looking at foreign exchange and macro indicators, the EU and UK rules of origin for electric vehicles approaching in 2027 and the escalating tariff conflict against Chinese products are expected to act as a major variable in asset prices and liquidity in the future.
+In addition, across industries and the stock market, the possibility of a Fed interest rate freeze in December should not be ruled out, and related diagnoses are being made, and differentiation by sector continues.
+
+In the field of international security and defense, the news of Funjin, Seoul National University, KAIST and the expansion of the defense AI front was highlighted as a major agenda.
+In addition, on the stage of global defense industry and diplomatic cooperation, geopolitical risk management is emphasized by viewing defense business data, expanding space, and doubling time to confirm trends.
+
+The third section is the three key observation points that you must pay attention to today.
+First, please pay attention to the development of next-generation artificial intelligence agent technology and the reorganization of customized semiconductor supply chains such as HBM Four.
+Second, you should closely examine the direction of the U.S. Federal Reserve's monetary policy, the won-dollar exchange rate trend, and the performance guidance of major big tech companies.
+Third, we recommend that you prepare for market volatility by keeping an eye on the expansion of global defense orders and the schedules of trade and diplomatic negotiations between major countries.
+
+Lastly, here are some positive morning affirmations that will energize your day.
+Please take a deep breath and repeat this sentence in your mind.
+Today will be the day when the greatest opportunities of my life come.
+I hope today is a meaningful day where you can fully demonstrate your potential.This concludes the daily morning intelligence briefing.Thank you for listening.
