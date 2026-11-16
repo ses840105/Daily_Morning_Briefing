@@ -1,0 +1,35 @@
+hello.This is the Daily Morning Intelligence Briefing, November 16, 2026.
+For those of you who are starting your day today, we summarize the key news that occurred overnight in the global market and technology ecosystem in an easy-to-understand manner.
+Today's briefing will be delivered in the following order: artificial intelligence and semiconductor technology trends, the latest research papers from academia and YouTube tech trends, the latest AI tools and techniques to note, and global macroeconomic and security issues.
+
+First, the first section is about artificial intelligence, big tech semiconductors, and academic research trends.
+This is the most noteworthy technology news today.The news that even the cursor was breached, that fake Claude code was distributed using stolen API keys, and that 5,000 developers were exposed is drawing great attention from the global tech industry.
+In addition, as a next-generation model and infrastructure trend, the debut of LPU-based AI inference server at HyperExcel and supercomputing event SC26 continues, and the competition for leadership in the ecosystem appears to be intensifying.
+In addition, in the semiconductor and cloud supply chain, market participants are focusing their attention as analyzes related to LG Electronics, strengthening physical AI competitiveness, and establishing a humanoid quality verification system are raised.
+
+
+Next, let’s look at popular tech videos on YouTube.
+First, Two Minute Papers focused on the fact that AI can do everything except this, and pointed out the changes that technological innovation will bring.
+Additionally, the Two Minute Papers channel focused on DeepMinds AI's ability to do the impossible and delivered key implications for practitioners and developers to pay attention to.
+
+Next, we will introduce the latest AI/ML tools and techniques that practical developers and researchers should pay attention to.
+The first tools to note are vLLM & PagedAttention - zero memory fragmentation high-speed serving engines.It is an open source serving engine that eliminates KV cache memory waste when serving LLM and increases throughput by up to 24 times by introducing the PagedAttention algorithm inspired by the OS's virtual memory paging technique.
+Also noteworthy are the key techniques: GraphRAG & Corrective RAG - Knowledge Graph Combined Unsupervised Search Augmentation.To overcome the limitations of simple keywords or dense vector similarity searches, our advanced RAG architecture extracts entity and relationship graphs from unstructured text and combines community summaries to cover the entire context.
+
+We continue with the second section, global macroeconomic and financial markets, and security diplomacy trends.
+First of all, this is the most noteworthy news in the financial market.News of the bill arriving before the Federal Reserve's additional hike drew investors' attention.
+Looking at foreign exchange and macro indicators, KOSPI is expected to turn downward in the aftermath of the weakness of US semiconductors and move below the 5300 line, which will act as a major variable in asset prices and liquidity in the future.
+In addition, across industries and the stock market, differentiation by sector continues, with diagnoses related to the exchange rate, a sideways movement in the mid-1,330 won range, and the continued strength of the dollar due to the U.S. price burden.
+
+In the field of international security and defense, the news of The Pict being selected as the host organization for the 4.4 billion won future defense bridge technology development project was highlighted as a major agenda.
+In addition, on the global defense industry and diplomatic cooperation stage, trends in support for the Seongnam Industry Promotion Agency, LIG, and local small and medium-sized enterprises to enter the defense industry market are confirmed, and geopolitical risk management is emphasized.
+
+The third section is the three key observation points that you must pay attention to today.
+First, please pay attention to the development of next-generation artificial intelligence agent technology and the reorganization of customized semiconductor supply chains such as HBM Four.
+Second, you should closely examine the direction of the U.S. Federal Reserve's monetary policy, the won-dollar exchange rate trend, and the performance guidance of major big tech companies.
+Third, we recommend that you prepare for market volatility by keeping an eye on the expansion of global defense orders and the schedules of trade and diplomatic negotiations between major countries.
+
+Lastly, here are some positive morning affirmations that will energize your day.
+Please take a deep breath and repeat this sentence in your mind.
+I greet the miracles that this day brings with a grateful heart at every moment.
+I hope that today is a meaningful day for you to fully demonstrate your potential.This concludes the daily morning intelligence briefing.Thank you for listening.

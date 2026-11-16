@@ -1,0 +1,35 @@
+hello.This is the Daily Morning Intelligence Briefing, November 15, 2026.
+For those of you who are starting your day today, we summarize the key news that occurred overnight in the global market and technology ecosystem in an easy-to-understand manner.
+Today's briefing will be delivered in the following order: artificial intelligence and semiconductor technology trends, the latest research papers from academia and YouTube tech trends, the latest AI tools and techniques to note, and global macroeconomic and security issues.
+
+First, the first section is about artificial intelligence, big tech semiconductors, and academic research trends.
+This is the most noteworthy technology news today.News of a visit to Ulsan Nam-gu Office, a small and medium-sized business delegation, and the Shanghai Humanoid Robot Kirin Training Center is drawing great attention from the global tech industry.
+In addition, as for the next-generation model and infrastructure trends, LG Electronics' Tennessee plant in the United States exceeds 10 million units in cumulative production and becomes a physical AI base - Money Today continues, and the competition for leadership in the ecosystem appears to be intensifying.
+In addition, in the semiconductor and cloud supply chain, analysis of United Airlines and AI agent blocking of reservations and purchases has been raised, drawing the attention of market participants.
+
+
+Next, let’s look at popular tech videos on YouTube.
+First, Lee Dong-hoon's Root AI concludes NotebookLM + AI Agent A to Z in one video. It focuses on AI assistants, data analysis, and report writing practices, and points out the changes that technological innovation will bring.
+In addition, the Epi-Vive Coding Channel focused on “We will summarize the concept of AI Agent from LLM in one place” and delivered key implications for working-level staff and developers to pay attention to.
+
+Next, we will introduce the latest AI/ML tools and techniques that practical developers and researchers should pay attention to.
+The first tool to note is MCP (Model Context Protocol) - a standard interoperability standard for agent tools.An open protocol that connects LLM applications with local and remote data sources and tools in a secure and standardized manner.
+Also, as a key technique, it is worth noting GRPO (Group Relative Policy Optimization) - an inference reinforcement learning technique.It is an innovative technique that reinforces learning a model only with the relative rewards of multiple output groups for the same prompt, without a separate large value neural network.
+
+We continue with the second section, global macroeconomic and financial markets, and security diplomacy trends.
+First of all, this is the most noteworthy news in the financial market.Investors' attention was focused on the news that the ELS issued for 9,000 won would expire next month and that there would be a principal loss warning.
+Next, looking at foreign exchange and macro indicators, the KOSPI failed to recover to the 5300 line and the growing uncertainty in AI stocks was detected in the NVIDIA variable, which is expected to act as a major variable in asset prices and liquidity in the future.
+In addition, in the industry and stock market as a whole, differentiation by sector continues, with diagnoses related to the largest increase in monthly rent prices in four years last month amid the high interest rate trend.
+
+In the field of international security and defense, news of Kushner's push for direct Russia-Europe dialogue to end the war in Ukraine emerged as a major agenda.
+In addition, on the global defense industry and diplomatic cooperation stage, geopolitical risk management is being emphasized as the Trump administration considers reducing the reduction of U.S. forces in Europe, the prolongation of the Iran war, and trends affecting NATO's defense spending.
+
+The third section is the three key observation points that you must pay attention to today.
+First, please pay attention to the development of next-generation artificial intelligence agent technology and the reorganization of customized semiconductor supply chains such as HBM Four.
+Second, you should closely examine the direction of the U.S. Federal Reserve's monetary policy, the won-dollar exchange rate trend, and the performance guidance of major big tech companies.
+Third, we recommend that you prepare for market volatility by keeping an eye on the expansion of global defense orders and the schedules of trade and diplomatic negotiations between major countries.
+
+Lastly, here are some positive morning affirmations that will energize your day.
+Please take a comfortable breath and repeat this sentence in your mind together.
+No matter what trials come my way, I deal with them flexibly and grow to the next level.
+I hope that today is a meaningful day for you to fully demonstrate your potential.This concludes the daily morning intelligence briefing.Thank you for listening.
