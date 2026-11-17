@@ -1,0 +1,37 @@
+hello.This is the Daily Morning Intelligence Briefing, November 17, 2026.
+For those of you who are starting your day today, we summarize the key news that occurred overnight in the global market and technology ecosystem in an easy-to-understand manner.
+Today's briefing will be delivered in the following order: artificial intelligence and semiconductor technology trends, the latest research papers from academia and YouTube tech trends, the latest AI tools and techniques to note, and global macroeconomic and security issues.
+
+First, the first section is about artificial intelligence, big tech semiconductors, and academic research trends.
+This is the most noteworthy technology news today.News of Antropic's expansion into Claude's industrial sites and introduction of AI agents from manufacturing to conferences is drawing great attention from the global tech industry.
+Along with this, next-generation model and infrastructure trends include Open AI, Altman AI, which should not hand over control of the human future, and the trend of emphasizing human choice in the era of superintelligence continues, and the competition for leadership in the ecosystem appears to be heating up even more.
+In addition, in the semiconductor and cloud supply chain, the attention of market participants is focused on the analysis of Open AI Altman Jensen Huang, My Hero, Even Heroes Have Flaws.
+
+The following is the archive's latest artificial intelligence research news that is attracting attention in academia.
+The main paper published today is AIS and RF Combination: Analysis of Markovian Approach for Marine Data Fusion, which is highly regarded in terms of inference efficiency and autonomous agent advancement.
+
+Next, let’s look at popular tech videos on YouTube.
+First, Fireship focused on why Microsoft was unable to repair its own servers for 36 hours and pointed out the changes that technological innovation will bring.
+In addition, Lee Dong-hoon's Root AI channel completed NotebookLM + AI Agent A to Z in one videoㅣ Paying attention to AI assistant, data analysis, and report writing practice, he delivered key implications that practitioners and developers should pay attention to.
+
+Next, we will introduce the latest AI/ML tools and techniques that practical developers and researchers should pay attention to.
+The first tools to note are Unsloth & QLoRA - an ultra-lightweight LLM finetuning framework that is 2x faster.It is a lightweight tool that accelerates fine tuning speed by 2x compared to Hugging Face and reduces memory usage by up to 80% by applying a mathematically accurate, manually derived custom backpropagation GPU kernel.
+Also noteworthy are the key techniques: LangGraph & Swarm - state graph-based multi-agent control.A state machine-based agent framework that goes beyond the limitations of one-way DAG pipelines and provides complete control over circulation, branching, human-in-the-loop, and distributed checkpointing.
+
+We continue with the second section, global macroeconomic and financial markets, and security diplomacy trends.
+First of all, this is the most noteworthy news in the financial market.Investors' attention was drawn to the news that 1.5 billion CPUs were illegally imported and resold online by exploiting international mail.
+Next, looking at foreign exchange and macro indicators, trends such as US tariff policy, response to EU environmental regulations?, Gwangju Chamber of Commerce, and export company briefing sessions are detected, which are expected to act as major variables in asset prices and liquidity in the future.
+In addition, in the industry and stock market as a whole, differentiation by sector continues, with KOSPI and US semiconductor stocks falling by 1% in the aftermath, and a diagnosis related to the 5000 line being in danger.
+
+In the field of international security and defense, the news that Daegu Textile Company's combat uniform was designated as the first innovative product in the defense field was highlighted as a major topic.
+In addition, on the global defense industry and diplomatic cooperation stage, trends in participation in the 6th Technology Exchange Meeting of the Tmaxivero and Defense Subcommittee are confirmed, and geopolitical risk management is being emphasized.
+
+The third section is the three key observation points that you must pay attention to today.
+First, please pay attention to the development of next-generation artificial intelligence agent technology and the reorganization of customized semiconductor supply chains such as HBM Four.
+Second, you should closely examine the direction of the U.S. Federal Reserve's monetary policy, the won-dollar exchange rate trend, and the performance guidance of major big tech companies.
+Third, we recommend that you prepare for market volatility by keeping an eye on the expansion of global defense orders and the schedules of trade and diplomatic negotiations between major countries.
+
+Lastly, here are some positive morning affirmations that will energize your day.
+Please take a comfortable breath and repeat this sentence in your mind together.
+My mind is calm and my life is full of positive energy.
+I hope that today is a meaningful day for you to fully demonstrate your potential.This concludes the daily morning intelligence briefing.Thank you for listening.
