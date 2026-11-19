@@ -1,0 +1,34 @@
+hello.This is the Daily Morning Intelligence Briefing, November 19, 2026.
+For those of you who are starting your day today, we summarize the key news that occurred overnight in the global market and technology ecosystem in an easy-to-understand manner.
+Today's briefing will be delivered in the following order: artificial intelligence and semiconductor technology trends, the latest research papers from academia and YouTube tech trends, the latest AI tools and techniques to note, and global macroeconomic and security issues.
+
+First, the first section is about artificial intelligence, big tech semiconductors, and academic research trends.
+This is the most noteworthy technology news today.From harvest to shipment, news of the operation of polytechnic and physical AI education facilities is spreading, attracting great attention from the global tech industry.
+In addition, as a next-generation model and infrastructure trend, the introduction of physical AI quadrupedal robots to construction sites in Kajima, Japan continues, and the competition for leadership in the ecosystem appears to be intensifying.
+In addition, in the semiconductor and cloud supply chain, the attention of market participants is focused on the fact that it operates every time Python is turned on, and an analysis of the account takeover code in the Microsoft AI agent development package has been raised.
+
+The following is the archive's latest artificial intelligence research news that is attracting attention in academia.
+The main paper published today is Peripheral LLM: Data Efficient Supervision Fine-Tuning Research through Temperature Matching, which is highly regarded in terms of inference efficiency and autonomous agent advancement.
+
+
+Next, we will introduce the latest AI/ML tools and techniques that practical developers and researchers should pay attention to.
+The first tool to note is Speculative Decoding - a lossless 3x inference acceleration technique.A small draft model speculatively generates multiple tokens at lightning speed, and the main target model verifies them in parallel with just one forward operation, reducing decoding speed by 2 to 3 times without losing accuracy.
+Also worth noting are the key techniques: DPO & SimPO - direct preference sorting without compensation model.This is an alignment technique that directly learns the human preference dataset using only a simple cross-entropy loss function by mathematically replacing the complex reward model learning and PPO sampling loop of reinforcement learning-based RLHF.
+
+We continue with the second section, global macroeconomic and financial markets, and security diplomacy trends.
+First of all, this is the most noteworthy news in the financial market.On the day of the college entrance exam, KOSPI started to rise, and investors' attention was focused on the news that the 5,000 line was in jeopardy due to foreign selling.
+Next, looking at foreign exchange and macro indicators, NASDAQ 100 futures, an upward trend in anticipation of Antropic's listing, and a downward trend in U.S. Treasury yields are detected, which are expected to act as major variables in asset prices and liquidity in the future.
+In addition, across industries and stock markets, differentiation by sector continues, with diagnoses related to KOSPI starting up 0.45% and KOSDAQ up 0.83%.
+
+In the field of international security and defense, honesty like gunpowder, accurate responsible management, and news of the future of K Defense, which extends into space, have emerged as major agenda items.
+In addition, on the stage of global defense industry and diplomatic cooperation, geopolitical risk management is emphasized with the opening of the Gyeongbuk Provincial Advanced Defense Industry Promotion Center, testing, evaluation, and verification of defense industry companies, and trends confirmed in Gumi in one place.
+
+The third section is the three key observation points that you must pay attention to today.
+First, please pay attention to the development of next-generation artificial intelligence agent technology and the reorganization of customized semiconductor supply chains such as HBM Four.
+Second, you should closely examine the direction of the U.S. Federal Reserve's monetary policy, the won-dollar exchange rate trend, and the performance guidance of major big tech companies.
+Third, we recommend that you prepare for market volatility by keeping an eye on the expansion of global defense orders and the schedules of trade and diplomatic negotiations between major countries.
+
+Lastly, here are some positive morning affirmations that will energize your day.
+Please take a deep breath and repeat this sentence in your mind.
+My passion and effort will always bear great results.
+I hope that today is a meaningful day for you to fully demonstrate your potential.This concludes the daily morning intelligence briefing.Thank you for listening.
